@@ -1,0 +1,123 @@
+@import url('teacher-reset.less');
+#wonderful-sure{
+  .bar-tab{
+    text-align:center;
+    font-size:0.65rem;
+    line-height:2.5rem;
+    span{
+      display:inline-block;
+      width:8.5rem;
+      text-align:center;
+      height:1.75rem;
+      line-height:1.75rem;
+      background:#45c6fc;
+      color:#fff;
+      border:1px solid #45c6fc;
+      border-radius:0.2rem;
+      font-size:0.65rem;
+      vertical-align: middle;
+    }
+  }
+  .bar-nav{
+    background: #45c6fc;
+    .title{
+      text-align:center;
+      font-size:0;
+    }
+    span{
+      border: 2rem/@base-f solid #fff;
+      display:inline-block;
+      font-size:0.65rem;
+      width:4.2rem;
+      text-align:center;
+      line-height: 1.15rem;
+      height:1.25rem;
+      color:#fff;
+      margin-top: 0.45rem;
+    }
+    .one{
+      border-top-left-radius:0.2rem;
+      border-bottom-left-radius:0.2rem;
+    }
+    .two{
+      border-top-right-radius:0.2rem;
+      border-bottom-right-radius:0.2rem;
+    }
+    .active{
+      background:#fff;
+      color:#45c6fc;
+    }
+    .icon-left:before{
+      content:url('../../../build/img/go-back.png')
+    }
+  }
+  .cont{
+    margin-top:1.0rem;
+    .p-mesg{
+      padding:0.5rem 0.75rem;
+      line-height:0.8rem;
+      width:95%;
+      background:#fff2df;
+      color:#ffab4c;
+      margin:0 auto;
+
+      font-size:0.5rem;
+      border-radius:0.2rem;
+      border:1px solid #ff9600;
+      margin-bottom: 0.9rem;
+    }
+    .img{
+      max-width:90%;
+      margin:0 auto;
+      border-radius:0.2rem;
+      text-align: center;
+      margin-bottom:0.625rem;
+      position:relative;
+      input{
+        width:100%;
+        height:100%;
+        position:absolute;
+        z-index:20;
+        left:0;
+        top:0;
+        opacity: 0;
+      }
+      .close{
+        display:inline-block;
+        width:0.8rem;
+        height:0.8rem;
+        background:url('../../../build/img/image-close.png') no-repeat;
+        position:absolute;
+        right:1rem;
+        top:0.5rem;
+        z-index:21;
+      }
+      img{
+       
+        max-width:100%;
+      }
+    }
+  }
+
+}
+  .photo-browser.photo-browser-in{
+      .bar-nav{
+           span{
+      border: none;
+      display:inline;
+      font-size:0.65rem;
+      width:4.2rem;
+      text-align:center;
+      line-height: 2.2rem;
+      height: 2.2rem;
+      color:#fff;
+      margin-top: 0.45rem;
+    }
+
+      }
+      .swiper-container{padding-bottom:0px;}
+      /*.photo-browser-zoom-container{
+          img{max-width:85%;}
+      }*/
+      /*.photo-browser-slide{align-items:stretch}*/
+  }

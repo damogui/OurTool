@@ -1,0 +1,92 @@
+@import "./teacher-reset.less";
+
+.bg{background: #ebf8ff;}
+.content{padding-bottom: 3.225rem}
+.card{
+  margin: 0;
+  box-shadow: none;
+  .card-header{
+    .head-title{
+      font-size:0.75rem;
+      .icon-down-drop{margin-right: 0.75rem}
+    }
+    .head-after{color:#9eadb6;font-size: 0.6rem }
+    &:after{background: none}
+    border-top: solid 0.05rem #E5E5E5 ;
+  }
+  .card-content {
+    .list-block {
+      margin: 0;
+      .item-content {
+        padding: 0;
+        margin-left:2rem;
+        border-top: solid 0.05rem #E5E5E5 ;
+        //border-bottom: solid 0.05rem #E5E5E5 ;
+
+          .item-inner {
+            align-items: flex-start;
+          .item-title {
+            font-size: 0.75rem;
+            color: #5d6467;
+            //max-width: 10.4rem;
+            .item-desc {
+              font-size: 0.6rem;
+              margin: 0.4rem 0 0 0;
+              color: #9eadb6;
+              .data{
+                color: #8e8e8e;
+              }
+              .red{
+                  color:#ee4900;
+              }
+
+            }
+          }
+          .item-after {
+            font-size: 0.75rem;
+            color: #5d6467;
+            //max-height: 3.5rem;
+            max-width: 5rem;
+            min-width: 108px;
+            justify-content: flex-end;
+            //align-items: flex-start;
+            align-content:space-between;
+            height: 5.25rem;
+            flex-flow: wrap;
+            .red{ color:#ee4900;}
+            .item-status-lesson {
+              cursor: pointer;
+              font-size: 0.5rem;
+              display: flex;
+              width: 5rem;
+              min-width: 108px;
+              height: 1rem;
+              background: #41c7ff;
+              border-radius: 0.15rem;
+              color: #ffffff;
+              margin-top: 1.3rem;
+              justify-content: center;
+              align-items: center;
+            }
+
+          }
+          &:after {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}
+.slide-up{
+  .card-header{height: 3.6rem;
+    .head-title{
+      .icon-right-drop{
+        margin-right: 0.75rem}
+    }
+  }
+  .card-content{display:none}
+}
+.bar-tab{height: 3.125rem; text-align: center;
+.btn{margin-top: 0.6625rem;}
+}

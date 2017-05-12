@@ -1,0 +1,216 @@
+@import "student-reset.less";
+.main-pops{
+  //width:80%;
+
+  min-height:620px;
+  .tabs-wrap{
+    .tabs-header{
+
+      /*学情分析用*/
+      .tabs-btn-1{
+        width:130px;
+      }
+      .active{
+        background:#ff942f;
+        border-color:#ff8522;
+      }
+      .normal{
+        background:#e5e5e5;
+        color: #a5a5a5;
+        text-shadow:1px 0px 1px #ffffff,1px 0px 1px #ffffff;
+        border-color:#cacaca ;
+      }
+    }
+    .tabs-split{
+      background: url(../../img/student-split1.png) no-repeat;
+      height: 2px;
+      background-size: 100%;
+    }
+    .tabs-content{
+      margin-top: 0px;
+      //饼状图样式
+      .chart-div-pie{
+        margin-top: 75px;
+        border: none;
+        width: 49%;
+        display: inline-block;
+
+        .chart_title{
+          width: 300px;
+          margin:0 auto;
+          color: #ff8716;
+          font-size: 18px;
+          text-align: left;
+        }
+        .chart{
+          //background: url(../../img/student-chart.png) no-repeat;
+          width: 300px;
+          margin:0 auto;
+          height:172px;
+          margin-top: 60px;
+
+          //text-align: center;
+        }
+        .chart_left{
+          background-position: 0px,0px;
+          //background-position: 160px;
+
+        }
+        .chart_right{
+          background-position:-474px, 0px;
+
+        }
+      }
+      //柱状图样式
+      .chart-div-line{
+        margin: 35px 0 45px 0 ;
+        p{background: #f7f7f7;height:40px;line-height: 40px;text-align: center;color: #ff8716; }
+        .chart-line{ margin: 20px auto 0 auto ; width: 917px;height: 255px}
+      }
+
+      //百分比图样式
+      .chart-div-water{
+        margin-top: 75px;
+        border: none;
+        width: 49%;
+        display: inline-block;
+        .chart{
+          //background: url(../../img/student-chart.png) no-repeat;
+          width: 280px;
+          margin:0 auto;
+          height:172px;
+          margin-top: 60px;
+          canvas{width:156px;height:156px;}
+
+          //text-align: center;
+          .water-warp{
+            width: 154px;
+            height: 154px;
+            position: relative;
+            border-radius: 77px;
+            border: solid 1px #19a5fe;
+
+            .water-text{
+              font-size: 36px;
+              text-align: center;
+            }
+            .water-content{
+              bottom: -1px;left:-1px;
+              border-bottom-left-radius:77px;
+              border-bottom-right-radius: 77px;
+              position: absolute;
+              width: 100%;
+              height: 50%;
+              z-index: 1;
+              border: solid 1px #19a5fe;
+              border-top: 0;
+            }
+          }
+          .water-warp.blue{
+            background:#d4f4ff;
+
+            .water-text{
+              color: #19a5fe;
+            }
+            .water-content{
+              background:#45c6fc;
+            }
+          }
+          .chart-legend{font-size: 16px;float: right;margin-top: 100px;line-height: 1.5;}
+          .chart-legend.blue{color: #45c6fc}
+          .chart-legend.orange{color: #ff9600}
+          .chart-info{text-align: center;font-size: 16px;margin-top: 26px;width: 156px;color: #6d6d6d}
+        }
+
+      }
+      .head_title{
+        color: #ff8716;
+        font-size: 18px;
+        text-align: left;
+        &:before{content:"";display:inline-block; width: 4px;height: 20px;background: #ff9933;border: solid 1px #eb6100;vertical-align: middle;margin-right: 7px;}
+      }
+      table.record-list{
+        width: 100%;
+        border-collapse: collapse;
+        border: solid 1px #dbdbdb;
+        thead{background: #f8f8f8;color: #838f97;
+          tr{
+            line-height: 55px;
+            height: 55px;
+            th{text-align: center;}
+          }
+
+        }
+        tbody{color: #6b7981;
+        tr{line-height: 49px;
+          height: 49px;
+        border-top: solid 1px #e8e8e8;
+        }
+        }
+      }
+      dl.record-list {
+        dd {
+          height: 40px;
+          //width: 100%;
+          padding-left:27px ;
+          position: relative;
+          margin-bottom: 6px;
+          .pink_title{position: absolute; display: inline-block;margin-left:-27px;height:40px;width:25px;background: #ffebd9  }
+          p{background:#f2f2f2; padding:0 20px; height:40px;line-height: 40px;
+          color: #646464}
+          .course_name,.course_num{color:#ff8008}
+        }
+
+      }
+      dl.course-list {
+        margin-top: 17px;
+        dd {
+          background: #eeeeee;
+          border-radius: 5px;
+          width: 100%;
+          border: solid 1px #bcbcbc;
+          color: #545454;
+          margin-bottom: 6px;
+          cursor: pointer;
+          font-size: 16px;
+          position: relative;
+          p{margin:0 20px;line-height: 50px;height: 50px;
+          padding: 0 8px;
+          }
+          p.slide{display: none;
+            //border-top: solid 1px #ffcb80;
+
+          span{margin-right: 100px;}
+            .icon-slide-up{position: absolute;bottom: 8px;right: 8px;display: none}
+          }
+          &:hover{
+            //background: #ff9600;
+            //border:solid 1px #ff6600;
+            //color: #ffffff;
+
+            background: #ff9600;
+            border:solid 1px #ff6600;
+            color: #ffffff;
+            p{
+              display: none;}
+            p.slide{display: block}
+          }
+        }
+        dd.active{
+          background: #ff9600;
+          border:solid 1px #ff6600;
+          color: #ffffff;
+          p{
+            display: none;}
+          p.slide{display: block}
+
+        }
+
+      }
+
+
+    }
+  }
+
+
+}

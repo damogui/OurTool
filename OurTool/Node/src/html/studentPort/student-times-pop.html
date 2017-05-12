@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/studentPort/student-reset.css">
+</head>
+<body>
+<div class="time-pop ">
+    <div class="inner_wrap">
+        <!--倒计时 开始-->
+        <div class="time_center none">
+            <div class="rotate-big ">
+                <div class="rotate-point">
+                </div>
+                <div class="times-big">10</div>
+            </div>
+            <div class="rotate-small">
+                <div class="rotate-point">
+                </div>
+                <div class="times-small">10</div>
+            </div>
+            <p class="f18 col-ff8716 info" style="">请在规定时间内认真答题，延时未答，视为答错。 </p>
+        </div>
+        <!--倒计时 结束-->
+        <!--单元自测start 开始-->
+        <div class="time_center none ">
+            <div class="start">
+            </div>
+
+        </div>
+        <!--单元自测start 结束-->
+        <!--单元自测end 开始-->
+        <div class="time_center none">
+            <div class="end">
+            </div>
+
+        </div>
+        <!--单元自测end 结束-->
+        <!--全局暂停 开始-->
+        <div class="time_center ">
+            <div class="all_pause">
+            </div>
+            <p class="f18 col-ff8716 info" style="">暂停！暂停一下！ </p>
+        </div>
+        <!--全局暂停 结束-->
+    </div>
+</div>
+<div class="no-data-pop">
+
+    <div class="time_center">
+        <div class="no_data">
+
+        </div>
+        <p class="f18 info col-normal " style="">暂无单词 </p>
+    </div>
+
+</div>
+<input type="button" value="点击" onclick="alert(1);">
+
+<div class="eg-pop ">
+    <div class="header">
+        <span>教材说明</span>
+        <span class="close" onclick="$('.eg-pop').hide()"></span>
+    </div>
+    <div class="body">
+        <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+            dolor sit amet lacus accumsan et viverra
+        </div>
+        <div class="word">你还有<span id="remainWord">10</span>个词汇尚未复习！</div>
+    </div>
+    <div class="oprt">
+        <span class="btn">确定</span>
+        <span class="btns ml30">取消</span>
+    </div>
+</div>
+<div class="pop-mask" style="display:block"></div>
+<div class="eg-pop eg-pop-image" style="display: none">
+
+    <div class="body">
+        <div class="pop-img"></div>
+        <div class="text info">
+            <p>厉害了！</p>
+            <p>你已完成本课程所有单元的学习，请注意继续复习！</p>
+        </div>
+    </div>
+    <div class="oprt">
+        <span class="btn">给自己点赞</span>
+    </div>
+</div>
+
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/studentPort/header.js"></script>
+<script src="../../../build/js/studentPort/student-times-pop.js"></script>
+</body>
+</html>

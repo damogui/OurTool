@@ -1,0 +1,45 @@
+@import "parent-reset.less";
+.bg{background: #ffffff;}
+#unbind-info{
+  .content{
+    padding: 100rem/@basef 80rem/@basef 130rem/@basef 80rem/@basef;
+    .bind{
+      background: #f8fbfc;
+      border: solid 1rem/@basef #c5c5c5;
+      padding: 10rem/@basef 50rem/@basef;
+      height: 535rem/@basef;
+      .line-info{
+        font-weight: bold;
+        margin-top: 45rem/@basef;
+      .lbl{font-size: 24rem/@basef;}
+      .txt{font-size: 28rem/@basef;}
+      }
+    }
+    .opt{
+      margin-top: 100rem/@basef;
+      width: 100%;
+      text-align: center;
+      .btn{
+        height:1.8rem;
+        line-height:1.8rem;
+        display:inline-block;
+        text-align: center;
+        color:#fff;
+        width: 200rem/@basef;
+        @media only screen and (max-width: 374px)
+        {
+        width: 181rem/@basef;
+        }
+        background:#45c6fc;
+        font-size:0.65rem;
+        border-radius:0.25rem;
+        cursor: pointer;
+      }
+      .active{background:#45c6fc;}
+      .un-active{background:#c3c3c3;margin-left: 88rem/@basef}
+    }
+
+  }
+
+
+}

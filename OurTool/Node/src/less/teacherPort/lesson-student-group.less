@@ -1,0 +1,73 @@
+@import "./teacher-reset.less";
+
+.bg{background: #ebf8ff;}
+.content{
+    margin-bottom:3.125rem;
+  .check-name {
+    color: #5d6467;
+    font-size: 0.75rem;
+    //margin-left: 0.6rem;
+  }
+  .info {
+    font-size: 0.6rem;
+    color: #9eadb6
+  }
+  .content-head {
+
+    padding-left:0.9rem;
+    background: #ffffff;
+    height: 2rem;
+    line-height: 2rem;
+    margin-bottom: 0.45rem;
+  }
+  .cards-list{
+    .card{
+      padding-left:0.9rem;
+      margin: 0;
+      box-shadow: none;
+      .card-header{font-size: 0.6rem;color: #8e8e8e;}
+      .card-content-inner {
+        padding: 0;
+        .stu {
+          display: inline-block;
+          width: 7.1rem;
+          height: 2.65rem;
+          line-height: 2.65rem;
+          border-radius: 0.25rem;
+          margin: 0.5rem 0.625rem;
+          .lui_checkbox{float: left;margin-left: 0.5rem;}
+          .check-name{float: left;margin-left: 0.4rem;white-space: nowrap;text-overflow: ellipsis;width: 2.25rem;overflow: hidden;}
+          .info {
+            float: left;
+            font-size: 0.5rem;
+            width: 2.6rem;
+            text-align: right;
+          }
+        }
+        .sel {
+          border: solid 0.05rem #41c7ff
+        }
+        .def {
+          border: solid 0.05rem #bfbfbf
+        }
+      }
+    }
+  }
+
+}
+.list-block{
+  margin: 0;
+  .item-content{
+    border-bottom: solid 0.05rem #E5E5E5 ;
+    height: 3.5rem;
+.item-inner{
+  .item-title{font-size: 1rem; color: #5d6467}
+  .item-after{font-size: 0.5rem; color: #9eadb6}
+  &:after{background:none;}
+}
+  }
+}
+.bar-tab{height: 3.125rem; text-align: center;
+  .btn{margin-top: 0.6625rem;}
+  .btn-disable{background:#d6d6d6;}
+}

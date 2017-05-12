@@ -1,0 +1,124 @@
+@import "../comm/egComm.less";
+@import "../../LUI/css/com.less";
+#content{
+  min-height:740px;
+  margin-top:30px;
+  font-size:0;
+  position:relative;
+
+  .left-content{
+    font-size:14px;
+    display:inline-block;
+    width:15%;
+    height:100%;
+    .list-content,.header{
+      text-align:center;
+      font-size:16px;
+      img{vertical-align: middle;margin-right:15px;}
+      height:125px;
+      line-height:110px;
+    }
+    .list-content{
+      cursor: pointer;
+      height:55px;
+      line-height:55px;
+      background:#d9edfd;
+    }
+    .list-list{
+      width:90%;
+      margin-left:10%;
+      text-align:center;
+      border:1px solid #ebebeb;
+      ul{
+        li{
+          height:43px;
+          line-height:43px;
+          border-bottom:1px solid #ebebeb;
+        }
+        li:last-child{
+          border-bottom:none;
+        }
+        li:hover{
+          background:#edf0f4;
+        }
+      }
+    }
+  }
+  .right-conent{
+    font-size:14px;
+    padding-bottom:60px;
+    width:85%;
+    vertical-align: top;
+    display:inline-block;
+    .calendar{
+      height:42px;
+      .input{
+        border-radius:4px;
+        margin-right:40px;
+      }
+    }
+    .see-analysis{
+      padding:20px 40px;
+      .child{
+        margin-top:20px;
+        padding:45px 60px;
+        line-height:30px;
+        background:#fff;
+        border:1px solid #dbdbdb;
+        border-radius:4px;
+        box-shadow: 0 10px 5px #dce2e9;
+        font-size:0;
+        .left-title{
+          width:20%;
+          line-height:100%;
+          display:inline-block;
+          font-size:18px;
+          .title{
+            margin-right:20px;
+            display:inline-block;
+            width:5px;
+            height:21px;
+            vertical-align: middle;
+            background: #4ca9f7;
+          }
+        }
+        .right-mesg{
+          display:inline-block;
+          width:70%;
+          font-size:14px;
+          vertical-align: middle;
+          position:relative;
+          .p{
+            width:520px;
+            display:inline-block;
+            vertical-align: middle;
+          }
+        }
+        .opr{
+          display:inline-block;
+          width:10%;
+          height:100%;
+          line-height:100%;
+          font-size:14px;
+          .operatBtn{
+            display:inline-block;
+            line-height: normal;
+            background:#0084f3;
+            border:1px solid #0057e6;
+            color:#fff;
+          }
+          .operatBtn:hover{
+            border:1px solid #0057e6;
+          }
+        }
+      }
+    }
+  }
+  .border{
+    position:absolute;
+    display:inline-block;
+    width:1px;
+    height:100%;
+    background:#dbdbdb;
+  }
+}

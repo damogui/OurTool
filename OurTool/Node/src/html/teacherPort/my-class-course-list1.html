@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/egword/build/dep/SUI-Mobile/css/sm.css">
+    <!--<link rel="stylesheet" href="/egword/build/css/teacherPort/my-class-course-list.css">-->
+    <title>初中5班课程记录</title>
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current bg" id="my-class-course-list">
+              <!-- 你的html代码 -->
+        <div class="content infinite-scroll infinite-scroll-bottom" data-distance="100">
+            <div class="list-block">
+                <ul class="list-container">
+                </ul>
+            </div>
+            <!-- 加载提示符 -->
+            <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="/egword/build/dep/SUI-Mobile/js/zepto.min.js"></script>
+<script type="text/javascript" src="/egword/build/dep/SUI-Mobile/js/sm.js"></script>
+<!--<script type="text/javascript" src="/egword/build/js/teacherPort/router.js"></script>-->
+<script type="text/javascript">
+    // 加载flag
+    var loading = false;
+    // 最多可加载的条目
+    var maxItems = 100;
+
+    // 每次加载添加多少条目
+    var itemsPerLoad = 15;
+
+    function addItems(number, lastIndex) {
+        // 生成新条目的HTML
+        var html = '';
+        for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+            html += '<li class="item-content"><div class="item-inner"><div class="item-title">Item ' + i + '</div></div></li>';
+        }
+        // 添加新条目
+        $('.infinite-scroll-bottom .list-container').append(html);
+
+    }
+//    //预先加载20条
+//    addItems(itemsPerLoad, 0);
+    GetClassCourseRecordList(1,1,10);
+    // 上次加载的序号
+
+    var lastIndex = 10;
+
+    // 注册'infinite'事件处理函数
+    $(document).on('infinite', '.infinite-scroll-bottom',function() {
+
+        // 如果正在加载，则退出
+        if (loading) return;
+
+        // 设置flag
+        loading = true;
+        GetClassCourseRecordList(1,Math.ceil(lastIndex/itemsPerLoad),itemsPerLoad);
+        // 模拟1s的加载过程
+        setTimeout(function() {
+            // 重置加载flag
+            loading = false;
+
+            if (lastIndex >= maxItems) {
+                // 加载完毕，则注销无限加载事件，以防不必要的加载
+                $.detachInfiniteScroll($('.infinite-scroll'));
+                // 删除加载提示符
+                $('.infinite-scroll-preloader').remove();
+                return;
+            }
+
+            // 添加新条目
+            addItems(itemsPerLoad, lastIndex);
+            // 更新最后加载的序号
+            lastIndex = $('.list-container li').length;
+            //容器发生改变,如果是js滚动，需要刷新滚动
+            $.refreshScroller();
+        }, 1000);
+    });
+    function GetClassCourseRecordList(classid,pageindex,pagesize) {
+        pageindex=pageindex||1;
+        pagesize=pagesize||10;
+
+        $.ajax({
+            type: "get",
+            url: "/teacher/myclass/GetClassCourseRecordList",
+            cache: false,
+            data: { classid: classid, pageindex: pageindex, pagesize: pagesize },
+            dataType: "JSON",
+            success: function (data) {
+                loading = false;
+                data = JSON.parse(data);
+
+                var li = data.result;
+                var str = "暂无课次记录";
+
+//                var tpl = require("teacher/my-class-course-list");
+                addItems(itemsPerLoad, lastIndex);
+//                $("#courselist").append(tpl(li));
+                if (li.length == 0) {
+                    //$("#courselist").html(str);
+                }
+                if (lastIndex >= maxItems) {
+                    // 加载完毕，则注销无限加载事件，以防不必要的加载
+                    $.detachInfiniteScroll($('.infinite-scroll'));
+                    // 删除加载提示符
+                    $('.infinite-scroll-preloader').remove();
+                    return;
+                }
+                // 更新最后加载的序号
+                lastIndex = $('#courselist li').length;
+                maxItems = data.totalnum;
+                console.log(maxItems);
+                console.log(lastIndex);
+                //容器发生改变,如果是js滚动，需要刷新滚动
+                $.refreshScroller();
+                $(".s-course-list").off("click");
+                $(".s-course-list").on("click", function () {
+
+                    var classindex = $(this).attr("data-classindex");
+
+                    $.router.load('/teacher/myclass/CourseReport?classindex=' + classindex, true);
+
+                });
+
+            }
+        });
+    }
+
+    $.init();
+</script>
+</body>
+</html>

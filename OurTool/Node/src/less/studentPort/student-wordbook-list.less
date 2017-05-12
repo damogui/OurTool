@@ -1,0 +1,63 @@
+@import "student-reset.less";
+.main-pops{
+  //width:80%;
+
+ min-height:620px;
+  .tabs-wrap{
+    .tabs-header{
+
+      /*学情分析用*/
+      .tabs-btn-1{
+        width:130px;
+      }
+      .active{
+        background:#ff942f;
+        border-color:#ff8522;
+      }
+      .normal{
+        background:#e5e5e5;
+        color: #a5a5a5;
+        text-shadow:1px 0px 1px #ffffff,1px 0px 1px #ffffff;
+        border-color:#cacaca ;
+      }
+    }
+    .tabs-split{
+      background: url(../../img/student-split1.png) no-repeat;
+      height: 2px;
+      background-size: 100%;
+    }
+    .word-list{
+      .tabs-content{
+        .switch-control{
+          margin:25px 0;
+          text-align: right;
+          cursor: pointer;
+          .switch-icon{background: url(../../img/student-icon.png) no-repeat -30px 0;width: 18px;height: 18px;display: inline-block;vertical-align: bottom}
+          .switch-text{display: inline-block;height: 18px;line-height: 18px;margin-right: 60px;}
+          .total-num{margin-right: 15px;color: #a0a0a0}
+        }
+        margin-top: 0px;
+        dl {
+          dd {
+            height: 40px;
+            //width: 100%;
+            margin-bottom: 6px;
+            height:80px;
+            line-height: 80px;
+            background:#f2f2f2;
+            .col{display: inline-block;float: left;text-indent: 3.04%;}
+            .col1{background: #ffebd9;width: 20%; border-right:1px solid #ffffff; font-size: 22px;  }
+            .col2{width: 17.8%; border-right:2px solid #ededed; background:#f2f2f2;    }
+            .col3{width: 61%; background:#f2f2f2;    }
+            .word-key{color:#ff8008}
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+
+}

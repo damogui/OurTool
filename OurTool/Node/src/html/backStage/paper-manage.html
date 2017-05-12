@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/paper-manage.css">
+</head>
+<body>
+<div id="eg-header" style="background:#00a2ff;"></div>
+<div id="content">
+     <div class="header">
+        <div class="part-first">
+            <span class="right font16">共<span class="color" style="font-weight:600;">12</span>人，禁用 <span class="red">2</span>人</span>
+        </div>
+        <div class="part-second">
+            <span class="addbtn left addstuff"><img src="../../../build/img/org-add.png" alt="">&nbsp;添加员工</span>
+            <div class="right">
+                <input type="text" class="input-search" style="width:230px;"><img src="../../../build/img/search.png" alt="" class="middle">
+            </div>
+        </div>
+    </div>
+    
+    <div style="font-size:0;">
+        <div class="left-content" style=""></div>
+        <div class="table" style="width:80%;display:inline-block;font-size:14px;padding:0;">
+            <table class="wd100">
+                <tr>
+                    <td>姓名</td>
+                    <td>账号</td>
+                    <td>角色</td>
+                    <td>按钮</td>
+                </tr>
+                <tr>
+                    <td>机构名称</td>
+                    <td>金牌</td>
+                    <td>B级</td>
+                    <td>
+                        <span class="inline operatBtn active see-detail">查看</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>机构名称</td>
+                    <td>金牌</td>
+                    <td>B级</td>
+                    <td>
+                        <span class="inline operatBtn active see-detail">查看</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>机构名称</td>
+                    <td>金牌</td>
+                    <td>B级</td>
+                    <td>
+                        <span class="inline operatBtn active see-detail">查看</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>机构名称</td>
+                    <td>金牌</td>
+                    <td>B级</td>
+                    <td>
+                        <span class="inline operatBtn active see-detail">查看</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--添加员工的弹窗开始-->
+<div class="eg-pop hide" id="addStuff">
+    <div class="header text">
+        添加员工
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div class="inputdiv">
+            <span class="white">姓名</span><span class="orange">* </span><span class="label">姓名:</span>
+            <input type="text" class="inputStyle">
+        </div>
+        <div class="inputdiv mt25">
+           <span class="white">*性别 </span><span class="label">性别:</span>
+            <label><span class="radio active"></span><span class="left15">男</span></label>
+            <label><span class="radio"></span><span class="left15">女</span></label>
+        </div>
+        <div class="inputdiv mt25">
+            <span class="white">手机</span><span class="orange">* </span><span class="label">手机:</span>
+            <input type="text" class="inputStyle">
+        </div>
+        <p class="tel">手机号可用户账号登录，请确保手机号填写正确！</p>
+        <div class="inputdiv mt25">
+            <span class="white">* </span><span class="label">入职时间:</span>
+            <input type="text" class="inputStyle">
+        </div>
+        <div class="inputdiv mt25">
+            <span class="white">*角色 </span><span class="label">角色:</span>
+            <div class="inline" id="drop_demo1"></div>
+        </div>
+        <div class="inputdiv mt25">
+            <span class="white">* </span><span class="label">管理校区:</span>
+            <div class="inline" id="drop_demo2"></div>
+        </div>
+    </div>
+    <div class="center"><span class="sure">确定</span></div>
+</div>
+<!--添加员工的弹窗结束-->
+<!--添加人员成功开始-->
+<div class="eg-pop hide" id="addstuff-success">
+    <div class="header">
+        添加人员成功
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div style="color:#505050;height:80px;">
+            <span class="left">
+                <span>密码</span>
+                <span>***</span>
+            </span>
+            <span class="right">
+                <span>账号</span>
+                <span>***</span>
+            </span>
+        </div>
+        <p style="text-align:center;">手机号可用账号登录</p>
+    </div>
+    <div class="center">
+        <span class="sure">确定</span>
+    </div>
+</div>
+<!--添加人员成功结束-->
+<div class="pop-mask"></div>
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/header.js"></script>
+<script src="../../../build/js/backStage/paper-manage.js"></script>
+</body>
+</html>

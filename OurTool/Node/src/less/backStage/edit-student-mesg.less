@@ -1,0 +1,126 @@
+@import "../comm/egComm.less";
+@import "../../LUI/css/com.less";
+.mr20{margin-right:20px;}
+.mt20{margin-top:20px;}
+.title-content{width:88%;}
+#content{
+  width:88%;
+  .content-mesg{
+    padding:0 0 0 70px;
+  }
+  .color{
+    color:#0084f3;
+  }
+  .red{
+    color:#ff4901;
+  }
+  height:660px;
+  .header{
+    height:75px;
+    .addbtn{margin-top:30px;height:30px;line-height:30px;margin-right:20%;padding:0 25px;}
+  }
+  .filter{
+    padding:0 30px 0 50px;
+    height:65px;
+  }
+  .table{
+    border-top:1px solid #dbe1e8;
+  }
+  .table tr {
+    border-top:none;
+  }
+  .table tr:last-child{border-bottom:none;}
+}
+//点击套课按钮组的样式
+.spans{
+  display:inline-block;
+  height:39px;
+  line-height:39px;
+  padding:0 25px;
+  cursor: pointer;
+  color:#696969;
+  background:#eff4f7;
+  border:1px solid #828385;
+  border-left:none;
+  border-right:none;
+}
+.line-border{
+  width:1px;
+  height:40px;
+  margin-top:0px;
+  background:blue;
+  display:inline-block;
+}
+
+.spans:first-of-type{border-top-right-radius:4px;border-bottom-right-radius:4px;border-right:1px solid #828385;}
+.spans:last-of-type{border-top-left-radius:4px;border-bottom-left-radius:4px;border-left:1px solid #828385;}
+.spans:first-of-type:hover{border:1px solid blue;border-left:none;background:#0084f3;color:#fff;}
+.spans:last-of-type:hover{border:1px solid blue;border-right:none;background:#0084f3;color:#fff;}
+
+.spans.active:first-of-type{background:#0084f3;color:#fff;border:1px solid blue;border-left:none;}
+.spans.active:last-of-type{background:#0084f3;color:#fff;border:1px solid blue;border-right:none;}
+#add-grade{
+  width:600px;
+  min-height:400px;
+  .header{
+    text-align:left;
+    line-height:normal;
+    .tabs{
+      padding-top:20px;
+      span{
+        border-bottom:2px solid #fff;
+        height:39px;line-height:38px;
+        display:inline-block;
+        text-align:center;
+        width:40px;
+        margin-left:60px;
+      }
+      span.active{
+        border-bottom:2px solid #008bff;
+        color:#008bff;
+      }
+      span:hover{
+        border-bottom:2px solid #008bff;
+        color:#008bff;
+        cursor: pointer;
+      }
+    }
+  }
+  .body{
+    padding:24px 75px 70px 75px;
+    .table{
+      padding-bottom:30px;
+    }
+    table{
+      width:100%;
+      margin-top:20px;
+      tr{
+        border:none;
+        td{
+          span{
+            display:inline-block;
+            padding:9px;
+          }
+          span.active{
+            background:#0084f3;
+            border-radius:4px;
+            color:#fff;
+          }
+          span:hover{
+            cursor: pointer;
+            background:#0084f3;
+            border-radius:4px;
+            color:#fff;
+          }
+        }
+      }
+      tr:hover{
+        background:#fff;
+      }
+    }
+  }
+}
+.eg-pop .header{
+    color:#838f97;
+}
+//点击套课样式结束

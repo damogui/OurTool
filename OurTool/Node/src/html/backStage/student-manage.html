@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/student-manage.css">
+</head>
+<body>
+<div id="eg-header" style="background:#00a2ff;"></div>
+<div id="content">
+    <div class="header">
+        <span class="font18">学生列表</span>
+        <span class="addbtn right creatStudent"><img src="../../../build/img/org-add.png" alt="">&nbsp;创建学生</span>
+    </div>
+    <div class="filter">
+        <div style="height:34px;">
+            <div id="drop_dem1" style="height:20px;padding: 5px 25px 5px 15px;margin-right:16px;"></div>
+            <div id="drop_dem2" style="height:20px;padding: 5px 25px 5px 15px;margin-right:16px;"></div>
+            <div id="drop_dem3" style="height:20px;padding: 5px 25px 5px 15px;"></div>
+            <div class="right">
+                <input type="text" class="input-search" style="width:230px;"><img src="../../../build/img/search.png" alt="" class="middle">
+            </div>
+         </div>
+        <span class="right font16" style="height: 31px;line-height: 31px;">共 <span class="color">2323</span> 名学生</span>
+    </div>
+    <div class="table">
+        <table class="wd100">
+            <tbody><tr>
+                <td>姓名</td>
+                <td>账号</td>
+                <td>所在校区</td>
+                <td>班级</td>
+                <td>课程类型</td>
+                <td>课次进度</td>
+                <td>有效期</td>
+                <td>按钮</td>
+            </tr>
+            <tr>
+                <td>徐老师</td>
+                <td>t100088</td>
+                <td>1校区</td>
+                <td>1班</td>
+                <td>同步班</td>
+                <td class="red">18/20</td>
+                <td>2017/06/01</td>
+                <td>
+                    <span class="inline operatBtn seeDetail">查看详情</span>
+                    <span class="inline operatBtn active continue">续课</span>
+                </td>
+            </tr>
+            <tr>
+                <td>徐老师</td>
+                <td>t100088</td>
+                <td>1校区</td>
+                <td>1班</td>
+                <td>同步班</td>
+                <td>18/20</td>
+                <td>2017/06/01</td>
+                <td>
+                    <span class="inline operatBtn seeDetail">查看详情</span>
+                    <span class="inline operatBtn active continue">续课</span>
+                </td>
+            </tr>
+            <tr>
+                <td>徐老师</td>
+                <td>t100088</td>
+                <td>1校区</td>
+                <td>1班</td>
+                <td>同步班</td>
+                <td>18/20</td>
+                <td>2017/06/01</td>
+                <td>
+                    <span class="inline operatBtn seeDetail">查看详情</span>
+                    <span class="inline operatBtn active continue">续课</span>
+                </td>
+            </tr>
+            <tr>
+                <td>徐老师</td>
+                <td>t100088</td>
+                <td>1校区</td>
+                <td>1班</td>
+                <td>同步班</td>
+                <td>18/20</td>
+                <td>2017/06/01</td>
+                <td>
+                    <span class="inline operatBtn seeDetail">查看详情</span>
+                    <span class="inline operatBtn active continue">续课</span>
+                </td>
+            </tr>
+            </tbody></table>
+    </div>
+</div>
+<!--创建学生的开始-->
+<div class="eg-pop" id="creatStudent">
+    <div class="header">
+        创建学生
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div class="input-name">
+            <input type="text" class="input" style="width:295px;">
+        </div>
+        <div class="input-name mt20">
+            <input type="text" class="input" style="width:295px;">
+        </div>
+        <div class="input-name mt20">
+            <span class="first" style="margin-right:30px;">性别:</span>
+            <label style="margin-right:60px;"><span class="radio active" style="margin-right:15px;"></span><span class="left15">男</span></label>
+            <label><span class="radio" style="margin-right:15px;"></span><span class="left15">女</span></label>
+        </div>
+        <div class="mt20" style="height:30px;">
+            年级:
+        </div>
+        <div>
+            <div id="drop_dem4" style="padding: 10px 25px 10px 15px;"></div>
+        </div>
+        <div class="mt20" style="height:30px;">
+            版本:
+        </div>
+        <div>
+            <div id="drop_dem5" style="padding: 10px 25px 10px 15px;"></div>
+        </div>
+    </div>
+    <div class="center">
+        <span class="sure" style="padding:15px 130px;">确定</span>
+    </div>
+</div>
+<div class="pop-mask"></div>
+<!--创建学生的结束-->
+<!--课程开通的开始-->
+<div class="eg-pop hide" id="continue">
+    <div class="header">
+        创建学生
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div class="input-name">
+            <span class="mr20">姓名:</span><span>张三（七年级）</span>
+        </div>
+        <div class="input-name mt20">
+            <span class="mr20">年级:</span><div id="drop_dem6" style="padding: 9px 25px 9px 15px;"></div>
+        </div>
+        <div class="input-name mt20">
+            <span class="mr20">课次:</span><span>20</span>
+        </div>
+        <div class="input-name mt20">
+            <span class="mr20">课程有限期:</span><span>6个月</span>
+        </div>
+        <div class="input-name mt20">
+            <span class="mr20">课价:</span><span>2000元</span>
+        </div>
+        <div class="input-name mt20">
+            <span class="mr20">年级:</span><div id="drop_dem7" style="padding: 9px 25px 9px 15px;"></div>
+        </div>
+        <div class="input-name inline-hover" style="width:240px;margin-top:20px;height:40px;">
+            <span class="spans right active">美式发音</span><span class="right line-border"></span><span class="spans right">英试发音</span>
+        </div>
+    </div>
+    <div class="center">
+        <span class="sure" style="padding:15px 130px;">确定</span>
+    </div>
+</div>
+<!--课程开通的结束-->
+<!--添加人员成功的开始-->
+<div class="eg-pop hide" id="addPerson">
+    <div class="header">
+        添加人员成功！
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div style="height:20px;">
+            <span class="left">账号:<span style="margin-left:10px;">******</span></span>
+            <span class="right">密码:<span style="margin-left:10px;">******</span></span>
+        </div>
+        <div style="height:50px;"></div>
+        <div class="center" style="color:#afb6ba;">
+            手机号可用账号登录
+        </div>
+        <div class="center" style="margin-top:10px;">
+            <span class="sure">确定</span>
+        </div>
+    </div>
+</div>
+<!--添加人员成功的结束-->
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/header.js"></script>
+<script src="../../../build/js/backStage/student-manage.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@import "teacher-reset.less";
+html:not(.watch-active-state) .list-block .item-link:active, .list-block .item-link.active-state{ background:#45c6fc;}
+#person-center{
+    background:#ebf8ff;
+    .ml10{margin-left:10px;}
+    .ml1{margin-left:0.5rem;color:#ff5400;font-size:0.75rem;}
+    .list-block{
+        ul{
+            background:#45c6fc;
+        }
+        .set{
+            display:inline-block;
+            padding:0.25rem 0.6rem;
+            border-radius:0.2rem;
+            background:#fff;
+            font-size:0.6rem;
+            color:#27bfff;
+        }
+        .item-subtitle{color:#fff;font-size:0.75rem;}
+        .item-text{color:#fff;font-size:0.6rem;}
+        margin-top:0;
+        margin-bottom: 1rem;
+        .item-link .item-inner{background-image:none;}
+    }
+    .card{
+        padding-bottom:2rem;
+        .card-header{
+            display:inline-block;
+            justify-content:flex-start;
+            -webkit-justify-content:flex-start;
+            .rect{
+                display:inline-block;
+                border:1px solid #66b9dc;
+                width:0.4rem;
+                height:0.6rem;
+                background:#8fddfd;
+                border-radius:0.1rem;
+                margin-right:5px;
+            }
+            font-size:0.65rem;
+            color:#00b4ff;
+            font-weight:600;
+            &:after{background:none;}
+        }
+        .card-content{
+            width: 90%;
+            margin:0 auto;
+            font-size:0.6rem;
+            display: flex;
+            justify-content:space-between;
+            -webkit-justify-content:space-between;
+        }
+    }
+    .Statistics{
+        .ml1{color:#5d6467;}
+        .card-content{height:1.75rem;line-height:1.75rem;}
+        .card-content-inner{
+            padding:0 0.75rem;
+        }
+    }
+    
+
+}
+#b-picker{
+    position:absolute;
+    left:0;
+    top:0;
+    outline:none;
+    border:none;
+    width:3.5rem;
+    padding-right:0.5rem;
+    z-index:4;
+    background: transparent;
+}
+.teachdown{
+    position:absolute;
+    right:0;
+    top:0.3rem;
+    z-index:3;
+}
+.picker-modal-inner{
+    background:#fff;
+    -webkit-mask-box-image:none;
+}
+.picker-modal{
+    background:#fff;
+}
+.picker-modal{
+    height:8rem;
+}
+.bar + .picker-items{
+         height:6.8rem;
+     }

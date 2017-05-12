@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/channel-management.css">
+</head>
+<body>
+<div id="eg-header"></div>
+<div id="content">
+    <div class="divContent">
+        <div class="part">
+            <div class="part-title">
+                <span class="img" style="margin-right:12px;"></span><span style="margin-right:40px;">专职销售团队</span><span>10人</span>
+                <span class="addbtn right creat-hild"><img src="../../../build/img/org-add.png" alt="" class="middle">&nbsp;&nbsp;创建下级</span>
+            </div>
+            <div class="part-body">
+                <div class="name-tel">
+                    <span class="name">张越</span>
+                    <span>15205609863</span>
+                    <span class="operatBtn right dele-child">删除</span>
+                    <span class="operatBtn right">修改</span>
+                 </div>
+                <div class="name-tel mt10">
+                    <span class="name">张越</span>
+                    <span>15205609863</span>
+                </div>
+            </div>
+        </div>
+        <div class="part">
+            <div class="part-title">
+                <span class="img" style="margin-right:12px;"></span><span style="margin-right:40px;">渠道代理团队</span><span>10人</span>
+                <span class="addbtn right creat-hild"><img src="../../../build/img/org-add.png" alt="" class="middle">&nbsp;&nbsp;创建下级</span>
+            </div>
+            <div class="part-body">
+                <div class="name-tel">
+                    <span class="name">张越</span>
+                    <span>15205609863</span>
+                    <span class="operatBtn right dele-child">删除</span>
+                    <span class="operatBtn right">修改</span>
+                </div>
+                <div class="name-tel mt10">
+                    <span class="name">张越</span>
+                    <span>15205609863</span>
+                </div>
+            </div>
+        </div>
+        <div class="part">
+            <div class="part-title">
+                <span class="img" style="margin-right:12px;"></span><span style="margin-right:40px;">客户转介绍</span><span>10人</span>
+                <span class="addbtn right creat-hild"><img src="../../../build/img/org-add.png" alt="" class="middle">&nbsp;&nbsp;创建下级</span>
+            </div>
+            <div class="part-body">
+                <div class="name-tel">
+                    <span class="name">张越</span>
+                    <span>15205609863</span>
+                    <span class="operatBtn right dele-child">删除</span>
+                    <span class="operatBtn right">修改</span>
+                </div>
+                <div class="name-tel mt10">
+                    <span class="name">张越</span>
+                    <span>15205609863</span>
+                </div>
+            </div>
+        </div>
+        <div class="part">
+            <div class="part-title">
+                <span class="img" style="margin-right:12px;"></span><span style="margin-right:40px;">品牌广告吸引</span><span>10人</span>
+                <span class="addbtn right creat-hild"><img src="../../../build/img/org-add.png" alt="" class="middle">&nbsp;&nbsp;创建下级</span>
+            </div>
+            <div class="part-body hide">
+                <div class="name-tel">
+                    <span class="name">张越</span>
+                    <span>15205609863</span>
+                    <span class="operatBtn right dele-child">删除</span>
+                    <span class="operatBtn right">修改</span>
+                </div>
+                <div class="name-tel mt10">
+                    <span class="name">张越</span>
+                    <span>15205609863</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--删除下级的弹窗开始-->
+<div class="eg-pop hide" id="delet-child">
+    <div class="header">
+        删除下级
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div class="center">
+            是否确定删除 &nbsp;&nbsp;&nbsp;<span >张三</span>
+        </div>
+    </div>
+    <div class="center">
+        <span class="sure">确定</span>
+        <span class="cancel">取消</span>
+    </div>
+</div>
+<!--删除下级的弹窗结束-->
+<!--创建下级的弹窗开始-->
+<div class="eg-pop hide" id="creat-child">
+    <div class="header">
+        创建下级
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div class="divinput">
+            <span class="first"><span class="white">名</span>名称</span>
+            <input type="text" class="input" style="width:250px;">
+        </div>
+        <div class="divinput mt20">
+            <span class="first">手机号</span>
+            <input type="text" class="input" style="width:250px;">
+        </div>
+    </div>
+    <div class="center">
+        <span class="sure">确定</span>
+    </div>
+</div>
+<!--创建下级的弹窗结束-->
+
+<div class="pop-mask"></div>
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/header.js"></script>
+<script src="../../../build/js/backStage/channel-management.js"></script>
+</body>
+<script>
+    $('.part-title').click(function(){
+        var str=$(this).find('.img').css('background').indexOf('left-cart');
+        $(this).next().toggle();
+       if(str>0){
+          $(this).find('.img').css('background','url(../../../build/img/cart.png) no-repeat 0 5px');
+       }else{
+         $(this).find('.img').css('background','url(../../../build/img/left-cart.png) no-repeat');
+       }
+    })
+</script>
+</html>

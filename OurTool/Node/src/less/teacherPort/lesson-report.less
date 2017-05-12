@@ -1,0 +1,119 @@
+@import "./teacher-reset.less";
+
+.bg{background: #ebf8ff;}
+.card{
+  box-shadow: none;
+    margin:0 0 -1.8rem 0;
+
+  .card-header{
+    color: #5d6467;padding: 1.2rem 1.25rem 0.6rem 1.25rem;font-size: 0.75rem;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+  &:after{background: none;  }
+  }
+  .card-content-inner{
+    padding:0  0.9rem;
+//.content-block-title{}
+.list-block{
+  margin: 0;
+  .item-content {
+    padding: 0;
+    //border-bottom: solid 0.05rem #d2d2d2;
+    height: 2.6rem;
+    margin-top: 0.5rem;
+    position: relative;
+    .item-media {
+      width: 0.25rem;
+      background: #eeeeee;
+      border: solid 0.05rem #d2d2d2;
+      height: 100%;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+    .item-media.green{
+            background: #84db1d;
+            border: solid 0.05rem #1bbc9b;
+    }
+    .item-media.yellow{
+            background: #ffc000;
+            border: solid 0.05rem #ffa200;
+    }
+    .item-media.red{
+            background: #e95026;
+            border: solid 0.05rem #d3001c;
+    }
+    .seq {
+      position: absolute;
+      left:18rem/@base-f;
+      top: -14rem/@base-f;
+    }
+    .seq-num {
+      position: absolute;
+      left: 28rem/@base-f;
+      top:0.55rem;
+      //margin-left: 28rem/@base-f;
+      font-size: 1rem;
+       font-style:normal;
+    }
+    .item-inner {
+      margin-left: 0;
+      height: 100%;
+      border: solid 0.05rem #d2d2d2;
+      border-left: none;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+
+      .item-title {
+        margin-left:110rem/@base-f;
+        color: #5d6467;
+        font-size: 0.75rem;
+
+      }
+      .item-after {
+        .word-num {
+          color: #ff5400
+        }
+
+      }
+      &:after {
+        background: none;
+      }
+
+    }
+  }
+}
+  }
+  .card-footer{&:before{background: none}}
+}
+.student{
+  margin-bottom: 3.8rem;
+  .card-content-inner{
+  .list-block{
+    .item-content {
+    .item-inner{
+      .lesson-circle{
+        margin-top: -0.3rem;
+        margin-right: 1.25rem;
+        width: 2rem;height: 2rem;display: inline-block;border-radius: 1rem;
+        font-size: 0.45rem;line-height: 2rem;text-align: center;
+        @media  only screen and (max-width: 374px){
+          margin-top: -0.45rem;
+        width: 2.3rem;height: 2.3rem;border-radius: 1.15rem;line-height: 2.3rem;
+        }
+      }
+      .over{
+        background: #eeeeee;
+        border: solid 1px #cdcdcd;
+        color: #5c5c5c;
+      }
+        .normal{
+          background: #eef9fd;
+          border: solid 1px #0ca1ff;
+          color: #0ca1ff;
+        }
+      }
+  }}
+}}
+.bar-tab{height: 3.125rem; text-align: center;
+  .btn{margin-top: 0.6625rem;}
+}

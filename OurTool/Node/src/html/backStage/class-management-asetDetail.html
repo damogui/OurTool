@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/class-management-asetDetail.css">
+</head>
+<body>
+<div id="eg-header"></div>
+<div class="title-content">
+    <span>课程管理</span>&nbsp;>&nbsp;<span>套课管理</span>&nbsp;>&nbsp;<span>添加套课</span>
+</div>
+<div id="content">
+    <div style="padding: 70px 0 50px 90px;">
+        <div class="edit-mesg">
+            <span class="first"><span class="white">课</span>课程名称:</span>
+            <input type="text" class="input" style="width:300px;">
+        </div>
+        <div class="edit-mesg mt15">
+            <span class="first"><span class="white">课价课</span>课价:</span>
+            <span>5000</span>&nbsp;&nbsp;(进价)&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<span>100</span>(售价)
+        </div>
+        <div class="edit-mesg mt15">
+            <span class="first"><span class="white">开</span>开放权限:</span>
+            <div class="inline" id="drop_dem1" style="margin-right:41px;"></div>
+            <div class="inline" id="drop_dem2"></div>
+        </div>
+        <div class="edit-mesg mt15">
+            <span class="first"><span class="white">退</span>退费权限:</span>
+            <div class="inline" id="drop_dem3" style="margin-right:41px;"></div>
+            <div class="inline" id="drop_dem4"></div>
+        </div>
+        <div class="edit-mesg mt15">
+            <span class="first">课程有效期:</span>
+            <div class="inline" id="drop_dem5"></div>
+        </div>
+        <div class="edit-mesg mt15">
+            <span class="first left"><span class="white">子课子</span>子课:</span>
+            <div class="add-org inline">
+                <span class="addbtn right addChildClass" style="margin:0;padding:0 20px;"><img src="../../../build/img/org-add.png" alt="">&nbsp;添加子课程</span>
+            </div>
+        </div>
+        <div class="edit-mesg mt15" style="height:40px;line-height:40px;">
+            <span class="first white">子课子子课:</span>
+            <span class="addbtn" style="padding: 0 10px 0 25px;margin:0;">初中补差课<span class="img"></span></span>
+            <span class="addbtn" style="padding: 0 10px 0 25px;margin:0;">小学补差课<span class="img"></span></span>
+        </div>
+        <div class="mt15">
+            <span class="first left mt15"><span class="white">课</span>课程描述:</span>
+            <textarea class="input" style="height:150px;width:900px;"></textarea>
+        </div>
+    </div>
+    <div>
+        <span class="sure" style="margin-left:25%;margin-top:50px;">保存</span>
+    </div>
+</div>
+<!--添加子课弹窗开始-->
+<div class="eg-pop hide" id="add-childClass">
+    <div class="header">
+        添加子课
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <span class="addbtn" style="width:287px;height:40px;line-height:40px;text-align:left;padding: 0px 20px 0 15px;">初中补差课<img src="../../../build/img/ok-grade.png" alt="" class="right" style="margin-top:14px;"></span>
+        <input type="text" class="input mt20" style="width:100%;">
+    </div>
+    <div class="center">
+        <span class="sure">确定</span>
+    </div>
+</div>
+<!--添加子课弹窗结束-->
+
+<!--加课次的结束-->
+<div class="pop-mask"></div>
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/header.js"></script>
+<script src="../../../build/js/backStage/class-management-asetDetail.js"></script>
+</body>
+</html>

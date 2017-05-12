@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link href='css/com.less' type="text/css" rel="stylesheet" />
+    <link href='css/tree.css' type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+   
+    <div>
+        <p>组1</p>
+        <luicheck class="lui_checkbox" data-name="g1" data-val="01" data-text="我是自定义1" data-checked="0"></luicheck>
+        <luicheck class="lui_checkbox" data-name="g1" data-val="02" data-text="我是自定义2" data-checked="0"></luicheck>
+        <input type="button" onclick="setg1('g1','01')" value="设置值"/>
+<input type="button" onclick="getg1('g1')" value="获取值"/>
+</div>
+<div>
+    <p>组2</p>
+    <luicheck class="lui_checkbox" data-name="g2" data-val="01" data-text="我是自定义3" data-checked="0"></luicheck>
+    <luicheck class="lui_checkbox" data-name="g2" data-val="02" data-text="我是自定义4" data-checked="0"></luicheck>
+    <input type="button" onclick="setg1('g2','02')" value="设置值"/>
+<input type="button" onclick="getg1('g2')" value="获取值"/>
+</div>
+<hr/>
+<!--<div class="lui_tree_warp">
+<ul>
+    <li>
+        
+         <luicheck class="lui_checkbox" data-name="tree_1"  data-val="01" data-text="" data-checked="0"></luicheck>
+        <i class="icon icon_op open"></i>
+        <a>first</a>
+       <ul>
+    <li>
+        <i class="icon icon_check check_sel"></i>
+        <i class="icon icon_op open"></i>
+        <a>first</a>
+    </li>
+    <li>
+        <i class="icon icon_check check_sel"></i>
+        <i class="icon icon_op open"></i>
+        <a>second</a>
+    </li>
+    <li>
+        <i class="icon icon_check check_sel"></i>
+        <i class="icon icon_op open"></i>
+        <a>third</a>
+    </li>
+</ul>
+    </li>
+    <li>
+        <i class="icon icon_check check_sel"></i>
+        <i class="icon icon_op open"></i>
+        <a>second</a>
+    </li>
+    <li>
+        <i class="icon icon_check check_sel"></i>
+        <i class="icon icon_op open"></i>
+        <a>third</a>
+    </li>
+</ul>
+</div>-->
+<hr/>
+<div id="tree_demo1"></div>
+<div id="tree_demo2"></div>
+<!--<div class="lui_dropdownlist">-->
+<div id="drop_demo1"></div>
+<div id="drop_demo2"></div>
+<!--</div>-->
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/checkbox.js"></script>
+<script type="text/javascript" src="js/tree.js"></script>
+<script type="text/javascript" src="js/dropdownlist.js"></script>
+<script type="text/javascript" src="js/lui.js"></script>
+<script>
+                                      var t1, t2;
+                                      $(function () {
+
+
+                                          /*初始化树
+                              *warpid 容器ID
+                              *nameField 节点展示内容字段
+                              *idField   节点绑定id字段
+                              *parentField 节点父级ID
+                              *data      数据列表 json格式
+                              *showParentCheckBox 父节点元素是否显示复选框
+                              *showCheckBox 子节点元素是否显示复选框
+                              */
+                                          var p = {
+                                              warpid: "tree_demo1", nameField: 'name', idField: 'id', parentField: 'pid', isOnlyLeafCallBack: true, showParentCheckBox: true, showCheckBox: true, data: [{ name: '01', id: '00', pid: '' }, { name: '02', id: '00_01', pid: '00' }, { name: '03', id: '00_02', pid: '00' }, { name: '04', id: '00_01_01', pid: '00_01' }, { name: '05', id: '00_01_02', pid: '00_01' }, { name: '06', id: '00_02_01', pid: '00_02' }, { name: '07', id: '00_02_02', pid: '00_02' }], selectedCallBack: function (groupname, val) {
+                                                  // var j=JSON.parse(unescape(val));
+                                                  console.log(val);
+                                              }
+                                          };
+                                          var p2 = {
+                                              warpid: "tree_demo2", nameField: 'name', idField: 'id', parentField: 'pid', isOnlyLeafCallBack: true, showParentCheckBox: true, showCheckBox: true, data: [{ name: '01', id: '00', pid: '' }, { name: '02', id: '00_01', pid: '00' }, { name: '03', id: '00_02', pid: '00' }, { name: '04', id: '00_01_01', pid: '00_01' }, { name: '05', id: '00_01_02', pid: '00_01' }, { name: '06', id: '00_02_01', pid: '00_02' }, { name: '07', id: '00_02_02', pid: '00_02' }], selectedCallBack: function (groupname, val) {
+                                                  // var j=JSON.parse(unescape(val));
+                                                  console.log(val);
+                                              }
+                                          };
+                                          // var p={warpid:"tree_demo1",nameField:'name',idField:'id',parentField:'pid',showParentCheckBox:false,showCheckBox:false,data:[{name:'01',id:'00',pid:''},{name:'02',id:'00_01',pid:'00'},{name:'03',id:'00_02',pid:'00'},{name:'04',id:'00_01_01',pid:'00_01'},{name:'05',id:'00_01_02',pid:'00_01'},{name:'06',id:'00_02_01',pid:'00_02'},{name:'07',id:'00_02_02',pid:'00_02'}]}
+
+
+                                          t2 = lui.initTree(p2);
+                                          t1 = lui.initTree(p);
+                                          lui.initDropDownList({ warpid: "drop_demo1",width:200, nameField: 'name', idField: 'id', data: [{ name: '01', id: '00', pid: '' }, { name: '02', id: '00_01', pid: '00' }, { name: '03', id: '00_02', pid: '00' }, { name: '04', id: '00_01_01', pid: '00_01' }, { name: '05', id: '00_01_02', pid: '00_01' }, { name: '06', id: '00_02_01', pid: '00_02' }, { name: '07', id: '00_02_02', pid: '00_02' }] });
+ lui.initDropDownList({ warpid: "drop_demo2",width:200, nameField: 'name', idField: 'id', data: [{ name: '01', id: '00', pid: '' }, { name: '02', id: '00_01', pid: '00' }, { name: '03', id: '00_02', pid: '00' }, { name: '04', id: '00_01_01', pid: '00_01' }, { name: '05', id: '00_01_02', pid: '00_01' }, { name: '06', id: '00_02_01', pid: '00_02' }, { name: '07', id: '00_02_02', pid: '00_02' }] });
+                                          //  lui.checkBox.init();
+                                      })
+                                      var lui = new Lui();
+                                      function getg1(g) {
+                                          lui.checkBox.getValue(g);
+                                      }
+                                      function setg1(g, val) {
+                                          lui.checkBox.setValue(g, val);
+                                      }
+    </script>
+
+</body>
+
+</html>

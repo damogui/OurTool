@@ -1,0 +1,48 @@
+@import "./student-reset.less";
+.main-pop{
+  width:80%;
+  min-height:728px;
+  .return{margin-top:50px;margin-left:50px;}
+  .div-result{
+    width: 510px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    color: #fe932e;
+    .result-img{background: url(../../img/student-test-end.png) no-repeat; width: 100%;height: 170px;background-position-x:172px; }
+    .result-text{font-size: 36px;font-weight: bold;}
+    .result-split{border-top: solid 1px #ffc066}
+    .result-content{font-size: 20px;}
+  }
+
+  .start-learn{
+    height:230px;
+    background:#fe932e;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    position:relative;
+    line-height: 230px;
+    text-align: center;
+    .btn{
+      padding:0 210px;
+      height:60px;
+      line-height:60px;
+      background:#fff;
+      color:#fe932e;
+      font-size:22px;
+      border:1px solid #fe932e;
+    }
+  }
+  .start-learn:before{
+    content:'';
+    position:absolute;
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-bottom:20px solid #fe932e;
+    top:-20px;
+    left:50%;
+    -ms-transform:translate(-50%,0%);
+    -o-transform:translate(-50%,0%);
+    -webkit-transform:translate(-50%,0%);
+    -moz-transform:translate(-50%,0%);
+  }
+}

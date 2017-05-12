@@ -1,0 +1,66 @@
+@import "../comm/egComm.less";
+#content{
+ min-height:740px;
+  margin-top:30px;
+  font-size:0;
+  position:relative;
+  table{
+    border:1px solid #dbe1e8;
+  }
+  .table tr:first-child{
+    border-top:1px solid #dbe1e8;
+  }
+  tr td:last-child{
+    color:#fd7b42;
+  }
+  .left-content{
+    font-size:14px;
+    display:inline-block;
+    width:15%;
+    height:100%;
+    .list-content,.header{
+      text-align:center;
+      font-size:16px;
+      img{vertical-align: middle;margin-right:15px;}
+      height:110px;
+      line-height:110px;
+    }
+    .list-content{
+      height:55px;
+      line-height:55px;
+      background:#d9edfd;
+    }
+    .list-list{
+      width:90%;
+      margin-left:10%;
+      text-align:center;
+      border:1px solid #ebebeb;
+      ul{
+        li{
+          height:43px;
+          line-height:43px;
+          border-bottom:1px solid #ebebeb;
+        }
+        li:last-child{
+          border-bottom:none;
+        }
+        li:hover{
+          background:#edf0f4;
+        }
+      }
+    }
+  }
+  .right-conent{
+    font-size:14px;
+    width:85%;
+    vertical-align: top;
+    display:inline-block;
+  }
+  .border{
+    position:absolute;
+    display:inline-block;
+    width:1px;
+    height:100%;
+    background:#dbdbdb;
+  }
+}

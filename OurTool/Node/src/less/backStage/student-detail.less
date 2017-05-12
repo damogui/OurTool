@@ -1,0 +1,173 @@
+@import "../comm/egComm.less";
+@import "../../LUI/css/com.less";
+.mr20{margin-right:20px;}
+.mt20{margin-top:20px;}
+.title-content{width:88%;}
+#content{
+
+  width:88%;
+  .content-mesg{
+    padding:0 0 0 70px;
+  }
+  .color{
+    color:#0084f3;
+  }
+  .red{
+    color:#ff4901;
+  }
+  min-height:660px;
+  .headers{
+    position:relative;
+    height:112px;
+    text-align:right;
+    line-height:112px;
+    padding-right:40px;
+    margin-right:45px;
+    .addbtn{height:30px;line-height:30px;padding:0 25px;margin-right:10px;}
+    .manage{
+      padding:0;
+      position:relative;
+      width:100px;
+      height:30px;
+      top:10px;
+    }
+    .managebtn{
+      position:absolute;
+      z-index:1;
+      width:80px;
+      left:0px;
+
+    }
+    .drop{
+      position:absolute;
+      width:100px;
+      background: #f7f6f6;
+      top:40px;
+      left:0;
+      display:none;
+    }
+    .operate{
+      border-radius:4px;
+
+      width: 100%;
+      color: #838f97;
+      border: 1px solid #d9d9d9;
+      li:hover{
+        background:#e7e9ea;
+      }
+    }
+  }
+  .filter{
+    padding:0 30px 0 50px;
+    height:65px;
+  }
+  .table{
+    width:70%;
+   }
+  .table tr:first-child {
+    border-top: 1px solid #dbe1e8;
+  }
+  td.red{
+    color:#ff5a00;
+  }
+}
+#sing-up{
+  width:458px;
+  height:570px;
+  .body{
+    padding:35px 0 45px 45px;
+    .input-name{display:block;}
+    .first{margin-right:10px;color:#707070;}
+    .tip{
+      color:#ff8467;
+      margin-left:15px;
+    }
+  }
+}
+#sing-out{
+  width:500px;
+  height:525px;
+  .body{
+    padding:50px 0 35px 60px;
+  }
+
+}
+#change-class,#add-classOrder,#change-prounce{
+  width:470px;
+  max-height:460px;
+  padding-bottom:30px;
+  .body{
+    padding:30px 0px 30px 0px;
+  }
+  .overflow{
+    max-height: 160px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  #updateReadCourse{
+      display: inline-block;
+      width: 283px;
+      font-size:0;
+      vertical-align:top;
+      margin-top: -5px;
+      label{
+          font-size:14px;
+          width:100%;
+          display:inline-block;
+          margin-left:0!important;
+          line-height:30px;
+      }
+  }
+}
+.spans{
+  display:inline-block;
+  height:40px;
+  line-height:40px;
+  padding:0 25px;
+  cursor: pointer;
+  color:#696969;
+  background:#eff4f7;
+  border:1px solid #828385;
+  border-left:none;
+  border-right:none;
+}
+.line-border{
+  width:1px;
+  height:42px;
+  margin-top:0px;
+  background:blue;
+  display:inline-block;
+}
+
+.spans:first-of-type{border-top-right-radius:4px;border-bottom-right-radius:4px;border-right:1px solid #828385;}
+.spans:last-of-type{border-top-left-radius:4px;border-bottom-left-radius:4px;border-left:1px solid #828385;}
+.spans:first-of-type:hover{border:1px solid blue;border-left:none;background:#0084f3;color:#fff;}
+.spans:last-of-type:hover{border:1px solid blue;border-right:none;background:#0084f3;color:#fff;}
+
+.spans.active:first-of-type{background:#0084f3;color:#fff;border:1px solid blue;border-left:none;}
+.spans.active:last-of-type{background:#0084f3;color:#fff;border:1px solid blue;border-right:none;}
+.mt15{margin-top:15px;}
+#stuCourse{
+    display:inline-block;
+    width:325px;
+    font-size:0;
+    margin-top: -5px;
+}
+#stuCourse label{
+    font-size:14px;
+    display:inline-block;
+    width:100%;
+    line-height: 30px;
+}
+
+.radioRead{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:url('../../../build/img/radio-single.png') 0 1px no-repeat;
+    vertical-align:middle;
+}
+.radioRead.active{
+     background:url('../../../build/img/active-radio.png') 0 0px no-repeat;
+}
+

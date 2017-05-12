@@ -1,0 +1,92 @@
+.lui_checkbox{
+/*防止双击选中*/
+-moz-user-select:none;
+.icon_check{background: url('../img/checkico.png');background-repeat: no-repeat; width: 16px;height: 16px;display:inline-block;}
+.check_def{background-position:0 0 }
+.check_sel{background-position: 0 -77px;}
+}
+
+/*dropdownlist  start ---------------------*/
+.lui_dropdownlist{
+    padding: 8px 40px 8px 10px;
+    text-align: center;
+    padding-bottom: 5px;
+     position: relative;
+    // border-color: rgb(169, 186, 195);
+    border:1px solid #8e9fa8;
+    border-radius: 5px;
+    height: 20px;
+    background: #fff;
+    padding: 8px 25px 8px 15px;
+    line-height: 20px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+
+    .dn{display: none}
+    .dropul{
+    margin: 0;
+    padding: 0;
+    position: static;
+    margin-top: 7px;
+    // border: 1px solid rgb(169, 186, 195);
+    border: 1px solid #d2d2d2;
+    
+    border-radius: 5px;
+    left: 0;
+    width: 100%;
+    line-height: 30px;
+    background: #fff;
+    z-index: 99;
+    li{list-style: none;}
+     li:hover {
+    background: #f7f6f6;
+}
+    }
+
+.num_down {
+    right: 20px;
+    bottom: 14px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #c2c2c2;
+    position: absolute
+}
+.num_up {
+    border-bottom: 6px solid #c2c2c2;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    cursor: pointer;
+}
+.dropdiv {
+    position: absolute;
+    top: 38px;
+    border: 0 solid #d2d2d2;
+    border-radius: 5px;
+    left: 0;
+    width: 100%;
+    line-height: 30px;
+    min-height: 5px;
+    padding-top: 3px;
+    padding-bottom: 0;
+    z-index: 99;
+    // display: none;
+} 
+}
+/*dropdownlist  end ---------------------*/
+
+/**单词发音*/
+.lui_wordspeak{
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    margin-left: 6px;
+    margin-right: 20px;
+    cursor: pointer;
+    background: url(../img/wordico.png) -4px -4px no-repeat;
+    vertical-align: middle;
+    &:hover {background:url("../img/sound-play.gif") no-repeat;}
+}

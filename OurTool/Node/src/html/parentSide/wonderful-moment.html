@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/egword/build/dep/SUI-Mobile/css/sm.css">
+    <link rel="stylesheet" href="/egword/build/css/parentSide/wonderful-moment.css">
+    <title>我的班级</title>
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current bg" id="wonderful-moment">
+        <!-- 你的html代码 -->
+        <header class="bar bar-nav">
+            <h1 class="title">
+                <span class="one">课程评价</span>
+                <span class="active two">精彩瞬间</span>
+            </h1>
+        </header>
+        <div class="content">
+
+            <div class="cont">
+
+                <div class="img">
+                    <img src="../../../build/img/slides-1.png" alt="">
+                </div>
+                <div class="img">
+                    <img src="../../../build/img/slides-1.png" alt="">
+                </div>
+                <div class="img">
+                    <img src="../../../build/img/slides-1.png" alt="">
+                </div>
+            </div>
+            <div class="no-record">
+                <img src="../../../build/img/no-record.png" alt="">
+                <p style="color:#b4bfc6;">暂无记录</p>
+            </div>
+        </div>
+        <nav class="bar bar-tab">
+            <img src="../../../build/img/parent-button.png" alt="">
+        </nav>
+    </div>
+
+</div>
+<div class="pop-mask"><img src="../../../build/img/slides-1.png" alt=""></div>
+<!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->
+<script type="text/javascript" src="/egword/build/dep/SUI-Mobile/js/zepto.min.js"></script>
+<script type="text/javascript" src="/egword/build/dep/SUI-Mobile/js/sm.js"></script>
+<script type="text/javascript" src="/egword/build/js/parentSide/wonderful-moment.js"></script>
+    <script>
+        $(document).on('click', '.img', function () {
+            $('.pop-mask').show();
+            var htnlval = $(this).html();
+            $('.pop-mask').html(htnlval)
+
+        })
+      $(document).on('click', '.pop-mask img', function () {
+           $('.pop-mask').html('');
+            $('.pop-mask').hide();
+        })
+    </script>
+</body>
+</html>

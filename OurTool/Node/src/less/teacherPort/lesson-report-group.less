@@ -1,0 +1,104 @@
+@import "./teacher-reset.less";
+
+.bg {
+    background: #ebf8ff;
+}
+
+.card {
+    margin: 0;
+    box-shadow: none;
+
+    .card-header {
+        color: #009ee2;
+        padding: 1rem 0.75rem 0.75rem 1.65rem;
+        font-size: 0.55rem;
+
+        &:after {
+            background: none;
+        }
+    }
+
+    .card-content-inner {
+        padding: 0 0.9rem;
+        //.content-block-title{}
+        .list-block {
+            margin: 0;
+
+            .item-content {
+                padding: 0;
+                //border-bottom: solid 0.05rem #E5E5E5;
+                height: 2.6rem;
+                margin-top: 0.5rem;
+
+                .item-media {
+                    width: 0.25rem;
+                    background: #eeeeee;
+                    border: solid 0.05rem #d2d2d2;
+                    height: 100%;
+                    border-top-left-radius: 0.25rem;
+                    border-bottom-left-radius: 0.25rem;
+                }
+
+                .item-media.green {
+                    background: #84db1d;
+                    border: solid 0.05rem #1bbc9b;
+                }
+
+                .item-media.yellow {
+                    background: #ffc000;
+                    border: solid 0.05rem #ffa200;
+                }
+
+                .item-media.red {
+                    background: #e95026;
+                    border: solid 0.05rem #d3001c;
+                }
+
+                .seq {
+                    position: absolute;
+                    left: 18rem/@base-f;
+                    top: -14rem/@base-f;
+                }
+
+                .seq-num {
+                    position: absolute;
+                    left: 28rem/@base-f;
+                    top: 0.55rem;
+                    //margin-left: 28rem/@base-f;
+                    font-size: 1rem;
+                    font-style:normal;
+                }
+
+                .item-inner {
+                    margin-left: 0;
+                    height: 100%;
+                    border: solid 0.05rem #d5d5d5;
+                    border-left: none;
+                    border-top-right-radius: 0.25rem;
+                    border-bottom-right-radius: 0.25rem;
+
+                    .item-title {
+                        margin-left: 110rem/@base-f;
+                        color: #5d6467;
+                        font-size: 0.75rem;
+                    }
+                    .item-after {
+                        .word-num {
+                            color: #ff5400;
+                        }
+                    }
+                    &:after {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .card-footer {
+        &:before {
+            background: none;
+        }
+    }
+}

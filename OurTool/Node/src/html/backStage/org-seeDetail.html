@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/org-seeDetail.css">
+</head>
+<body>
+<div id="eg-header"></div>
+<div class="title-content">
+    <span>学生列表</span>&nbsp;>&nbsp;<span>查看详情</span>
+</div>
+<div id="content">
+    <div class="btns">
+        <div class="addbtn editMesg" style="margin-right:10px;">编辑</div>
+        <div class="addbtn saveVal" style="margin-right:10px;">储值</div>
+        <div class="addbtn" style="margin-right:30px;">冻结账号</div>
+    </div>
+    <div class="contetn-show">
+        <div>
+            <div class="response-div">
+                <span>机构名称 :</span><span>创新教育</span>
+            </div>
+        </div>
+        <div>
+            <div class="response-div mt20">
+                <span>合同类型 :</span><span>金牌机构</span>
+            </div>
+            <div class="response-div">
+                <span>储值折扣 :</span><span>6折</span>
+            </div>
+            <div class="response-div">
+                <span>储值余额 :</span><span>149300元</span>
+            </div>
+        </div>
+        <div>
+            <div class="response-div mt20">
+                <span>到期时间 :</span><span>2017</span>
+            </div>
+            <div class="response-div">
+                <span>签约渠道 :</span><span>渠道代理团队</span>
+            </div>
+         </div>
+        <div>
+            <div class="response-div mt20">
+                <span>所在区域 :</span><span>北京市海淀区</span>
+            </div>
+            <div class="response-div">
+                <span>区域等级 :</span><span>一级</span>
+            </div>
+            <div class="response-div">
+                <span>教研评级 :</span><span>B级</span>
+            </div>
+        </div>
+        <div>
+            <div class="response-div">
+                <span>生源量/年 :</span><span>5000-10000人</span>
+            </div>
+            <div class="response-div mt20">
+                <span>校区数量 :</span><span>5-10个</span>
+            </div>
+        </div>
+        <div>
+            <div class="response-div">
+                <span>销售额/年 :</span><span>50000-100000元</span>
+            </div>
+            <div class="response-div mt20">
+                <span>教师数量 :</span><span>50-100人</span>
+            </div>
+        </div>
+        <div>
+            <div class="response-div">
+                <span>机构联系人 :</span><span>王老师</span>
+            </div>
+            <div class="response-div mt20">
+                <span>电话 :</span><span>13828373734</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!--编辑信息弹窗开始-->
+<div class="eg-pop hide" id="edit-pop">
+    <div class="header">
+        编辑信息
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div class="divinput">
+            <div class="left">
+                <span class="first">合同类型:</span>
+                <div class="inline" id="drop_demo1"></div>
+            </div>
+            <div class="right">
+                <span class="first">教研评级:</span>
+                <div class="inline" id="drop_demo2"></div>
+            </div>
+        </div>
+        <div class="divinput mt30">
+            <div class="left">
+                <span class="first">合同延期:</span>
+                <div class="inline" id="drop_demo3"></div>
+            </div>
+            <div class="right">
+                <span>目前合同到期时间：2017/01/01</span>
+            </div>
+        </div>
+        <div class="divinput mt30">
+            <div class="left">
+                <span class="first">储值折扣:</span>
+                <div class="inline" id="drop_demo4"></div>
+            </div>
+        </div>
+        <div class="divinput mt30">
+            <div class="left">
+                <span>机构联系人:&nbsp;&nbsp;</span>
+                <input type="text" class="input" style="width:185px;">
+            </div>
+            <div class="right">
+                <span class="first">电话:</span>
+                <input type="text" class="input" style="width:155px;">
+            </div>
+        </div>
+        <div class="divinput mt30">
+            <div class="left">
+                <span class="first">通讯地址:</span>
+                <input type="text" class="input" style="width:414px;">
+            </div>
+        </div>
+        <div class="divinput mt30">
+            <div class="left">
+                <span class="first left" style="width:64px;text-align:right;">备注:</span>
+                <input type="text" class="input rigth" style="width:414px;height:70px;">
+            </div>
+        </div>
+    </div>
+    <div class="center" style="margin-top:40px;">
+        <span class="sure" style="padding-left:50px;padding-right:50px;margin-right:110px;">确定</span><span class="cancel" style="padding-left:50px;padding-right:50px;">取消</span>
+    </div>
+</div>
+<!--编辑信息弹窗结束-->
+<!--储值弹窗辑开始-->
+<div class="eg-pop hide" id="save-pop">
+    <div class="header">
+        编辑信息
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div style="height:20px;margin-bottom:40px;">
+            <span class="first left"><span>机构</span>机构名称:</span>
+            <span>创新教育</span>
+        </div>
+        <div class="divinput mt30">
+            <div class="left">
+                <span class="first left">机构付款金额:</span>
+                <input type="text" class="input" style="width:125px;">
+            </div>
+            <div class="right">
+                <span class="first">折扣:</span>
+                <div id="drop_demo5"></div>
+            </div>
+        </div>
+        <div class="divinput mt30">
+            <div class="left">
+               <span class="first left"><span class="checkBox"><img src="../../../build/img/ok-img.png" alt="" class="checked-img"></span>奖励储值:</span>
+                <input type="text" class="input" style="width:360px;">
+            </div>
+        </div>
+        <div class="divinput mt30">
+            <div class="left">
+                <span class="first left"><span class="white">备注备注</span>备注:</span>
+                <input type="text" class="input rigth" style="width:360px;" value="特此奖励">
+            </div>
+        </div>
+        <div class="center" style="margin-top:50px;">
+            <p>机构储值余额将会增加：21000</p>
+        </div>
+    </div>
+
+    <div class="center" style="margin-top:40px;">
+        <span class="sure" style="padding-left:50px;padding-right:50px;margin-right:110px;">确定</span><span class="cancel" style="padding-left:50px;padding-right:50px;">取消</span>
+    </div>
+</div>
+<!--储值信息弹窗结束-->
+<div class="pop-mask"></div>
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/header.js"></script>
+<script src="../../../build/js/backStage/org-seeDetail.js"></script>
+
+</body>
+</html>

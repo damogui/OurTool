@@ -1,0 +1,131 @@
+@import "../comm/egComm.less";
+@import "../../LUI/css/com.less";
+#content{
+  margin-top:30px;
+  min-height:685px;
+  font-size:0;
+  position:relative;
+  .left-content{
+    font-size:14px;
+    display:inline-block;
+    width:20%;
+
+    vertical-align:top;
+    .left-title:hover,.untitle-title:hover{
+      cursor:pointer;
+
+    }
+    .left-title,.untitle-title{
+      text-align:center;
+      color:#0057e6;
+      height:53px;
+      line-height:53px;
+       a.active{
+          display:inline-block;
+          width:100%;
+         color:#0057e6;
+      }
+      .left-img{
+        display:inline-block;
+        width:16px;
+        height:16px;
+        background:url('../../../build/img/echart_student_1.png') no-repeat;
+        margin-left:30px;
+        margin-right:20px;
+        vertical-align:middle;
+      }
+      .record{margin-right:70px;}
+      .right-img,.right_img,.imgs_right{
+        display:inline-block;
+        width:14px;
+        height:14px;
+        background:url('../../../build/img/cart.png') no-repeat;
+        vertical-align:middle;
+      }
+      .right_img{
+          background:url('../../../build/img/img-right.png') no-repeat;
+      }
+    }
+    .untitle-title{
+      margin-top:0;
+      border:0;
+      background:#fff;
+      color:#838f97;
+      .left-img{
+        background:url('../../../build/img/$_1.png') no-repeat;
+            background-size: contain;
+      }
+      .coming{
+            background:url('../../../build/img/echart_incoming.png') no-repeat;
+      }
+      .right-img{
+        background:none;
+      }
+    }
+  }
+  .center-border{
+    width:1px;
+    height:100%;
+    background:#dbe1e8;
+    position:absolute;
+    display:inline-block;
+  }
+  .right-content{
+    margin-left:-2px;
+    width:80%;
+    display:inline-block;
+    font-size:14px;
+    padding:0;
+    .choose-title{
+      padding:30px 35px 30px 35px;
+      border-bottom:1px solid #dfdfdf;
+    }
+
+    .bottom-content{
+      font-size:0;
+      .ratio{
+        display:inline-block;
+        text-align:center;
+        width:49%;
+        height:50px;
+        position:relative;
+        border-right:1px solid #dcdcdc;
+        .top{
+          position:relative;
+          top:-10px;
+          font-size:16px;
+        }
+        .bottom{
+          font-size:28px;
+          position:relative;
+          bottom:-10px;
+        }
+      }
+      .tab{
+        width:70%;
+        font-size:0;
+        .tabs{
+          width:33.3%;
+          height:45px;
+          line-height:45px;
+          font-size:16px;
+          text-align:center;
+          display: inline-block;
+          border-bottom:2px solid #e5e5e5;
+        }
+        .tabs.active{
+          border-bottom:2px solid #1a82ff;
+          color:#1a82ff;
+        }
+      }
+      .echart_div{
+        width: 500px;
+        height:270px;
+        margin: 0 auto;
+        margin-top: 60px;
+        font-size:16px;
+        margin-bottom:50px;
+      }
+    }
+  }
+}

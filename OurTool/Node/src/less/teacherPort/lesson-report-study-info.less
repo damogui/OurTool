@@ -1,0 +1,81 @@
+@import "./teacher-reset.less";
+
+.bg{background: #ebf8ff;}
+.content {
+
+  .card {
+    //padding-left:0.9rem;
+    margin: 2.175rem 0.4rem;
+    box-shadow: none;
+    .head-before {
+      width: 100%;
+      height: 0.175rem;
+      background: #7ad8ff;
+      border: solid 0.05rem #1bbaff;
+      border-top-left-radius: 0.175rem;
+      border-top-right-radius: 0.175rem;
+    }
+    .card-header {
+      font-size: 30rem/@base-f;;
+      color: #5d6467;
+    }
+    .lesson-circle{
+      position: absolute;right: 20px;top:-10px;
+      width: 2rem;height: 2rem;display: inline-block;border-radius: 1rem;
+      font-size: 0.45rem;line-height: 2rem;text-align: center;
+      @media  only screen and (max-width: 374px){
+        width: 2.3rem;height: 2.3rem;border-radius: 1.15rem;line-height: 2.3rem;
+      }
+    }
+    .lesson-circle.over{
+      background: #eeeeee;
+      border: solid 1px #cdcdcd;
+      color: #5c5c5c;
+    }
+    .lesson-circle.normal{
+      background: #eef9fd;
+      border: solid 1px #0ca1ff;
+      color: #0ca1ff;
+    }
+    .card-content-inner {
+      .content-block-title {
+        color: #1bbaff;
+        font-weight: bold;
+        font-size: 34rem/@base-f;
+        &:before {
+          content: "";
+          width: 0.4rem;
+          height: 0.6rem;
+          background: #7ad8ff;
+          border: solid 1px #66b9dc;
+          display: inline-block
+        }
+      }
+      padding: 0;
+      .list-block {
+        margin: 0;
+        .item-content {
+          padding-left: 1.3rem;
+          .item-inner {
+            .item-title {
+              font-size: 30rem/@base-f;
+              color: #5d6467;
+              .word-num{color:#ff5400;}
+              .item-remark{margin-left:2.5rem }
+            }
+            .item-after {
+              font-size: 30rem/@base-f;
+              color: #9eadb6
+            }
+            &:after {
+              background: none;
+            }
+          }
+        }
+      }
+      .split{height: 0.025rem;background:#c9c9c9;margin: 0 1rem }
+    }
+
+  }
+}
+

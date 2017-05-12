@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Title</title>
+    <style>
+        html,body,div,p,a,dl,dt,dd,table,tr,td{padding: 0;margin: 0;}
+        dl{border: solid 1px #cecece;font-size: 12px}
+        dt{background: #0a8ddf;border: solid 1px #ffffff;height: 50px;line-height: 50px;text-align: center}
+        dd{border-bottom: solid 1px #c0c0c0;padding-left:10px;margin: 0 }
+        a{text-decoration: none;color: #cc5200}
+        a:link{color: rebeccapurple}
+
+    </style>
+    <script type="text/javascript" src="read.js"></script>
+
+</head>
+<body>
+<div id="wrap"></div>
+<script type="text/javascript">
+    var pdir;
+    var olddir;
+    var html='';
+
+    function wp(obj){
+        for(var p in obj)
+        {
+
+            if(typeof(obj[p])==="object")
+            {
+                pdir=p;
+                if(pdir!=olddir){
+
+                    html+='<dl>';
+                    html+='<dt data-isshow="true">'+p+'</dt>'
+                }
+                wp(obj[p]);
+                if(pdir!=olddir){
+                      olddir=pdir;
+                    html+='</dl>';
+
+                }
+            }
+            else{
+
+                var href="/egword/src/html/"+pdir+"/"+obj[p];
+                html+='<dd><a style="height: 50px;line-height: 50px;display: inline-block" href="'+href+'">'+p+"："+obj[p]+'</a></dd>';
+
+
+            }
+        }
+
+    }
+   wp(list);
+  document.getElementById("wrap").innerHTML=html;
+    var dts=document.getElementsByTagName("dt");
+    var len=dts.length;
+    for(var k=0;k<len;k++){
+        dts[k].addEventListener("click",function () {
+            var dds=this.parentElement.getElementsByTagName("dd");
+            var ddlen=dds.length;
+
+            if(this.getAttribute("data-isshow")=="true")
+            {
+                this.setAttribute("data-isshow","false");
+                for(var i=0;i<ddlen;i++){dds[i].style.display="none";}
+            }
+            else{
+                this.setAttribute("data-isshow","true");
+                for(var i=0;i<ddlen;i++){dds[i].style.display="block";}
+            }
+
+        })
+    }
+
+</script>
+</body>
+</html>

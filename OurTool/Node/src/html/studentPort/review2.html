@@ -1,0 +1,185 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/studentPort/review2.css">
+</head>
+<body>
+<div id="content">
+    <img src="../../../build/img/student-bg.png" alt="" class="bg-img">
+    <div class="main-pop auto review-word">
+        <div style="height:75px;"></div>
+        <div class="main-pops">
+            <div class="progress">
+                <span class="btn return">退出</span>
+                <div class="progress-bar">
+                    <div class="child-progress"></div>
+                </div>
+                <span class="color">3/10</span>
+                <div class="roate times">
+                    4s
+                </div>
+            </div>
+            <div class="content">
+                <div class="voice ">
+                    <div class="mt30">
+                        <span class="need">请选择正确的词义</span>
+                    </div>
+                    <div class="word">
+                        <span class="fl">disrupt</span>
+                        <div class="pronunce">
+                            <span>d</span>
+                            <span class="red">i</span>
+                            <span>s</span>
+                            <span>-</span>
+                            <span>r</span>
+                            <span class="red">u</span>
+                            <span>p</span>
+                            <img src="../../../build/img/horn.png" alt="" class="horn">
+                        </div>
+                    </div>
+                    <div class="btn"><span class="order">A</span>v.  使分裂, 使瓦解; 使混乱, 使中断</div><div class="btn"><span class="order">B</span>v.  使分裂, 使瓦解; 使混乱, 使中断</div><!--
+                    --><!--
+                    --><div class="btn error"><span class="order">C</span>v.  使分裂, 使瓦解; 使混乱, 使中断</div><!--
+                    --><img src="../../../build/img/big-error.png" alt="" class="vm"><!--
+                    --><div class="btn success"><span class="order">D</span>v.  使分裂, 使瓦解; 使混乱, 使中断</div><!--
+                    --><img src="../../../build/img/big-ok.png" alt="" class="vm">
+                </div>
+                <div class="voice ">
+                    <div class="need" style="margin-top:35px;height:85px;line-height:85px;">
+                        <span>听音拼写单词</span>
+                    </div>
+                    <div class="tell">
+                        <img src="../../../build/img/horn.png" alt="">
+                        <span class="see">看词义</span>
+                    </div>
+                    <div class="write">
+                        <input type="text">
+                        <input type="text">
+                        <i class="back-del"></i>
+                        <img src="/egword/build/img/error.png" class="word0-clear pointer" alt="">
+                        <span class="word0-right-answer-right">
+                            <img src="/egword/build/img/smail.png" alt="" class="ml30">
+                            <span class="success">正确拼写:<span>{{Answer}}</span></span>
+                        </span>
+                        <span class="none word0-right-answer-error">
+                            <img src="/egword/build/img/cry.png" alt="" class="ml30">
+                            <span class="error">正确拼写:<span>{{Answer}}</span></span>
+                        </span>
+                    </div>
+                    <div class="sing-word">
+                        <span>b</span>
+                        <span class="active">p</span>
+                        <span>ed</span>
+                        <span>ed</span>
+                        <span>ed</span>
+
+                    </div>
+                </div>
+                <div class="voice ">
+                    <div class="need" style="height:90px;line-height:90px;">
+                        <span>根据词意选择正确的单词</span>
+                    </div>
+                    <p class="mean" style="margin-bottom:20px;">v.  使分裂, 使瓦解; 使混乱, 使中断 </p>
+                    <div class="btn"><span class="order">A</span>disrupt</div>
+                    <div class="btn"><span class="order">B</span>abrupt</div>
+                    <div class="btn error"><span class="order">C</span>irrupt</div>
+                    <img src="../../../build/img/big-error.png" alt="" class="vm">
+                    <div class="btn success"><span class="order">D</span>interrupt</div>
+                    <img src="../../../build/img/big-ok.png" alt="" class="vm">
+                </div>
+                <div class="voice ">
+                    <div class="need" style="margin-top:35px;height:75px;line-height:75px;">
+                        <span>听音拼写单词</span>
+                    </div>
+                    <div class="tell">
+                        <span>n. 床，河床</span>
+                    </div>
+                    <div class="write">
+                        <input type="text">
+                        <input type="text">
+                    </div>
+                    <div class="sing-word">
+                        <span>b</span>
+                        <span class="active">p</span>
+                        <span>ed</span>
+                        <span>ed</span>
+                        <span>ed</span>
+
+                    </div>
+                </div>
+                <div class="voice">
+                    <div class="word" style="width:95%;border-bottom: 1px solid #d0d8dd;">
+                        {{Word}}
+                    </div>
+                    <div class="pronunce" style="float:none;margin-left:0;">
+                        <span style="font-size:0;" class="pronunce-guide">
+                            {{# $helpers.GetRedWord($data)}}
+
+                        </span>
+                        <i class="lui_wordspeak" data-src="{{Audio}}" data-auto="true" data-loop="2"></i>
+                        <!--<img src="/egword/build/img/horn.png" alt="" class="horn">-->
+                    </div>
+                    <div class="word-types">
+                        <!--单词类型0，熟词；1，夹生词；2，生词；-->
+                        {{if WordType==2}}
+                        <div>
+                            <span class="konow-gap-guide">
+                                <span class="konow-gap">陌</span>
+                                <span>陌生词，分音节，慢速跟读三遍</span>
+
+                            </span>
+                        </div>
+                        {{else if WordType==1}}
+                        <div class="">
+                            <span class="konow-gap-guide">
+                                <span class="konow-gap">生</span>
+                                <span>夹生词，分音节，快速跟读两遍</span>
+                            </span>
+                        </div>
+                        {{/if}}
+
+
+                    </div>
+                    <div class="anysis ">
+                        {{each WordNatures as v i}}
+                        <span>{{v}}</span>
+                        <br />
+                        {{/each}}
+
+                    </div>
+                    <div class="remumber ">
+                        <div class="wordWrap"><span class="mr10">【记忆法】</span>{{Rember}}</div>
+                    </div>
+                    <div class="btns" id="btn-learn-next" style="margin-top:35px;background: #ff8b1e;border: 1px solid #ff3c00;width: 100%;text-align:center;color:#fff;padding:0;">下一个</div>
+                </div>
+            </div>
+            <div style="height:203px;"></div>
+        </div>
+        <div style="height:190px;"></div>
+    </div>
+</div>
+<!--弹框-->
+<div class="eg-pop none">
+    <div class="header">
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <img src="../../../build/img/pop-img.png" alt="">
+        <div class="text">
+            <p>复习词汇量：<span>20</span></p>
+            <p>正确率：<span style="font-size:14px;color:#fff;">汇量</span><span>80%</span></p>
+        </div>
+        <div class="word">你还有10个词汇尚未复习！</div>
+    </div>
+    <div class="oprt">
+        <span class="btn">确定退出</span>
+        <span class="btns fr">继续复习</span>
+    </div>
+</div>
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/studentPort/header.js"></script>
+</body>
+</html>

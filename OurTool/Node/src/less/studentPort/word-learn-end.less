@@ -1,0 +1,75 @@
+@import "./student-reset.less";
+.main-pops{
+    min-height:620px;
+  position:relative;
+  .return{
+    margin-top:50px;margin-left:50px;
+    background:#fff;
+    color:#fe932e;
+    padding:0 30px;
+    height:30px;
+    line-height:30px;
+  }
+  img{
+    position:absolute;
+    top:133px;
+
+    left:50%;
+    -ms-transform:translate(-50%,0);
+    -o-transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+    -moz-transform:translate(-50%,0);
+
+}
+  .congration{
+    position:absolute;
+    top:380px;
+    left:50%;
+    -ms-transform:translate(-50%,0);
+    -o-transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+    -moz-transform:translate(-50%,0);
+    font-size:24px;
+    color:#fff;
+  }
+  .learn-end{
+    background:#fe932e;
+    height:495px;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    position:relative;
+  }
+  .learn-end:after{
+    content:'';
+    position:absolute;
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-top:20px solid #fe932e;
+    bottom:-20px;
+    left:50%;
+    z-index:10;
+    -ms-transform:translate(-50%,0%);
+    -o-transform:translate(-50%,0%);
+    -webkit-transform:translate(-50%,0%);
+    -moz-transform:translate(-50%,0%);
+  }
+  .start-learn{
+    height:230px;
+    background:#fff;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    position:relative;
+    line-height: 230px;
+    text-align: center;
+    .btn{
+      background:#ff9f44;
+      padding:0 210px;
+      height:50px;
+      line-height:50px;
+      color:#fff;
+      text-shadow:1px -1px 1px #ff7044,2px -1px 1px #ff7044;
+      font-size:22px;
+      border:1px solid #fe932e;
+    }
+  }
+}

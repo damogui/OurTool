@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/egword/build/dep/SUI-Mobile/css/sm.css">
+    <link rel="stylesheet" href="/egword/build/css/parentSide/lesson-report.css">
+    <title>我的班级</title>
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current bg" id="lesson-report">
+        <!-- 你的html代码 -->
+        <div class="content">
+
+                <header class="bar bar-nav">
+                    <button class="button button-link button-nav pull-left">
+                        <span class="icon icon-left"></span>
+                     </button>
+                    <button class="button button-link button-nav pull-right">
+                        <span class="icon icon-right"></span>
+                    </button>
+                    <h1 class="title">
+                        <div class="tabs">
+                            <div class="box active">最新报名课程</div>
+                            <div class="box">课程2</div>
+                            <div class="box">课程3</div>
+                            <div class="box">课程4</div>
+                        </div>
+                    </h1>
+                </header>
+
+
+            <div class="mesg-show">
+                <div class="data">
+                    <div class="box">
+                        <span  style="color:#ff9000;">620</span>
+                        <span class="p">已掌握单词</span>
+                    </div>
+                    <div class="box">
+                        <span  style="color:#45c6fc;">900</span>
+                        <span class="p">目标词汇量</span>
+                    </div>
+                    <div class="box">
+                        <span style="color:#ff3000;">55</span>
+                        <span class="p">单元测100分</span>
+                    </div>
+                </div>
+                <div class="report">
+                    <p class="title">每次课程报告都在这里</p>
+                    <div class="list-block media-list">
+                        <ul>
+                            <li>
+                                <a href="#" class="item-link item-content" style="background:#45c6fc;border-radius:0.3rem;">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title" >
+                                                <span style="font-size:1.2rem;float:left;">课2</span>
+                                                <span>新学单词：<span>99</span></span>
+                                                <span style="float:right;">单元小测：<span>5个100分</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title" >
+                                                <span style="font-size:1.2rem;float:left;">课1</span>
+                                                <span>新学单词：<span>99</span></span>
+                                                <span style="float:right;">单元小测：<span>5个100分</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="less-nodata">
+                <img src="../../../build/img/less-nodata.png" alt="">
+                <p style="color:#b4bfc6;">暂无数据</p>
+            </div>
+        </div>
+        <nav class="bar bar-tab">
+            <img src="../../../build/img/parent-button.png" alt="">
+        </nav>
+    </div>
+
+</div>
+
+<!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->
+<script type="text/javascript" src="/egword/build/dep/SUI-Mobile/js/zepto.min.js"></script>
+<script type="text/javascript" src="/egword/build/dep/SUI-Mobile/js/sm.js"></script>
+<script type="text/javascript" src="/egword/build/js/parentSide/lesson-report.js"></script>
+    <script>
+        $('.item-link').on('click', function () {
+           // $(this).css('background', '#45c6fc')
+            //return false;
+        })
+    </script>
+</body>
+</html>

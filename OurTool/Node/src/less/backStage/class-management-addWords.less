@@ -1,0 +1,65 @@
+@import "../comm/egComm.less";
+@import "../../LUI/css/com.less";
+.mt12{margin-top:12px;}
+.middle{cursor: pointer;}
+#content{
+  height:715px;
+  .first-part{
+    padding:30px 0 25px 50px;
+    border-bottom:1px solid #dbe1e8;
+   }
+  .addbtn{
+    height:35px;
+    line-height:35px;
+    margin-right:30px;
+    padding:0 30px;
+    border:1px solid #0000ff;
+  }
+  .choosedWord{
+    padding:20px 0 20px 0;
+    font-size:0;
+    .words{
+      display:inline-block;
+      font-size:14px;
+      height:35px;
+      line-height:35px;
+      padding:0 10px 0 20px;
+      border:1px solid #0000ff;
+      margin-right:15px;
+      border-radius:4px;
+      background:#0084f3;
+      color:#fff;
+      cursor: pointer;
+      .img{
+        display:inline-block;
+        width:14px;
+        height:14px;
+        background: url('../../build/img/word-close.png');
+        vertical-align:middle;
+        margin-left:15px;
+      }
+    }
+  }
+  .words-detail{
+    width:94%;
+    margin:0 auto;
+    .word{
+      padding:40px 50px 40px 100px;
+      border:1px solid #dbe1e8;
+      border-radius:4px;
+      height:35px;
+      .color{color:#0084f3;font-weight:600;}
+      .left{
+        width:25%;
+        height:35px;
+        line-height:35px;
+      }
+      .addbtn{padding:0 25px;margin-right:0;background:#fff;color:#838f97;border:1px solid #838f97;}
+      .addbtn:hover{
+        background:#0084f3;
+        color:#fff;
+        border:1px solid #0000ff;
+      }
+    }
+  }
+}

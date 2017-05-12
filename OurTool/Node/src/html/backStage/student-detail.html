@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/student-detail.css">
+</head>
+<body>
+<div id="eg-header" style="background:#00a2ff;"></div>
+<div class="title-content">
+    <span>学生列表</span>&nbsp;>&nbsp;<span>查看详情</span>
+</div>
+<div id="content">
+    <div class="header">
+        <span class="addbtn">编辑</span>
+        <span class="addbtn">重置密码</span>
+        <span class="addbtn">账号冻结</span>
+        <li class="addbtn manage">
+            <span class="managebtn">课程管理</span><img src="../../../build/img/small-arrow.png" alt="" style="position:absolute;right:7px;top:10px;">
+            <div class="drop">
+                <ul class="operate">
+                    <li>移到顶部</li>
+                    <li>移到底部</li>
+                    <li>上移</li>
+                    <li>下移</li>
+                    <li>删除</li>
+                </ul>
+            </div>
+        </li>
+    </div>
+   <div class="content-mesg">
+       <div>
+           <span class="mr20"><span class="white">姓名</span>姓名:</span>
+           <span>小明</span>
+       </div>
+       <div class="mt20">
+           <span class="mr20"><span class="white">账号</span>账号:</span>
+           <span> 39493943942</span>
+       </div>
+       <div class="mt20">
+           <span class="mr20"><span class="white">性别</span>性别:</span>
+           <span> 女</span>
+       </div>
+       <div class="mt20">
+           <span class="mr20"><span class="white">手机</span>手机:</span>
+           <span>12837472244</span>
+       </div>
+       <div class="mt20">
+           <span class="mr20"><span class="white">年级</span>年级:</span>
+           <span>七年级</span>
+       </div>
+       <div class="mt20">
+           <span class="mr20">教材版本:</span>
+           <span>人教版</span>
+       </div>
+       <div class="mt20">
+           <span class="mr20"><span class="white">发音</span>发音:</span>
+           <span>英式读音</span>
+       </div>
+       <div class="mt20">
+           <span class="mr20">课程信息:</span>
+         </div>
+       <div class="table" style="margin-top:15px;">
+           <table class="wd100">
+               <tr>
+                   <td>报班课程</td>
+                   <td>班级</td>
+                   <td>班主任</td>
+                   <td>课次进度</td>
+                   <td>有效期</td>
+               </tr>
+               <tr>
+                   <td>机构名称</td>
+                   <td>金牌</td>
+                   <td>B级</td>
+                   <td>
+                       20课时/24课次
+                   </td>
+                   <td class="red">
+                       已过期
+                   </td>
+               </tr>
+               <tr>
+                   <td>机构名称</td>
+                   <td>金牌</td>
+                   <td>B级</td>
+                   <td>
+                       20课时/24课次
+                   </td>
+                   <td class="red">
+                       已过期
+                   </td>
+               </tr>
+               <tr>
+                   <td>机构名称</td>
+                   <td>金牌</td>
+                   <td>B级</td>
+                   <td>
+                       20课时/24课次
+                   </td>
+                   <td class="red">
+                       已过期
+                   </td>
+               </tr>
+               <tr>
+                   <td>机构名称</td>
+                   <td>金牌</td>
+                   <td>B级</td>
+                   <td>
+                       20课时/24课次
+                   </td>
+                   <td class="red">
+                       已过期
+                   </td>
+               </tr>
+           </table>
+       </div>
+   </div>
+</div>
+<!--课程续报的开始-->
+<div class="eg-pop hide" id="sing-up">
+    <div class="header">
+        课程续报
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div>
+            <span class="mr20"><span class="white">姓名</span>姓名:</span>
+            <span>张三（七年级）</span>
+        </div>
+        <div class="mt20">
+            <span class="mr20"><span class="white">人</span>推荐人:</span>
+            <div id="drop_dem1" style="padding: 10px 25px 10px 15px;"></div>
+        </div>
+        <div class="mt20">
+            <span class="mr20"><span class="white">课程</span>课程:</span>
+            <div id="drop_dem2" style="padding: 10px 25px 10px 15px;"></div>
+        </div>
+        <div class="mt20">
+            <span class="mr20"><span class="white">课次</span>课次:</span>
+            <span>6个月</span>
+        </div>
+        <div class="mt20">
+            <span class="mr20"><span class="white">课价</span>课价:</span>
+            <span>2000元（实收1000元）</span>
+        </div>
+        <div class="mt20 center">
+            （续报课程已减掉 <span style="color:#ff6b47">基础课</span>的费用1000元）
+        </div>
+        <div class="mt20">
+            <span class="mr20"><span class="white">班级</span>班级:</span>
+            <div id="drop_dem3" style="padding: 10px 25px 10px 15px;"></div>
+        </div>
+    </div>
+    <div class="center">
+        <span class="sure" style="padding:15px 130px;">确定</span>
+    </div>
+</div>
+<div class="pop-mask"></div>
+<!--课程续报的结束-->
+<!--办理退课的开始-->
+<div class="eg-pop hide" id="sing-out">
+    <div class="header">
+        办理退课
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div>
+            <span class="mr20"><span class="white">姓名</span>姓名:</span><span>张三（七年级）</span>
+        </div>
+        <div class="mt20">
+            <span class="mr20"><span class="white">年级</span>年级:</span><div id="drop_dem4" style="padding: 9px 25px 9px 15px;"></div>
+        </div>
+        <div class="mt20">
+            <span class="mr20">剩余课程:</span><span>20课次/24课时</span>
+        </div>
+        <div class="mt20">
+            <span class="mr20 left">退课原因：</span><textarea name="" style="width:220px;height:138px;border-radius:4px;"></textarea>
+        </div>
+    </div>
+    <div class="center">
+        <span class="sure" style="padding:12px 40px;margin-right:45px;">确定</span> <span class="cancel" style="padding:12px 40px;">取消</span>
+    </div>
+</div>
+<!--办理退课的结束-->
+<!--调班的开始-->
+<div class="eg-pop hide" id="change-class">
+    <div class="header">
+       调班
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div>
+            <span class="mr20">姓名</span>
+            <span>张三</span>
+        </div>
+        <div class="mt20">
+            <span class="mr20">课程:</span>
+            <label style="margin-right:30px;"><span class="radio active" style="margin-right:15px;"></span><span class="left15">同步课</span></label>
+            <label><span class="radio" style="margin-right:15px;"></span><span class="left15">冲刺课</span></label>
+        </div>
+        <div class="mt20">
+            <span class="mr20">班级:</span>
+            <div id="drop_dem5"></div>
+        </div>
+       <p style="line-height:40px;">
+           <span class="mr20 white">班级:</span>目前班级：
+           <span>1班</span>
+       </p>
+     </div>
+    <div class="center">
+        <span class="sure" style="padding:12px 65px;">确定</span>
+    </div>
+</div>
+<!--调班的结束-->
+<!--加课次的开始-->
+<div class="eg-pop hide" id="add-classOrder">
+    <div class="header">
+        调班
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div>
+            <span class="mr20"><span class="white">姓</span>姓名</span>
+            <span>张三</span>
+        </div>
+        <div class="mt20">
+            <span class="mr20"><span class="white">课</span>课程:</span>
+            <label style="margin-right:30px;"><span class="radio active" style="margin-right:15px;"></span><span class="left15">同步课</span></label>
+            <label><span class="radio" style="margin-right:15px;"></span><span class="left15">冲刺课</span></label>
+        </div>
+        <div class="mt20">
+            <span class="mr20">加课次:</span>
+            <input type="text" class="input" style="width:185px;">
+        </div>
+        <p style="line-height:40px;">
+            <span class="mr20 white">加课次:</span>目前课程课次：
+            <span>1班</span>
+        </p>
+    </div>
+    <div class="center">
+        <span class="sure">确定</span>
+    </div>
+</div>
+<!--加课次的结束-->
+<!--修改读音的开始-->
+<div class="eg-pop hide" id="change-prounce">
+    <div class="header">
+        修改读音
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div>
+            <span class="mr20">姓名</span>
+            <span>张三</span>
+        </div>
+        <div class="mt20">
+            <span class="mr20">课程:</span>
+            <label style="margin-right:30px;"><span class="radio active" style="margin-right:15px;"></span><span class="left15">同步课</span></label>
+            <label><span class="radio" style="margin-right:15px;"></span><span class="left15">冲刺课</span></label>
+        </div>
+        <div class="mt20">
+            <span class="mr20 left" style="margin-top:14px;">读音:</span>
+            <div class="input-name inline-hover" style="height:40px;display:inline-block;">
+                <span class="spans right active">美式发音</span><span class="right line-border"></span><span class="spans right">英试发音</span>
+            </div>
+        </div>
+     </div>
+    <div class="center">
+        <span class="sure" style="padding:12px 65px;">确定</span>
+    </div>
+</div>
+<!--修改读音的结束-->
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/header.js"></script>
+<script src="../../../build/js/backStage/student-detail.js"></script>
+</body>
+</html>

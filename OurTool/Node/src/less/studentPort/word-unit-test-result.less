@@ -1,0 +1,92 @@
+@import "./student-reset.less";
+.main-pop{
+  width:80%;
+
+  .main-pops{
+      min-height:620px;
+    background: #ff8817;
+    .bg{background: url(../../img/student-unit-result-bgc.png) repeat-x;}
+    .main-content{
+      background: url(../../img/student-unit-result-bg.png) repeat;
+      min-height:728px;
+      height:900px;
+      .return{
+        background: #ffffff;
+        color: #ff8b17;
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0;
+        text-align: center;
+      }
+      .main-result{
+        width: 60%;
+        padding: 30px 30px 100px 30px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 5px;
+        margin-top: -10px;
+        .head{
+          position: relative;
+          .star{background: url(../../img/star7.png) no-repeat;width: 52px;height: 50px;display: inline-block}
+          .star7{background-position:0 }
+          .star8{background-position:-116px }
+          .star9{background-position:-58px }
+          .result{
+            position: absolute;
+            -webkit-transform:rotate(30deg);
+            transform: rotate(30deg);
+            font-size: 24px;
+            width: 150px;
+            font-weight:bold;
+            text-align: center;
+            display: inline-block;
+            right: -10px;
+          }
+          .pass{ border: solid 4px #ff7200;padding: 5px;color:#ff7200 ;
+            .in{ border: solid 1px #ff7200;height: 50px;width: 100%;  line-height: 50px;}
+          }
+          .fail{ border: solid 4px #838383;padding: 5px;color:#838383 ;
+            .in{ border: solid 1px #838383;height: 50px;width: 100%;  line-height: 50px;}}
+        }
+
+        .pass-score{
+          font-size: 76px;
+          color: #ff9a3a;
+          text-shadow: 1px 1px 1px #ff6600;
+        }
+        .fail-score{
+          font-size: 76px;
+          color: #838383;
+          text-shadow: 1px 1px 1px #919191;
+        }
+        .info{
+          margin: 40px  10% 0 10%;
+          height: 58px;
+          border:solid 1px #ffd376;
+          color: #ff9000;
+          line-height: 58px;
+          text-align: center;
+        }
+
+
+      }
+    }
+
+
+
+  }
+
+}
+#coins{
+  display:inline-block;
+  margin-top:4px;
+}
+#failscore,#nofullfen,#fullfen{
+    font-size:20px;
+    .f26{
+        margin-top: -6px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

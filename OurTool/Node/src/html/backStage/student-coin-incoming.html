@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/student-coin-incoming.css">
+</head>
+<body>
+<div id="eg-header"></div>
+<div class="title-content">
+    <a href="#" style="color:#838f97;"><span>学币奖品</span></a>&nbsp;&gt;&nbsp;<span>奖品列表</span>
+    
+</div>
+<div id="content">
+    <div class="header_header">
+        <div style="height:35px;text-indent: 10px;">
+            <span>全部奖品</span><span>（52个）</span>
+            <span class="addbtn right creatClass" style="padding:0;width:105px;">添加奖品</span>
+        </div>
+        <div>
+            <div id="drop_dem1" style="width: 100px;" class="lui_dropdownlist btn_num_updown btn_num_updown1 dib"></div>
+            <div id="drop_dem2" style="width: 100px;margin-left:25px;" class="lui_dropdownlist btn_num_updown btn_num_updown1 dib" ></div>
+        </div>
+    </div>
+    <div class="table" style="padding-bottom:50px;">
+        <table class="wd100">
+            <tbody id="ctable">
+                <tr>
+                    <td>姓名</td>
+                    <td >类别</td>
+                    <td>奖励方式</td>
+                    <td>学币数量</td>
+                    <td>补充说明</td>
+                    <td>班级更新时间</td>
+                    <td style="width:200px;">操作</td>
+                </tr>
+                <tr data-id="197"> 
+                    <td>马化腾</td> 
+                    <td>男子</td> 
+                    <td>学币兑换</td> 
+                    <td>23</td> 
+                    <td>这个是个补充说明的页面</td> 
+                    <td>2017-03-14 15:36</td> 
+                    <td>
+                        <span class="inline operatBtn coins">修改</span>
+                        <span class="inline operatBtn ">删除</span>
+                    </td> 
+                 </tr>
+                <tr data-id="197">
+                    <td>马化腾</td>
+                    <td>男子</td>
+                    <td>学币兑换</td>
+                    <td>23</td>
+                    <td>这个是个补充说明的页面</td>
+                    <td>2017-03-14 15:36</td>
+                    <td>
+                        <span class="inline operatBtn coins">修改</span>
+                        <span class="inline operatBtn ">删除</span>
+                    </td>
+                </tr>
+                <tr data-id="197">
+                    <td>马化腾</td>
+                    <td>男子</td>
+                    <td>学币兑换</td>
+                    <td>23</td>
+                    <td>这个是个补充说明的页面</td>
+                    <td>2017-03-14 15:36</td>
+                    <td>
+                        <span class="inline operatBtn coins">修改</span>
+                        <span class="inline operatBtn ">删除</span>
+                    </td>
+                </tr>
+                <tr data-id="197">
+                    <td>马化腾</td>
+                    <td>男子</td>
+                    <td>学币兑换</td>
+                    <td>23</td>
+                    <td>这个是个补充说明的页面</td>
+                    <td>2017-03-14 15:36</td>
+                    <td>
+                        <span class="inline operatBtn coins">修改</span>
+                        <span class="inline operatBtn ">删除</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--<div id="pager" class="pagination mt30"><ul class="page-box inline mr20 mb20"> <li><a href="#" data-num="1" class="active">1</a></li>   <li><a href="#" data-num="2">2</a> </li>  <li><a href="#" data-num="3">3</a> </li></ul> <a href="#" data-num="2" class="next-page inline next-e">下一页</a>  <a href="#" data-num="3" class="next-page inline">尾页</a> </div>-->
+    </div>
+</div>
+    <!--飘窗开始-->
+    <div class="fixed-success" style="display: block;">创建成功</div>
+    <!--修改奖品开始-->
+    <div class="eg-pop" style="display: block;">
+        <div class="header">
+            <span >修改奖品</span>
+            <span class="close"></span>
+        </div>
+        <div class="body" style="width:300px;padding:40px 60px;">
+            <input type="text" class="input" style="width:100%;margin-bottom:30px;" placeholder="奖品名称">
+            <div id="drop_dem3" style="width: 260px;" class="lui_dropdownlist btn_num_updown btn_num_updown1 dib" ></div>
+            <div class="input-name inline-hover" style="margin-top: 20px; height: 40px;text-align:center;margin-bottom:20px;">
+                <label style="margin-left:20px;margin-right:50px;cursor:pointer;">
+                    <span class="radio active" style="margin-left:15px;"></span>
+                    <span class="left15">学币兑换</span>
+                </label>
+                <label style="cursor:pointer;">
+                    <span class="radio" style="margin-left:15px;"></span>
+                    <span class="left15">随机抽奖</span>
+                </label>
+            </div>
+            <div>
+                学币数量&emsp;&emsp;
+                <input type="text" class="input" style="width:209px;margin-bottom:30px;" placeholder="整数">
+            </div>
+            <div>
+                <textarea class="input" style="width:100%;margin-bottom:30px;height:55px;line-height:25px;outline:none;"></textarea> 
+            </div>
+            <div class="center" style="height:45px;">
+                <span class="sure left" style="margin-right:35px;padding:12px 0;width:120px;background:#c2c2c2;color:#fff;" >放弃</span>
+                <span class="sure right" style="padding:12px 0;width:120px;">保存</span>
+            </div>
+        </div>
+    </div>
+    <!--修改奖品结束-->
+    <!--添加奖品开始-->
+    <div class="eg-pop" style="display: block;">
+        <div class="header">
+            <span>修改奖品</span>
+            <span class="close"></span>
+        </div>
+        <div class="body" style="width:300px;padding:40px 60px;">
+            <input type="text" class="input" style="width:100%;margin-bottom:30px;" placeholder="奖品名称">
+            <div id="drop_dem3" style="width: 260px;" class="lui_dropdownlist btn_num_updown btn_num_updown1 dib"></div>
+            <div class="input-name inline-hover" style="margin-top: 20px; height: 40px;text-align:center;margin-bottom:20px;">
+                <label style="margin-left:20px;margin-right:50px;cursor:pointer;">
+                    <span class="radio active" style="margin-left:15px;"></span>
+                    <span class="left15">学币兑换</span>
+                </label>
+                <label style="cursor:pointer;">
+                    <span class="radio" style="margin-left:15px;"></span>
+                    <span class="left15">随机抽奖</span>
+                </label>
+            </div>
+            <div>
+                学币数量&emsp;&emsp;
+                <input type="text" class="input" style="width:209px;margin-bottom:30px;" placeholder="整数">
+            </div>
+            <div>
+                <textarea class="input" style="width:100%;margin-bottom:30px;height:55px;line-height:25px;outline:none;" placeholder="（选填）标明有效期、兑换其它条件等"></textarea>
+            </div>
+            <div class="center" style="height:45px;">
+               <span class="sure " style="padding:12px 0;width:100%;">完成</span>
+            </div>
+        </div>
+    </div>
+    <!--添加奖品结束-->
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/headers.js"></script>
+<script src="../../../build/js/backStage/student-coin-incoming.js"></script>
+</body>
+</html>

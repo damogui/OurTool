@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/edit-student-mesg.css">
+</head>
+<body>
+<div id="eg-header" style="background:#00a2ff;"></div>
+<div class="title-content">
+    <span>学生列表</span>&nbsp;>&nbsp;<span>查看详情</span>
+</div>
+<div id="content">
+    <div class="header">
+        <span class="addbtn right creatStudent">保存</span>
+    </div>
+    <div class="content-mesg">
+        <div style="margin-bottom:40px;">
+            <span>小明</span>
+        </div>
+        <div class="mt20">
+            <span class="mr20">姓名:</span>
+            <input type="text" class="input" style="height:30px;width:180px;">
+        </div>
+        <div class="mt20">
+            <span class="mr20">性别:</span>
+            <label style="margin-right:30px;"><span class="radio active" style="margin-right:15px;"></span><span class="left15">男</span></label>
+            <label><span class="radio" style="margin-right:15px;"></span><span class="left15">女</span></label>
+        </div>
+        <div class="mt20">
+            <span class="mr20">年级:</span>
+            <div id="drop_dem1" style="padding: 5px 25px 5px 15px;"></div>
+        </div>
+        <div class="mt20">
+            <span class="mr20">教材:</span>
+            <img src="../../../build/img/grade-add.png" alt="" class="middle teacher-grade" style="cursor: pointer;">
+        </div>
+        <div class="mt20">
+            <span class="left" style="margin-top:13px;">发音:</span>
+            <div class="input-name inline-hover" style="width:240px;height:40px;">
+                <span class="spans right active">美式发音</span><span class="right line-border"></span><span class="spans right">英试发音</span>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:100px;">
+        <span class="sure" style="padding:10px 54px;margin-left:10%;">保存</span>
+    </div>
+</div>
+<!--年级的弹框-->
+<div class="eg-pop hide" id="add-grade">
+    <div class="header">
+        <div class="tabs">
+            <span class="active">小学</span>
+            <span>初中</span>
+            <span>高中</span>
+        </div>
+        <span class="close"></span>
+    </div>
+    <div class="body">
+        <div>六三制:</div>
+        <div class="table">
+            <table>
+                <tr>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                </tr>
+                <tr>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                </tr>
+            </table>
+        </div>
+        <div>五四制:</div>
+        <div class="table">
+           <table>
+                <tr>
+                    <td><span class="active">人教版</span></td>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                </tr>
+                <tr>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                    <td><span>人教版</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/header.js"></script>
+<script src="../../../build/js/backStage/edit-student-mesg.js"></script>
+</body>
+</html>

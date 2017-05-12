@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>机构管理</title>
+	<link rel="stylesheet" href="../../../build/css/backStage/org-management.css">
+</head>
+<body>
+	<div id="eg-header"></div>
+	<div id="content">
+		<div class="add-org">
+			<span class="addbtn right"><img src="../../../build/img/org-add.png" alt="">&nbsp;添加机构</span>
+		</div>
+		<div class="org-type" class="font16">
+				<span>类型:&nbsp;</span>
+				<div id="drop_demo1" class="inline"></div>
+				<div class="right">
+					<input type="text" class="input-search"><img src="../../../build/img/search.png" alt="" class="middle">
+				</div>
+
+		</div>
+		<div class="table">
+			<table class="wd100">
+				<tr>
+					<td>序号</td>
+					<td>机构名称</td>
+					<td>合作类型</td>
+					<td>教研评级</td>
+					<td>到期时间</td>
+					<td>储蓄余额</td>
+					<td>操作按钮</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>机构名称</td>
+					<td>金牌</td>
+					<td>B级</td>
+					<td>2017/02/20</td>
+					<td>20000</td>
+					<td>
+						<span class="inline operatBtn active see-detail">查看详情</span>
+						<span class="inline operatBtn ml25">储值</span>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>机构名称</td>
+					<td>金牌</td>
+					<td>B级</td>
+					<td>2017/02/20</td>
+					<td>20000</td>
+					<td>
+						<span class="inline operatBtn see-detail">查看详情</span>
+						<span class="inline operatBtn ml25">储值</span>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>机构名称</td>
+					<td>金牌</td>
+					<td>B级</td>
+					<td>2017/02/20</td>
+					<td>20000</td>
+					<td>
+						<span class="inline operatBtn see-detail">查看详情</span>
+						<span class="inline operatBtn ml25">储值</span>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>机构名称</td>
+					<td>金牌</td>
+					<td>B级</td>
+					<td>2017/02/20</td>
+					<td>20000</td>
+					<td>
+						<span class="inline operatBtn see-detail">查看详情</span>
+						<span class="inline operatBtn ml25">储值</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--添加弹窗开始-->
+		<div class="eg-pop hide" id="addorg-pop">
+			<div class="header">
+				添加机构
+				<span class="close"></span>
+			</div>
+			<div class="body">
+				<div class="divinput">
+					<!--<div class="input-name"><span class="right">机构名称:&nbsp;&nbsp;&nbsp;</span></div>-->
+
+					<div class="inline left" style="line-height:40px;height:40px;margin-right:10px;">
+						<span class="white">机构</span><span>机构名称:</span>
+					</div>
+					<div class="input-write inline">
+						<input type="text" class="input left">
+						<div class="cooperate right">
+							<span>合作类型:&nbsp;&nbsp;&nbsp;</span>
+							<div class="inline" id="drop_demo2"></div>
+						</div>
+					</div>
+				</div>
+				<div class="divinput" style="margin-top:35px;">
+					<div class="inline left" style="line-height:40px;height:40px;margin-right:10px;">
+						<span class="white">合同</span><span>合同期限:</span>
+					</div>
+					<div class="input-write inline">
+						<div  class="left" id="drop_demo3"></div>
+						<div class="cooperate right">
+							<span>签约渠道:&nbsp;&nbsp;&nbsp;</span>
+							<div  class="inline" id="drop_demo4"></div>
+							<div  class="inline" id="drop_demo5" style="margin-left:25px;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="divinput mt30">
+					<div class="inline left" style="line-height:40px;height:40px;margin-right:10px;">
+						<span class="white">区域</span><span>所在区域:</span>
+					</div>
+					<div class="input-write inline">
+						<div  class="left" id="drop_demo6"></div>
+						<div  class="left ml15" id="drop_demo7"></div>
+						<div  class="left ml15" id="drop_demo8"></div>
+						<div class="right">
+							<span>区域等级:&nbsp;&nbsp;&nbsp;</span>
+							<div  class="inline" id="drop_demo9"></div>
+						</div>
+					</div>
+				</div>
+				<div class="divinput mt30">
+					<div class="inline left" style="line-height:40px;height:40px;margin-right:10px;">
+						<span><span class="white">&nbsp;  </span>生产源量/年:</span>
+					</div>
+					<div class="input-write inline">
+						<div  class="left" id="drop_demo10"></div>
+						<span class="left ml15">校区数量:&nbsp;&nbsp;&nbsp;</span>
+						<div  class="left" id="drop_demo11"></div>
+						<span class="left ml15">教研评级:&nbsp;&nbsp;&nbsp;</span>
+						<div  class="left" id="drop_demo12"></div>
+					</div>
+				</div>
+				<div class="divinput mt30">
+					<div class="inline left" style="line-height:40px;height:40px;margin-right:10px;">
+						<span><span class="white"> &nbsp; 销 </span>销售额/年:</span>
+					</div>
+					<div class="input-write inline">
+						<div  class="left" id="drop_demo13"></div>
+						<span class="left ml15">教师数量:&nbsp;&nbsp;&nbsp;</span>
+						<div  class="left" id="drop_demo14"></div>
+					</div>
+				</div>
+				<div class="divinput mt30">
+					<div class="input-name" ><span><span class="white">机</span>机构联系人:</span></div>
+					<div class="input-write inline">
+						<input type="text" class="input" style="width:130px;">
+						<div class="right">
+							<span class="left ml15">电话:&nbsp;&nbsp;&nbsp;</span>
+							<input type="text" class="input" style="width:320px;">
+						</div>
+					</div>
+				</div>
+				<div class="divinput mt30">
+					<div class="input-name"><span class="white">通讯</span><span>通讯地址:</span></div>
+					<div class="input-write inline">
+						<input type="text" class="input" style="width:555px;">
+					</div>
+				</div>
+				<div class="mt30 divinput" style="height:88px;line-height:normal;">
+					<div class="input-name left"><span class="white">备注备注</span><span>备注:</span></div>
+					<textarea class="input" style="width:552px;height:88px;"></textarea>
+				</div>
+			</div>
+			<div class="center">
+				<span class="sure">确定</span>
+			</div>
+		</div>
+	<div class="pop-mask"></div>
+	<!--添加弹窗结束-->
+	<!--机构名称弹窗开始-->
+	<div class="eg-pop " id="addorg-name">
+		<div class="header">
+			<span class="close"></span>
+		</div>
+		<div class="body">
+			<div style="font-size:18px;color:#505050;font-family: '宋体';font-weight: 600;">
+				<span>机构名称:</span>  <span>创新教育</span>
+			</div>
+			<div style="color:#505050;margin-top:30px;">
+				&nbsp;<span>管理员账号:</span>&nbsp;&nbsp;&nbsp;
+				<span>39485959（可用手机号：13888888283登录）</span>
+			</div>
+			<div style="color:#505050;margin-top:35px;">
+				&nbsp;<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码:</span>&nbsp;&nbsp;&nbsp;
+				<span>39485959</span>
+			</div>
+		</div>
+		<div class="center">
+			<span class="sure">确定</span>
+		</div>
+	</div>
+	<div class="pop-mask"></div>
+<!--机构弹窗结束-->
+
+	<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+	<script src="../../../build/js/backStage/header.js"></script>
+	<script src="../../../build/js/backStage/org-management.js"></script>
+
+</body>
+</html>

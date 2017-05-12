@@ -1,0 +1,112 @@
+html:not(.watch-active-state) .list-block .item-link:active, .list-block .item-link.active-state{background:#fff;}
+h1.title{
+        height:2.2rem;
+        background:#fff;
+    }
+#lesson-report{
+    
+    .content{margin-bottom:2rem;}
+  background:#fff;
+  .tabs,.data{
+    width: 90%;
+    margin: 0 auto;
+    padding:0 0.5rem;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    flex-direction: row;
+    display: flex;
+    background:#fff;
+    height:2.25rem;
+    .box{
+      flex-grow:1;
+      -webkit-flex-grow:1;
+      text-align:center;
+      line-height:2.2rem;
+      color:#a1a1a1;
+      font-size:0.6rem;
+      height:2.2rem;
+    }
+    .active{
+      border-bottom: 0.05rem solid #45c6fc;
+      color:#45c6fc;
+    }
+  }
+  .data{
+    height:6.85rem;
+    .box{
+      font-size:1.75rem;
+      height:3.25rem;
+      align-self:center;
+      -webkit-align-self:center;
+      border-right:0.025rem solid #e5e5e5;
+      .p{
+        display: block;
+        font-size:0.7rem;
+        line-height:normal;
+        color:#5d6467;
+      }
+    }
+    .box:last-child{
+      border-right:none;
+    }
+  }
+  .report{
+    min-height:12.5rem;
+    margin-top:0.25rem;
+    border-top:0.025rem solid #e5e5e5;
+    background:#fff;
+    .title{
+      text-align:center;
+      color:#a9acae;
+      font-size:0.55rem;
+    }
+    .list-block{
+      .item-link .item-inner{
+        background-image:url('../../../build/img/li-arrow.png');
+      }
+      li{
+        background: #45c6fc;
+        width: 95%;
+        margin: 0 auto;
+        border: 0.025rem solid #009ee2;
+        border-radius: 0.3rem;
+        margin-bottom: 0.5rem;
+      }
+      .item-inner{
+        .item-title{
+          height:3.2rem;
+          line-height:3.2rem;
+          width:100%;
+          color:#fff;
+          text-align:center;
+          font-size:0.65rem;
+        }
+      }
+    }
+  }
+  /*.mesg-show{display:none;}*/
+  .less-nodata{
+    min-height:12.5rem;
+   border-top:0.025rem solid #e5e5e5;
+    background:#fff;
+    text-align:center;
+    img{
+      margin-top:3.25rem;
+    }
+  }
+  .bar-tab{
+    text-align:right;
+    font-size:0.65rem;
+    width:100%;
+    margin:0 auto;
+    background:#fff;
+    img{margin-right:5%;}
+
+  }
+  .bar-tab:before{
+    background-color:#fff;
+  }
+}
+.list-block .item-inner:after{
+    height:0;
+}

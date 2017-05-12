@@ -1,0 +1,89 @@
+@import "../comm/egComm.less";
+@import "../../LUI/css/com.less";
+@import "../../js/lib/page/paging.less";
+
+#content {
+    min-height: 600px;
+    margin-top: 30px;
+
+    .header {
+        height: 105px;
+        line-height: 105px;
+        padding: 0 40px;
+
+        .addbtn {
+            margin-top: 40px;
+            height: 25px;
+            line-height: 25px;
+        }
+    }
+
+    .filter {
+        padding: 0 40px;
+        height: 65px;
+    }
+
+    .table {
+        border-top: none;
+    }
+
+    .table tr:first-child {
+        border-top: none;
+    }
+     .table tr td p{
+        line-height:35px;
+    }
+}
+
+#editMesg, #addMesg {
+    width: 525px;
+    height: 470px;
+
+    .body {
+        padding: 40px 0 10px 75px;
+
+        .first {
+            color: #707070;
+        }
+
+        .input-name {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .tip {
+            margin-left: 40px;
+        }
+    }
+}
+
+#student {
+    width: 520px;
+    min-height: 285px;
+    max-height: 520px;
+
+    .table {
+        padding: 0;
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .body {
+        padding: 30px 20px;
+        padding-top: 10px;
+
+        .table tr {
+            border-top: none;
+        }
+
+        .table tr:last-child {
+            border-bottom: none;
+        }
+
+        .table tr:hover {
+            background: #fff;
+        }
+    }
+}

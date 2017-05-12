@@ -1,0 +1,64 @@
+.lui_tree_warp {
+  line-height: 35px;
+}
+.lui_tree_warp .dn {
+  display: none;
+}
+.lui_tree_warp ul {
+  padding-left: 25px;
+}
+.lui_tree_warp ul li {
+  list-style: none;
+  /*虚线*/
+  background: url('../img/tree_dash.png') no-repeat;
+  background-position: 8px -206px;
+  /*展开折叠*/
+  /*复选框*/
+}
+.lui_tree_warp ul li .icon_op {
+  background: url('../img/treeico_op.png');
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+.lui_tree_warp ul li .open {
+  background-position: -3px -48px;
+}
+.lui_tree_warp ul li .close {
+  background-position: -3px -15px;
+}
+.lui_tree_warp ul li .icon_check {
+  background: url('../img/checkico.png');
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.lui_tree_warp ul li .check_def {
+  background-position: 0 0;
+}
+.lui_tree_warp ul li .check_sel {
+  background-position: 0 -77px;
+}
+.lui_tree_warp ul .kf,
+.lui_tree_warp ul .leaf {
+  background-position: 0px 0px;
+}
+.lui_tree_warp ul .kf-last,
+.lui_tree_warp ul .leaf-last,
+.lui_tree_warp ul .parent-last {
+  background-position: 0px -1980px;
+}
+.lui_tree_warp ul .kf,
+.lui_tree_warp ul .kf-last,
+.lui_tree_warp ul .leaf,
+.lui_tree_warp ul .leaf-last {
+  padding: 0 0 0 10px;
+}
+.lui_tree_warp > ul {
+  margin: 0;
+  padding-left: 0;
+}

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../build/css/backStage/lesson-wonderfulMoent.css">
+</head>
+<body>
+<div id="eg-header"></div>
+<div class="title-content">
+    <span>统计</span>&nbsp;>&nbsp;<span>学生学情分析</span>&nbsp;>&nbsp;<span>课堂精彩瞬间</span>
+</div>
+<div id="content">
+    <p class="record">共124条记录</p>
+    <div class="lesson-picture">
+        <div class="outer-wrap">
+            <div class="box">
+                <img src="../../../build/img/student-test-end.png" alt="" data-img="0">
+            </div>
+            <div class="artic">
+                <p>校区1-1班-第1次课</p>
+                <span>2016/12/12  12:30</span>
+                <p>张老师</p>
+            </div>
+        </div>
+
+        <div class="outer-wrap">
+            <div class="box">
+                <img src="../../../build/img/pop-img.png" alt="" data-img="1">
+            </div>
+            <div class="artic">
+                <p>校区1-1班-第1次课</p>
+                <span>2016/12/12  12:30</span>
+                <p>张老师</p>
+            </div>
+        </div>
+        <div class="outer-wrap">
+            <div class="box">
+                <img src="../../../build/img/slides-1.png" alt="" data-img="2">
+            </div>
+            <div class="artic">
+                <p>校区1-1班-第1次课</p>
+                <span>2016/12/12  12:30</span>
+                <p>张老师</p>
+            </div>
+        </div>
+        <div class="outer-wrap">
+            <div class="box">
+                <img src="../../../build/img/studey-analysis.png" alt="" data-img="3">
+            </div>
+            <div class="artic">
+                <p>校区1-1班-第1次课</p>
+                <span>2016/12/12  12:30</span>
+                <p>张老师</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pop-mask"></div>
+<!--图片点击的时候放大-->
+<div class="picture">
+    <img src="../../../build/img/eg-close.png" alt="" class="close">
+    <span class="arrow-left"></span>
+    <span class="arrow-right"></span>
+    <div class="img-show">
+
+    </div>
+ </div>
+<script src="../../../build/js/jquery-3.1.1.min.js"></script>
+<script src="../../../build/js/backStage/headers.js"></script>
+<script>
+    $(function(){
+        $('.picture .close').click(function(){
+            $('.picture').hide();
+            $('.pop-mask').hide();
+        })
+        $('.outer-wrap .box').click(function(){
+            $('.img-show').html('');
+            $('.picture').show();
+            $('.pop-mask').show();
+            var val=$(this).html();
+            $('.img-show').html(val)
+        })
+        $('.arrow-right').click(function(){
+           var data=+($('.img-show').find('img').attr('data-img'));
+           if(data==$('.outer-wrap .box').length-1){
+                return false
+            }else{
+
+                $('.img-show').html('');
+                var val=$('.box').eq(data+1).html();
+                $('.img-show').html(val)
+            }
+
+        })
+        $('.arrow-left').click(function(){
+            var data=+($('.img-show').find('img').attr('data-img'));
+            if(data==0){
+                return false
+            }else{
+                $('.img-show').html('');
+                var val=$('.outer-wrap .box').eq(data-1).html();
+                $('.img-show').html(val)
+            }
+
+        })
+    })
+</script>
+</body>
+</html>

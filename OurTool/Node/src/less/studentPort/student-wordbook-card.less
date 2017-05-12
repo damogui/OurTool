@@ -1,0 +1,246 @@
+@import "student-reset.less";
+
+.main-pops {
+    //width:80%;
+   min-height:620px;
+
+    .tabs-wrap {
+
+        .tabs-header {
+            /*学情分析用*/
+            .tabs-btn-1 {
+                width: 130px;
+            }
+
+            .active {
+                background: #ff942f;
+                border-color: #ff8522;
+            }
+
+            .normal {
+                background: #e5e5e5;
+                color: #a5a5a5;
+                text-shadow: 1px 0px 1px #ffffff,1px 0px 1px #ffffff;
+                border-color: #cacaca;
+            }
+        }
+
+        .tabs-split {
+            background: url(../../img/student-split1.png) no-repeat;
+            height: 2px;
+            background-size: 100%;
+        }
+
+        .word-card {
+            .tabs-content {
+                .switch-control {
+                    margin: 25px 0;
+                    text-align: right;
+                    cursor: pointer;
+
+                    .switch-icon-list {
+                        background: url(../../img/student-icon.png) no-repeat -58px 0;
+                        width: 18px;
+                        height: 18px;
+                        display: inline-block;
+                        vertical-align: bottom;
+                    }
+
+                    .switch-text {
+                        display: inline-block;
+                        height: 18px;
+                        line-height: 18px;
+                        margin-right: 60px;
+                    }
+
+                    .total-num {
+                        color: #a0a0a0;
+                    }
+                }
+                //margin-top: 0px;
+                margin: 0 2.5% 67px 2.5%;
+                position: relative;
+
+                .card-prev {
+
+                    &:before {
+                        content: "<";
+                        font-size: 94px;
+                        color: #ffb973;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -60px;
+                        cursor: pointer;
+                    }
+                }
+
+                .card-next {
+
+                    &:before {
+                        content: ">";
+                        font-size: 94px;
+                        color: #ffb973;
+                        position: absolute;
+                        cursor: pointer;
+                         top: 50%;
+                        transform: translateY(-50%);
+                        right: -60px;
+                    }
+                }
+
+                .word-card {
+                    background: #fffdee;
+                    width: 100%;
+                    border: 1px solid #ffe6b1;
+
+                    dl {
+                        margin: 0 1.8%;
+                        width: 96.4%;
+
+                        dd {
+                            padding: 23px 0;
+                            border-bottom: 1px solid #ffe6b1;
+                            //height:80px;
+                            margin-left: 30px;
+                           
+                            .word-name {
+                                font-size: 30px;
+                                font-weight: bold;
+                            }
+
+                            .word-spell {
+                                font-size: 24px;
+                                margin-left: 92px;
+                                font-weight: bold;
+                            }
+
+                            .word-key {
+                                color: #ff8008;
+                            }
+
+                            .head {
+                                color: #ffa65d;
+                                font-size: 16px;
+                                margin-bottom: 12px;
+                                font-weight: bold;
+                            }
+
+                            .content-list {
+                                line-height: 2;
+                            }
+                        }
+
+                        .last {
+                            border: none;
+                            margin-bottom: 200px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .word-list {
+            .tabs-content {
+                .switch-control {
+                    margin: 25px 0;
+                    text-align: right;
+                    cursor: pointer;
+
+                    .switch-icon {
+                        background: url(../../img/student-icon.png) no-repeat -30px 0;
+                        width: 18px;
+                        height: 18px;
+                        display: inline-block;
+                        vertical-align: bottom;
+                    }
+
+                    .switch-text {
+                        display: inline-block;
+                        height: 18px;
+                        line-height: 18px;
+                        margin-right: 60px;
+                    }
+
+                    .total-num {
+                        margin-right: 15px;
+                        color: #a0a0a0;
+                    }
+                }
+                margin: 0 2.5% 67px 2.5%;
+                position: relative;
+
+                .card-prev {
+
+                    &:before {
+                        content: "<";
+                        font-size: 94px;
+                        color: #ffb973;
+                        position: absolute;
+                        top: 300px;
+                        left: -60px;
+                        cursor: pointer;
+                    }
+                }
+
+
+                .card-next {
+
+                    &:before {
+                        content: ">";
+                        font-size: 94px;
+                        color: #ffb973;
+                        position: absolute;
+                        cursor: pointer;
+                        top: 300px;
+                        right: -60px;
+                    }
+                }
+
+                margin-top: 0px;
+
+                dl {
+                    dd {
+                        height: 40px;
+                        //width: 100%;
+                        margin-bottom: 6px;
+                        height: 80px;
+                        line-height: 80px;
+                        background: #f2f2f2;
+                         cursor:pointer;
+                        .col {
+                            display: inline-block;
+                            float: left;
+                            text-indent: 3.04%;
+                            overflow:hidden;
+                            white-space:nowrap;
+                            text-overflow:ellipsis;
+                        }
+
+                        .col1 {
+                            background: #ffebd9;
+                            width: 20%;
+                            border-right: 1px solid #ffffff;
+                            font-size: 22px;
+                        }
+
+                        .col2 {
+                            width: 17.8%;
+                            border-right: 2px solid #ededed;
+                            background: #f2f2f2;
+                        }
+
+                        .col3 {
+                            width: 61%;
+                            background: #f2f2f2;
+                        }
+
+                        .word-key {
+                            color: #ff8008;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

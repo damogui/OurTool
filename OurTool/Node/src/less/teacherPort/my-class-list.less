@@ -1,0 +1,53 @@
+@import "teacher-reset.less";
+.bg{background: #ebf8ff;}
+.content {
+    margin-bottom:2.5rem;
+    .list-block {
+        margin: 0;
+
+        .item-content {
+            border-bottom: solid 0.05rem #E5E5E5;
+            height: 3.5rem;
+
+            .item-inner {
+                .item-title {
+                    font-size: 0.8rem;
+                    color: #5d6467;
+                    max-width: 10.4rem;
+
+                    .item-desc {
+                        font-size: 0.6rem;
+                        margin: 0.4rem 0 0 0;
+                        color: #9eadb6
+                    }
+                }
+
+                .item-after {
+                    font-size: 0.5rem;
+                    color: #9eadb6;
+                    max-height: 3.5rem;
+                    max-width: 3.5rem;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                    flex-flow: wrap;
+
+                    .item-status-lesson {
+                        display: flex;
+                        width: 3.25rem;
+                        height: 1rem;
+                        background: #41c7ff;
+                        border-radius: 6px;
+                        color: #ffffff;
+                        margin-top: 0.4rem;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                &:after {
+                    background: none;
+                }
+            }
+        }
+    }
+}
