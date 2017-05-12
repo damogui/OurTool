@@ -43,6 +43,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserBll\UserBll.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OurToolDAL\OurToolDAL.csproj">
+      <Project>{908156db-d5d0-4dde-ac06-d17a3d7a7962}</Project>
+      <Name>OurToolDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OurToolModel\OurToolModel.csproj">
+      <Project>{d46bcc77-0cf2-47d9-a860-9b7f43e17fee}</Project>
+      <Name>OurToolModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

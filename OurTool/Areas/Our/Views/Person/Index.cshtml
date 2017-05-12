@@ -1,0 +1,40 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    
+    $(function () {
+
+        $("#btnGetData").click(function () {
+            $.ajax({
+                type: "post",
+                url: "/Our/Person/GetUserList",
+                dataType: "json",
+                data: {
+                    data: 1
+                },
+                success: function (data) {
+
+                    alert(data);
+
+                }
+            });
+            
+        });
+
+       
+
+    })
+
+
+
+
+</script>
+
+<h2>这是新地盘</h2>
+<input  type="button"  value="点击获取数据"  id="btnGetData"/>
+

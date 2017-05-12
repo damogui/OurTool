@@ -1,0 +1,97 @@
+﻿@using OurTool.App_Start
+@using OurToolModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="keywords" content="魔方格-单词速记" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    @RenderSection("titleCSS", false)
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+   
+    <div id="eg-header">
+        <div class="header">
+            <a href='' class="log"></a><ul class="nav">
+              
+                    <li class="@((ViewBag.ActiveItem == MenuItem.OrgStatisticPage || ViewBag.ActiveItem == MenuItem.Home) ? "active" : "")"><a href="/Org/OrgStatManage/Index">统计</a></li>
+                    <li class="@(ViewBag.ActiveItem == MenuItem.OrgPeoplePage ? "active" : "")"><a href="/Org/PersonManage/Index">员工管理</a></li>
+             
+              
+                    <li class="@((ViewBag.ActiveItem == MenuItem.OrgStatisticPage || ViewBag.ActiveItem == MenuItem.Home) ? "active" : "")"><a href="/Org/OrgStatManage/Students">统计</a></li>
+                
+                <li class="@(ViewBag.ActiveItem==MenuItem.OrgStudentPage?"active":"")"><a href="/Org/StudentManage/Index">学生管理</a></li>
+               
+                    <li class="@(ViewBag.ActiveItem == MenuItem.OrgSchoolPage ? "active" : "")"><a href="/Org/School/Index">校区管理</a></li>
+                
+                <li class="@(ViewBag.ActiveItem==MenuItem.OrgClassPage?"active":"")"><a href="/Org/Classes/Index">班级管理</a></li>
+                <li class="@(ViewBag.ActiveItem==MenuItem.OrgCoursePage?"active":"")"><a href="/Org/Course/Index">课程管理</a></li>
+                <li class="@(ViewBag.ActiveItem==MenuItem.OrgKPIPage?"active":"")"><a href="/Org/KPI/Index">绩效管理</a></li>
+                <li class="@(ViewBag.ActiveItem==MenuItem.OrgCurrencyPage?"active":"")"><a href="/Org/Currency/Index">学币奖品</a></li>
+
+                <li class="@(ViewBag.ActiveItem==MenuItem.OrgUserPage?"active":"") right">
+                
+                    <div class="hover-brm" style="height:102px;line-height:50px;border:1px solid #dbdbdb;font-size:0; z-index: 100;">
+                        <a href="/Org/Index/Reset" style="padding:0;display:inline-block;width:100%;font-size:18px;height:50px;color:#838f97;border-bottom: 1px solid #dbdbdb;">修改密码</a>
+                        <a word-exit="1" style="height:50px;color:#838f97;line-height:40px;font-size:18px;padding:0;display:inline-block;width:100%;">退出</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    @RenderBody()
+
+
+    <div id="divLoading" style="display: none">
+        <div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+            <img src="@BaseConfig.ImgUrl/egword/build/img/loading.gif" />
+        </div>
+    </div>
+
+    <script src="@BaseConfig.JsUrl/egword/build/js/jquery-3.1.1.min.js"></script>
+
+    @RenderSection("titleJS", false)
+
+    <script type="text/javascript">
+
+        $(document).ajaxComplete(function (event, xhr, settings) {
+            if (xhr.responseJSON && (!xhr.responseJSON.OK) && xhr.responseJSON.Code == "404") {
+                location.href = "/";
+            }
+        });
+
+        $("a[word-exit]").click(function () {
+            $.ajax({
+                type: "post",
+                url: "/Home/Exit",
+                dataType: "json",
+                error: function (e) {
+                },
+                success: function (e) {
+                    if (e.OK) {
+                        location.href = "/";
+                    }
+                }
+            });
+        });
+        //统计
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8242c970a0879477fe92f8a1848001c2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>
