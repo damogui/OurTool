@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack的网站</title>
+    <link href="~/Static/SUI-Mobile/css/sm.css" rel="stylesheet" />
+    <link href="~/Static/SUI-Mobile/css/sm-extend.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -12,7 +14,7 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-          
+
         </div>
     </div>
     <div class="container body-content">
@@ -22,8 +24,11 @@
             <p>&copy; @DateTime.Now - Jack的网站</p>
         </footer>
     </div>
-
+    <script src="~/Static/SUI-Mobile/js/zepto.min.js"></script>
+    <script src="~/Static/SUI-Mobile/js/sm.js"></script>
+    <script src="~/Static/SUI-Mobile/js/sm-extend.js"></script>
     @Scripts.Render("~/bundles/jquery")
+
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

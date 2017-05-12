@@ -243,6 +243,7 @@
     <Content Include="Static\SUI-Mobile\js\sm.js" />
     <Content Include="Static\SUI-Mobile\js\sm.min.js" />
     <Content Include="Static\SUI-Mobile\js\zepto.min.js" />
+    <Content Include="Tool\Read\read.swf" />
     <Content Include="Tool\TCode\demos.js" />
     <Content Include="Tool\TCode\HtmlPage1.html" />
     <Content Include="Tool\TCode\index.html" />

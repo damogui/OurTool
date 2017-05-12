@@ -1,31 +1,20 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "音标学习";
 }
 
-<div class="jumbotron">
-    <h1>欢迎您</h1>
-    <p class="lead">希望下面的工具希望能帮到您</p>
 
+
+<div style="height: 100%; width: 100%">
+    <a class="button button-link button-nav pull-left back" href="/Home/Index">
+        <span class="icon icon-left"></span>
+        返回
+    </a>
+    <br/>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<p class="lead">点读下面的音标发音</p>
+    <embed allowscriptaccess="never" allownetworking="internal" invokeurls="false" src="~/Tool/Read/read.swf"
+           pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" quality="high" autostart="0" wmode="transparent"
+           align="middle" style="width: 1000px; height: 600px">
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>二维码生成</h2>
-        <p>
-            <a href="~/Tool/TCode/MTCode.html" class="btn btn-primary btn-lg">去生成</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>安卓学习</h2>
-        <p><a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" class="btn btn-primary btn-lg">去学习</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>c#学习</h2>
-        <p><a href="http://www.runoob.com/csharp/csharp-tutorial.html" class="btn btn-primary btn-lg">去学习</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>java学习</h2>
-        <p><a href="http://www.runoob.com/java/java-tutorial.html" class="btn btn-primary btn-lg">去学习</a></p>
-    </div>
+   
 
-</div>
