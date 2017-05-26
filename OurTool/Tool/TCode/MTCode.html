@@ -1,21 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    
+
     <title>Jack的网站</title>
     <!--<script src="../../Scripts/jquery-1.10.2.min.js"></script>-->
     <link href="../../Static/SUI-Mobile/css/sm.min.css" rel="stylesheet" />
 
-    <script src="qrcode.js"></script>
+    <!--<script src="qrcode.js"></script>-->
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="js/qrcode.js"></script>
+    <script type="text/javascript" src="js/utf.js"></script>
     <script src="../../Static/SUI-Mobile/js/zepto.min.js"></script>
     <script src="../../Static/SUI-Mobile/js/sm.js"></script>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no" />
     <script src="../../Static/SUI-Mobile/js/sm-extend.js"></script>
-  
-  
+
+
 
     <!--<script src="demos.js"></script>-->
-  <!--  -->
+    <!--  -->
     <script type="text/javascript">
         // 二维码对象
         var qrcode;
@@ -23,62 +27,44 @@
         var content;
         var size;
         $(function () {
-          
-           
+
             // 获取尺寸
-           
-            $(document).off('pageInit');//解绑
-            //对话框
-            $(document).on("pageInit", "#page-modal", function (e, id, page) {
-               
-               
-                var $content = $(page).find('.content');
-                $content.on('click', '#send', function () {
-                    // 获取内容
-                    content = document.getElementById("content").value;
-                    content = content.replace(/(^\s*)|(\s*$)/g, "");
-                    size = document.getElementById("size").value;
-                    if (document.getElementById("content").value == "") {
-                        $.alert('请输入内容');
-                        return false;
-                    }
-                    if (!/^[0-9]*[1-9][0-9]*$/.test(size)) {
-                        $.alert('请输入正整数');
-                        return false;
-                      
-                    }
-                    if (size < 100 || size > 500) {
-                        $.alert('尺寸范围在100～500');
-                        return false;
-                       
-                    }
+            var $content = $(this).find('.content');
+            $content.on('click', '#send', function () {
+                // 获取内容
+                content = document.getElementById("content").value;
+                content = content.replace(/(^\s*)|(\s*$)/g, "");
+                size = document.getElementById("size").value;
+                if (document.getElementById("content").value == "") {
+                    alert('请输入内容');
+                    //$.toast('请输入内容', 1000, 'pop-toast');
+                    return false;
+                }
+                if (!/^[0-9]*[1-9][0-9]*$/.test(size)) {
+                    alert('请输入正整数');
+                    return false;
 
-                    // 清除上一次的二维码
-                    if (qrcode) {
-                        qrcode.clear();
-                    }
-                    debugger;
-                    // 创建二维码
-                    qrcode = new QRCode(document.getElementById("qrcode"), {
-                        width: size,//设置宽高
-                        height: size,
-                        render: "canvas",
-                        text: document.getElementById("content").value,
-                        //width: "200",               //二维码的宽度
-                        //height: "200",              //二维码的高度
-                        background: "#ffffff",       //l二维码的后景色
-                        foreground: "#000000",        //二维码的前景色
-                        src: '../Read/logo.jpg'             //二维码中间的图片
-                    });
-                    //qrcode.setLogoPath("f:/qrcode/3.gif");
-                    //qrcode.makeCode(document.getElementById("content").value);
-                   
+                }
+                if (size < 100 || size > 500) {
+                    alert('尺寸范围在100～500');
+                    return false;
 
+                }
+
+                $("#qrcode").html("");
+                qrcode = jQuery('#qrcode').qrcode({
+                    render: "canvas",
+                    text: document.getElementById("content").value,
+                    width: size,               //二维码的宽度
+                    height: size,              //二维码的高度
+                    background: "#ffffff",       //二维码的后景色
+                    foreground: "#000000",        //二维码的前景色
+                    src: 'img/logo.jpg'             //二维码中间的图片
                 });
 
 
             });
-            $.init();
+
         });
     </script>
 </head>
@@ -102,7 +88,7 @@
                                 <div class="item-inner">
                                     <div class="item-title label">内容：</div>
                                     <div class="item-input">
-                                        <input type="text" id="content"  placeholder="输入你要生成的二维码内容">
+                                        <input type="text" id="content" placeholder="输入你要生成的二维码内容">
                                     </div>
                                 </div>
                             </div>
@@ -117,18 +103,19 @@
                                 </div>
                             </div>
                         </li>
-                       
+
                     </ul>
                 </div>
                 <div class="content-block" style="text-align: center">
                     <div class="row" style="margin-left: 50%">
 
-                        <div class="col-50"  style="text-align: center"><button id="send" class="button button-big button-fill button-success">生成二维码</button>
+                        <div class="col-50" style="text-align: center">
+                            <button id="send" class="button button-big button-fill button-success">生成二维码</button>
                         </div>
-                       
+
                     </div>
                 </div>
-                <div id="qrcode"  style="margin-left: 50%"></div>
+                <div id="qrcode" style="margin-left: 50%"></div>
             </div>
         </div>
 
