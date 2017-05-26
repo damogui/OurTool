@@ -870,10 +870,16 @@
     <Content Include="Static\SUI-Mobile\js\sm.js" />
     <Content Include="Static\SUI-Mobile\js\sm.min.js" />
     <Content Include="Static\SUI-Mobile\js\zepto.min.js" />
+    <Content Include="Tool\TCode\img\logo.jpg" />
     <Content Include="Tool\Read\read.swf" />
     <Content Include="Tool\TCode\demos.js" />
     <Content Include="Tool\TCode\HtmlPage1.html" />
+    <Content Include="Tool\TCode\img\1.jpg" />
     <Content Include="Tool\TCode\index.html" />
+    <Content Include="Tool\TCode\js\jquery-1.11.1.js" />
+    <Content Include="Tool\TCode\js\jquery.qrcode.js" />
+    <Content Include="Tool\TCode\js\qrcode.js" />
+    <Content Include="Tool\TCode\js\utf.js" />
     <Content Include="Tool\TCode\MTCode.html" />
     <Content Include="Tool\TCode\qrcode.js" />
     <Content Include="Web.config" />

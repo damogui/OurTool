@@ -57,15 +57,22 @@
                     if (qrcode) {
                         qrcode.clear();
                     }
-
+                    debugger;
                     // 创建二维码
                     qrcode = new QRCode(document.getElementById("qrcode"), {
                         width: size,//设置宽高
-                        height: size
+                        height: size,
+                        render: "canvas",
+                        text: document.getElementById("content").value,
+                        //width: "200",               //二维码的宽度
+                        //height: "200",              //二维码的高度
+                        background: "#ffffff",       //l二维码的后景色
+                        foreground: "#000000",        //二维码的前景色
+                        src: '../Read/logo.jpg'             //二维码中间的图片
                     });
-
-                    qrcode.makeCode(document.getElementById("content").value);
-
+                    //qrcode.setLogoPath("f:/qrcode/3.gif");
+                    //qrcode.makeCode(document.getElementById("content").value);
+                   
 
                 });
 
