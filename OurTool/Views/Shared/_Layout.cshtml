@@ -10,19 +10,32 @@
     <link href="~/Static/SUI-Mobile/css/sm-extend.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style type="text/css">
+        
+        body {
+
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+    </style>
+   
 
 </head>
 <body>
-    
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now - our666</p>
-            &nbsp;友情链接&nbsp;&nbsp;&nbsp;<a href="https://www.luyuhai.com/" target="_blank">fixmath</a>
 
-        </footer>
-    </div>
+<div class="container body-content">
+    <div  style="display: none" ><audio  src="~/Static/Mp3/Fade.mp3"  controls="controls" id="audio">
+   
+</audio></div>
+   
+    @RenderBody()
+    <hr/>
+    <footer>
+        <p>&copy; @DateTime.Now - our666</p>
+        &nbsp;友情链接&nbsp;&nbsp;&nbsp;<a href="https://www.luyuhai.com/" target="_blank">fixmath</a>
+
+    </footer>
+</div>
     <script src="~/Static/SUI-Mobile/js/zepto.min.js"></script>
     <script src="~/Static/SUI-Mobile/js/sm.js"></script>
     <script src="~/Static/SUI-Mobile/js/sm-extend.js"></script>
@@ -30,5 +43,15 @@
 
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+
+<script type="text/javascript">
+    $(function () {
+        var myAuto = document.getElementById('audio');
+        myAuto.play();
+        
+    })
+
+</script>
 </body>
 </html>
