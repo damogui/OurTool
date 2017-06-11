@@ -859,6 +859,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Static\Img\baidu.gif" />
+    <Content Include="Static\Mp3\Fade.mp3" />
     <Content Include="Static\SUI-Mobile\css\sm-extend.css" />
     <Content Include="Static\SUI-Mobile\css\sm-extend.min.css" />
     <Content Include="Static\SUI-Mobile\css\sm.css" />
