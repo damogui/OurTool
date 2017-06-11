@@ -49,8 +49,11 @@
     $(function () {
         var myAuto = document.getElementById('audio');
         myAuto.play();
-        
+       
     })
+    document.addEventListener('touchstart', function () {
+        audio.play();
+    }, false);
 
 </script>
 </body>
