@@ -27,10 +27,24 @@ namespace OurTool.Controllers
             return View();
         }
 
-
+        /// <summary>
+        /// 发音界面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Read()
         {
             
+
+            return View();
+        }
+
+        /// <summary>
+        /// 能够自适应
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ReadH5()
+        {
+
 
             return View();
         }
