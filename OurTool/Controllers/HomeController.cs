@@ -17,6 +17,7 @@ namespace OurTool.Controllers
             JSSDK sdk = new JSSDK(appId, appSecret, debug);
             SignPackage config = sdk.GetSignPackage(JsApiEnum.scanQRCode |JsApiEnum.onMenuShareAppMessage | JsApiEnum.onMenuShareQQ| JsApiEnum.onMenuShareTimeline);
             System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            config.jsApiList=new string[] { "checkJsApi", "onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareQZone", "hideMenuItems", "showMenuItems", "hideAllNonBaseMenuItem", "showAllNonBaseMenuItem", "translateVoice", "startRecord", "stopRecord", "onVoiceRecordEnd", "playVoice", "onVoicePlayEnd", "pauseVoice", "stopVoice", "uploadVoice", "downloadVoice", "chooseImage", "previewImage", "uploadImage", "downloadImage", "getNetworkType", "openLocation", "getLocation", "hideOptionMenu", "showOptionMenu", "closeWindow", "scanQRCode", "chooseWXPay", "openProductSpecificView", "addCard", "chooseCard", "openCard" };
             ViewBag.config = serializer.Serialize(config);
 
             return View();
