@@ -980,6 +980,10 @@
       <Project>{d46bcc77-0cf2-47d9-a860-9b7f43e17fee}</Project>
       <Name>OurToolModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OurWechatSdkCore\OurWechatSdkCore.csproj">
+      <Project>{5bc9c3b1-b922-4721-8db3-06d876429c0c}</Project>
+      <Name>OurWechatSdkCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

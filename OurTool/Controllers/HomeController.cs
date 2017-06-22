@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OurWechatSdkCore;
 
 namespace OurTool.Controllers
 {
@@ -10,6 +11,14 @@ namespace OurTool.Controllers
     {
         public ActionResult Index()
         {
+            string appId = System.Configuration.ConfigurationManager.AppSettings["WeChatAppId"];
+            string appSecret = System.Configuration.ConfigurationManager.AppSettings["WeChatAppSecret"];
+            bool debug = System.Configuration.ConfigurationManager.AppSettings["WeChatAppSecret"].ToLower() == "true";
+            JSSDK sdk = new JSSDK(appId, appSecret, debug);
+            SignPackage config = sdk.GetSignPackage(JsApiEnum.scanQRCode | JsApiEnum.onMenuShareQQ);
+            System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            ViewBag.config = serializer.Serialize(config);
+
             return View();
         }
 
