@@ -2,6 +2,100 @@
     ViewBag.Title = "Home Page";
 }
 
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+   
+
+
+        wx.config(@Html.Raw(ViewBag.config));
+        wx.ready(function() {
+            wx.checkJsApi({
+                jsApiList: [
+                  'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo'
+                ],
+                success: function(res) {
+                    //alert(JSON.stringify(res));
+                }
+            });
+           
+            wx.onMenuShareAppMessage({
+                title: '欢迎您',
+                desc: '欢迎您使用工具。',
+                link: 'https://www.our666.com/', // 分享链接
+                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+                trigger: function(res) {
+                    //alert('用户点击发送给朋友');
+                },
+                success: function(res) {
+                    //alert('已分享');
+                },
+                cancel: function(res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+                    
+                   alert("信息"+JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareTimeline({
+                title: '欢迎您',
+                desc: '欢迎您使用工具。',
+                link: 'https://www.our666.com/', // 分享链接
+                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+                trigger: function (res) {
+                    //alert('用户点击发送给朋友');
+                },
+                success: function (res) {
+                    //alert('已分享');
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+
+                   alert("朋友圈"+JSON.stringify(res));
+                }
+            });
+
+
+            wx.onMenuShareQQ({
+                title: '欢迎您',
+                desc: '欢迎您使用工具。',
+                link: 'https://www.our666.com/', // 分享链接
+                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+                trigger: function (res) {
+                    //alert('用户点击发送给朋友');
+                },
+                success: function (res) {
+                    //alert('已分享');
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+
+                    alert("qq" + JSON.stringify(res));
+                }
+            });
+
+        });
+        wx.error(function(res) {
+
+            //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+
+        });
+
+  
+</script>
+
+
+<div id="content"></div>
 <div class="jumbotron">
     <h1>欢迎您</h1>
     @*<p class="lead">希望下面的工具能帮到您</p>*@
