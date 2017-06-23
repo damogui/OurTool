@@ -135,6 +135,7 @@ namespace OurWechatSdkCore
             url += httpcontext.Request.ServerVariables["HTTP_HOST"];
             url += httpcontext.Request.ServerVariables["URL"];
             url += string.IsNullOrEmpty(httpcontext.Request.ServerVariables["QUERY_STRING"]) ? "" : httpcontext.Request.ServerVariables["QUERY_STRING"];
+            absoluteUrl=absoluteUrl.Replace("http://www.our666.com:9000", "https://www.our666.com").Replace("http://www.our666.com", "https://www.our666.com");
             return GetSignPackage(absoluteUrl, jsapi);
         }
         /// <summary>
