@@ -130,11 +130,12 @@ namespace OurWechatSdkCore
         public SignPackage GetSignPackage(JsApiEnum jsapi)
         {
             HttpContext httpcontext = System.Web.HttpContext.Current;
+           var absoluteUrl= httpcontext.Request.Url.ToString();//绝对路径
             string url = (!string.IsNullOrEmpty(httpcontext.Request.ServerVariables["HTTPS"])) && httpcontext.Request.ServerVariables["HTTPS"] != "off" ? "https://" : "http://";
             url += httpcontext.Request.ServerVariables["HTTP_HOST"];
             url += httpcontext.Request.ServerVariables["URL"];
             url += string.IsNullOrEmpty(httpcontext.Request.ServerVariables["QUERY_STRING"]) ? "" : httpcontext.Request.ServerVariables["QUERY_STRING"];
-            return GetSignPackage(url, jsapi);
+            return GetSignPackage(absoluteUrl, jsapi);
         }
         /// <summary>
         /// 获取jssdk签名配置对象

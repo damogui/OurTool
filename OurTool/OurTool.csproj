@@ -956,6 +956,7 @@
     <Content Include="Views\Shared\_backLogin.cshtml" />
     <Content Include="Scripts\qrcode.min.js.map" />
     <Content Include="Views\Home\ReadH5.cshtml" />
+    <Content Include="Scripts\jweixin-1.0.0.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,7 +2,8 @@
     ViewBag.Title = "Home Page";
 }
 
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+@*<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>*@
+<script src="~/Scripts/jweixin-1.0.0.js"></script>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
 @*<input type="button" id="btnset" value="点击设置"/>*@
@@ -86,74 +87,71 @@
 <script>
 
 
-    $(function () {
-        wx.config(@Html.Raw(ViewBag.config));
-        debugger;
-        wx.ready(function() {
+    wx.config(@Html.Raw(ViewBag.config));
+    debugger;
+    wx.ready(function() {
        
-            wx.onMenuShareAppMessage({
-                title: '欢迎您',
-                desc: '欢迎您使用工具。',
-                link: 'http://www.our666.com/', // 分享链接
-                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+        wx.onMenuShareAppMessage({
+            title: '欢迎您',
+            desc: '欢迎您使用工具。',
+            link: 'http://www.our666.com/Home/Index?from=singlemessage&isappinstalled=0', // 分享链接
+            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
               
-                success: function(res) {
-                    //alert('已分享');
-                },
-                cancel: function(res) {
-                    //alert('已取消');
-                },
-                fail: function (res) {
+            success: function(res) {
+                //alert('已分享');
+            },
+            cancel: function(res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
 
-                    alert("信息"+JSON.stringify(res));
-                }
-            });
-
-            wx.onMenuShareTimeline({
-                title: '欢迎您',
-                desc: '欢迎您使用工具。',
-                link: 'http://www.our666.com/', // 分享链接
-                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
-               
-                success: function (res) {
-                    //alert('已分享');
-                },
-                cancel: function (res) {
-                    //alert('已取消');
-                },
-                fail: function (res) {
-
-                    alert("朋友圈"+JSON.stringify(res));
-                }
-            });
-
-
-            wx.onMenuShareQQ({
-                title: '欢迎您',
-                desc: '欢迎您使用工具。',
-                link: 'http://www.our666.com/', // 分享链接
-                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
-               
-                success: function (res) {
-                    //alert('已分享');
-                },
-                cancel: function (res) {
-                    //alert('已取消');
-                },
-                fail: function (res) {
-
-                    alert("qq" + JSON.stringify(res));
-                }
-            });
-
-        });
-        wx.error(function(res) {
-
-            //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
-
+                alert("信息"+JSON.stringify(res));
+            }
         });
 
-    })
+        wx.onMenuShareTimeline({
+            title: '欢迎您',
+            desc: '欢迎您使用工具。',
+            link: 'http://www.our666.com/Home/Index?from=timeline&isappinstalled=0', // 分享链接
+            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+               
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("朋友圈"+JSON.stringify(res));
+            }
+        });
+
+
+        wx.onMenuShareQQ({
+            title: '欢迎您',
+            desc: '欢迎您使用工具。',
+            link: 'http://www.our666.com/', // 分享链接
+            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+               
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("qq" + JSON.stringify(res));
+            }
+        });
+
+    });
+    wx.error(function(res) {
+
+        //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+
+    });
 
 
 
