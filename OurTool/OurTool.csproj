@@ -211,6 +211,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="index.html" />
     <Content Include="Node\.debug.js" />
     <Content Include="Node\gulpfile.js" />
     <Content Include="Node\gulp\config.js" />
