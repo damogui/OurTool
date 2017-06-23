@@ -56,7 +56,7 @@
     </div>
     <div class="col-md-4">
         <h2>二维码生成</h2>
-        <p><a href="~/Tool/TCode/MTCode.html" class="btn btn-primary btn-lg">去生成</a>
+        <p><a href="/Home/MTCode/" class="btn btn-primary btn-lg">去生成</a>
         </p>
     </div>
     <div class="col-md-4">
@@ -80,7 +80,7 @@
 
 <script type="text/javascript">
     $(function () {
-        alert(location.href.split('#')[0])
+        //alert(location.href.split('#')[0])
         var myAuto = document.getElementById('audio');
         myAuto.play();
 
@@ -95,7 +95,6 @@
 
 
     wx.config(@Html.Raw(ViewBag.config));
-    debugger;
     wx.ready(function() {
        
         wx.onMenuShareAppMessage({
