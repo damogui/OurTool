@@ -244,6 +244,8 @@
     <Content Include="Img\2_30.jpg" />
     <Content Include="Img\2_31.jpg" />
     <Content Include="Img\2_32.jpg" />
+    <Content Include="Img\logo\2wm.jpg" />
+    <Content Include="Img\logo\mfg.jpg" />
     <Content Include="Img\logo\shizi.jpg" />
     <Content Include="Img\分隔符.gif" />
     <Content Include="Node\.debug.js" />

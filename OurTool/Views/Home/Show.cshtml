@@ -2,26 +2,34 @@
     ViewBag.Title = "魔方格单词速记";
     Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
 }
+<style type="text/css">
+    .video {
 
-<h2 style="color: #FCA300">魔方格单词速记</h2>
+        border: 1px;
+        border-color: #FCA300;
+        border-style: inset;
+    }
 
-<div  style="width: 50%; height: 50%;margin-left: 20%">
-    <embed class="vedio"
-           height="615"
-           width="744"
-           autoplay="true"
-           quality="high" allowfullscreen="true"
-           type="application/x-shockwave-flash"
-           @*src="https://static.hdslb.com/miniloader.swf"*@
-           src="https://app.iamjzs.com/hello.swf"
-           flashvars="aid=9138791&page=1"
-           pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+</style>
+<div>
+    <h2 style="color: #FCA300">魔方格单词速记</h2>
+    <img src="~/Img/logo/2wm.jpg" style="float: right; width: 20%;height: 20%">
 
 
-    @*src="https://app.iamjzs.com/hello.swf"*@
-
-
+    <iframe src="https://m.bilibili.com/video/av9138791.html" class="video" id="iframepage" scrolling="no" width="auto" height="600"></iframe>
 </div>
+
+<script type="text/javascript" language="javascript">
+
+function iFrameHeight() {
+var ifm= document.getElementById("iframepage");
+var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+if(ifm != null && subWeb != null) {
+   ifm.height = subWeb.body.scrollHeight;
+   ifm.width = subWeb.body.scrollWidth;
+}
+}
+</script>
 <script src="~/Scripts/jweixin-1.0.0.js"></script>
 <script>
 
