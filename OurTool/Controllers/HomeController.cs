@@ -33,8 +33,19 @@ namespace OurTool.Controllers
 
             return View();
 
+        } 
+        /// <summary>
+        /// 广告
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Show()
+        {
+            ViewBag.config = GetWchatConfig();
+
+            return View();
+
         }
-      
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

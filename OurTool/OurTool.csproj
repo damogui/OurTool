@@ -960,6 +960,8 @@
     <Content Include="Scripts\jweixin-1.0.0.js" />
     <Content Include="Views\Home\MTCode.cshtml" />
     <Content Include="Views\Shared\_LayoutShare.cshtml" />
+    <Content Include="Views\Home\Show.cshtml" />
+    <Content Include="Views\Shared\_LayoutEmpty.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
