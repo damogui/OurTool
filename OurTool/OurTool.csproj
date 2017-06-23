@@ -193,6 +193,7 @@
     <Compile Include="Areas\Our\Controllers\PersonController.cs" />
     <Compile Include="Areas\Our\OurAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -211,7 +212,42 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="index.html" />
+    <Content Include="Img\2_01.jpg" />
+    <Content Include="Img\2_02-04.jpg" />
+    <Content Include="Img\2_02.jpg" />
+    <Content Include="Img\2_03.jpg" />
+    <Content Include="Img\2_04.jpg" />
+    <Content Include="Img\2_05.jpg" />
+    <Content Include="Img\2_06.jpg" />
+    <Content Include="Img\2_08.jpg" />
+    <Content Include="Img\2_09.jpg" />
+    <Content Include="Img\2_10.jpg" />
+    <Content Include="Img\2_11.jpg" />
+    <Content Include="Img\2_12.jpg" />
+    <Content Include="Img\2_13.jpg" />
+    <Content Include="Img\2_14.jpg" />
+    <Content Include="Img\2_15.jpg" />
+    <Content Include="Img\2_16.jpg" />
+    <Content Include="Img\2_17.jpg" />
+    <Content Include="Img\2_18.jpg" />
+    <Content Include="Img\2_19.jpg" />
+    <Content Include="Img\2_20.jpg" />
+    <Content Include="Img\2_21.jpg" />
+    <Content Include="Img\2_22.jpg" />
+    <Content Include="Img\2_23.jpg" />
+    <Content Include="Img\2_24.jpg" />
+    <Content Include="Img\2_25.jpg" />
+    <Content Include="Img\2_26.jpg" />
+    <Content Include="Img\2_27.jpg" />
+    <Content Include="Img\2_28.jpg" />
+    <Content Include="Img\2_29.jpg" />
+    <Content Include="Img\2_30.jpg" />
+    <Content Include="Img\2_31.jpg" />
+    <Content Include="Img\2_32.jpg" />
+    <Content Include="Img\logo\2wm.jpg" />
+    <Content Include="Img\logo\mfg.jpg" />
+    <Content Include="Img\logo\shizi.jpg" />
+    <Content Include="Img\分隔符.gif" />
     <Content Include="Node\.debug.js" />
     <Content Include="Node\gulpfile.js" />
     <Content Include="Node\gulp\config.js" />
@@ -922,6 +958,12 @@
     <Content Include="Views\Home\Read.cshtml" />
     <Content Include="Views\Shared\_backLogin.cshtml" />
     <Content Include="Scripts\qrcode.min.js.map" />
+    <Content Include="Views\Home\ReadH5.cshtml" />
+    <Content Include="Scripts\jweixin-1.0.0.js" />
+    <Content Include="Views\Home\MTCode.cshtml" />
+    <Content Include="Views\Shared\_LayoutShare.cshtml" />
+    <Content Include="Views\Home\Show.cshtml" />
+    <Content Include="Views\Shared\_LayoutEmpty.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -929,6 +971,7 @@
     <Folder Include="Areas\Our\Views\Shared\" />
     <Folder Include="Node\src\tpl\ChannelManage\" />
     <Folder Include="Node\src\tpl\CourseManage\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -946,6 +989,10 @@
     <ProjectReference Include="..\OurToolModel\OurToolModel.csproj">
       <Project>{d46bcc77-0cf2-47d9-a860-9b7f43e17fee}</Project>
       <Name>OurToolModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OurWechatSdkCore\OurWechatSdkCore.csproj">
+      <Project>{5bc9c3b1-b922-4721-8db3-06d876429c0c}</Project>
+      <Name>OurWechatSdkCore</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

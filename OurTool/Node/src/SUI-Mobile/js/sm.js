@@ -1527,7 +1527,7 @@ Device/OS Detection
         return modal[0];
     };
     //显示一个消息，会在2秒钟后自动消失
-    $.toast = function(msg, duration, extraclass) {
+    doc.toast = function(msg, duration, extraclass) {
         var $toast = $('<div class="modal toast ' + (extraclass || '') + '">' + msg + '</div>').appendTo(document.body);
         $.openModal($toast, function(){
             setTimeout(function() {

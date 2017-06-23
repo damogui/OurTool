@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_LayoutShare.cshtml";
+}
+<h2>二维码生成</h2>
+<script src="~/Scripts/jweixin-1.0.0.js"></script>
+<script>
+
+
+    wx.config(@Html.Raw(ViewBag.config));
+    wx.ready(function() {
+
+        wx.onMenuShareAppMessage({
+            title: '二维码生成工具',
+            desc: '欢迎您使用二维码工具。',
+            link: 'https://www.our666.com/Home/MTCode/?from=singlemessage&isappinstalled=0', // 分享链接
+            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+
+            success: function(res) {
+                //alert('已分享');
+            },
+            cancel: function(res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("信息"+JSON.stringify(res));
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title: '二维码生成工具',
+            desc: '欢迎您使用二维码工具。',
+            link: 'https://www.our666.com/Home/MTCode/?from=timeline&isappinstalled=0', // 分享链接
+            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("朋友圈"+JSON.stringify(res));
+            }
+        });
+
+
+        wx.onMenuShareQQ({
+            title: '二维码生成工具',
+            desc: '欢迎您使用二维码工具。',
+            link: 'https://www.our666.com/Home/MTCode/?from=singlemessage&isappinstalled=1', // 分享链接
+            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("qq" + JSON.stringify(res));
+            }
+        });
+
+    });
+    wx.error(function(res) {
+
+        //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+
+    });
+
+
+
+
+
+
+</script>

@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurToolModel", "OurToolMode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurToolCommon", "OurToolCommon\OurToolCommon.csproj", "{6E3C297E-A297-47C2-B27A-4F8E7B8CB72A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurWechatSdkCore", "OurWechatSdkCore\OurWechatSdkCore.csproj", "{5BC9C3B1-B922-4721-8DB3-06D876429C0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurWechatSdkUtility", "OurWechatSdkUtility\OurWechatSdkUtility.csproj", "{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{6E3C297E-A297-47C2-B27A-4F8E7B8CB72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E3C297E-A297-47C2-B27A-4F8E7B8CB72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E3C297E-A297-47C2-B27A-4F8E7B8CB72A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC9C3B1-B922-4721-8DB3-06D876429C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC9C3B1-B922-4721-8DB3-06D876429C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC9C3B1-B922-4721-8DB3-06D876429C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC9C3B1-B922-4721-8DB3-06D876429C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

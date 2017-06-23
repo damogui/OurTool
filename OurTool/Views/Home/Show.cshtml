@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "魔方格单词速记";
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+}
+<style type="text/css">
+    .video {
+
+        border: 1px;
+        border-color: #FCA300;
+        border-style: inset;
+    }
+
+</style>
+<div>
+    <h2 style="color: #FCA300">魔方格单词速记</h2>
+    <img src="~/Img/logo/2wm.jpg" style="float: right; width: 20%;height: 20%">
+
+
+    <iframe src="https://m.bilibili.com/video/av9138791.html" class="video" id="iframepage" scrolling="no" width="auto" height="600"></iframe>
+</div>
+
+<script type="text/javascript" language="javascript">
+
+function iFrameHeight() {
+var ifm= document.getElementById("iframepage");
+var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+if(ifm != null && subWeb != null) {
+   ifm.height = subWeb.body.scrollHeight;
+   ifm.width = subWeb.body.scrollWidth;
+}
+}
+</script>
+<script src="~/Scripts/jweixin-1.0.0.js"></script>
+<script>
+
+
+    wx.config(@Html.Raw(ViewBag.config));
+    wx.ready(function() {
+
+        wx.onMenuShareAppMessage({
+            title: '魔方格单词速记',
+            desc: '魔方格单词速记介绍视频',
+            link: 'https://www.our666.com/Home/Show/?from=singlemessage&isappinstalled=0', // 分享链接
+            imgUrl: 'https://www.our666.com/Img/logo/mfg.jpg', // 分享图标
+
+            success: function(res) {
+                //alert('已分享');
+            },
+            cancel: function(res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("信息"+JSON.stringify(res));
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title: '魔方格单词速记',
+            desc: '魔方格单词速记介绍视频',
+            link: 'https://www.our666.com/Home/Show/?from=timeline&isappinstalled=0', // 分享链接
+            imgUrl: 'https://www.our666.com/Img/logo/mfg.jpg', // 分享图标
+
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("朋友圈"+JSON.stringify(res));
+            }
+        });
+
+
+        wx.onMenuShareQQ({
+            title: '魔方格单词速记',
+            desc: '魔方格单词速记视频',
+            link: 'https://www.our666.com/Home/Show/?from=singlemessage&isappinstalled=1', // 分享链接
+            imgUrl: 'https://www.our666.com/Img/logo/mfg.jpg', // 分享图标
+
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("qq" + JSON.stringify(res));
+            }
+        });
+
+    });
+    wx.error(function(res) {
+
+        //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+
+    });
+
+
+
+
+
+
+</script>
