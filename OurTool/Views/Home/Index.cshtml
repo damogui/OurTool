@@ -7,45 +7,32 @@
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
 @*<input type="button" id="btnset" value="点击设置"/>*@
+@*天气和音乐*@
+<div >
+    <a href="#" onclick="document.getElementById('audio').play(); return false;">开始</a>
+    <a href="#" onclick="document.getElementById('audio').pause(); return false;">暂停</a>
+</div>
 
 <div id="content"></div>
-<div class="jumbotron">
-    <h1>欢迎您</h1>
-    @*<p class="lead">希望下面的工具能帮到您</p>*@
-   
+<div class="jumbotron" style="background-color:#ffffff ">
+    
+    <form action="https://www.baidu.com/baidu" target="_blank">
+        <div align="center">
+            <table style="background-color: #FFFFFF">
+                <tr>
+                    <td>
+                        <input name=tn type="hidden">
+                        <a href="https://www.baidu.com/">
+                            <img src="~/Static/Img/baidu.gif" alt="Baidu" class="img" />
+                        </a>
+                        <input type=text name=word  class="input text">
+                        <input type="submit" class="btn btn-primary btn-lg" value="百度搜索">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
 </div>
-@*<form action="http://www.baidu.com/baidu" target="_blank">
-    <div align="center">
-        <input name=tn type=hidden value=baidu>
-        <a href="http://www.baidu.com/">
-            <img src="http://img.baidu.com/search/img/baidulogo_clarity_80_29.gif" alt="Baidu" align="bottom" border="0">
-        </a>
-        <input type=text name=word size=30>
-        <input type="submit" value="百度搜索">
-    </div>
-</form>*@
-@*<a>地址</a>
-@ViewBag.Url
-<a>签名</a>
-@ViewBag.Name*@
-
-
-
-<form action="https://www.baidu.com/baidu" target="_blank">
-    <div align="center">
-        <table style="background-color: #FFFFFF">
-            <tr>
-                <td>
-                    <input name=tn type="hidden">
-                    <a href="https://www.baidu.com/"> <img src="~/Static/Img/baidu.gif" alt="Baidu" align="bottom" border="0"/>
-                       </a>
-                    <input type=text name=word size=30>
-                    <input type="submit" value="百度搜索">
-                </td>
-            </tr>
-        </table>
-    </div>
-</form>
 <div class="row">
 
     <div class="col-md-4">
@@ -82,6 +69,7 @@
     $(function () {
         //alert(location.href.split('#')[0])
         var myAuto = document.getElementById('audio');
+        myAuto.volume = 0.01;//声音控制
         myAuto.play();
 
     })
