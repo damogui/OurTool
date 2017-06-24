@@ -194,6 +194,7 @@
     <Compile Include="Areas\Our\OurAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -967,6 +968,7 @@
     <Content Include="Views\Shared\_LayoutShare.cshtml" />
     <Content Include="Views\Home\Show.cshtml" />
     <Content Include="Views\Shared\_LayoutEmpty.cshtml" />
+    <Content Include="Views\Card\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
