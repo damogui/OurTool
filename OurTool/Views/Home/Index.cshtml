@@ -8,9 +8,24 @@
 
 @*<input type="button" id="btnset" value="点击设置"/>*@
 @*天气和音乐*@
+@*<style type="text/css">
+     .musis-default{
+                width:80px;
+                height:80px;
+            }
+     .musis-beg{
+                background: url('../../Img/music/beg.png') -150px -126px no-repeat;
+            }
+     .musis-end{
+                background: url('../../Img/music/end.png') -100px -68px no-repeat;
+            }
+</style>*@
 <div >
-    <a href="#" onclick="document.getElementById('audio').play(); return false;">开始</a>
-    <a href="#" onclick="document.getElementById('audio').pause(); return false;">暂停</a>
+    <img src="~/Img/music/beg.png" style="width: 5%; height: 5%; "   onclick="document.getElementById('audio').play(); return false;" id="beg" />
+    <img src="~/Img/music/end.png" style="width:  5%; height: 5%;display: none " onclick="document.getElementById('audio').pause(); return false;"  id="end"/>
+  
+   
+   
 </div>
 
 <div id="content"></div>
@@ -70,7 +85,18 @@
         //alert(location.href.split('#')[0])
         var myAuto = document.getElementById('audio');
         myAuto.volume = 0.01;//声音控制
-        myAuto.play();
+        myAuto.pause();
+        $("#beg").click(function() {
+            $("#end").css("display", "");
+            $("#beg").css("display", "none");
+            myAuto.play();
+          
+        });
+        $("#end").click(function () {
+            $("#beg").css("display", "");
+            $("#end").css("display", "none");
+            myAuto.pause();
+        });
 
     })
     //document.addEventListener('touchstart', function () {

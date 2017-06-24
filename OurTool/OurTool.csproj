@@ -215,6 +215,9 @@
     <Content Include="Img\logo\2wm.jpg" />
     <Content Include="Img\logo\mfg.jpg" />
     <Content Include="Img\logo\shizi.jpg" />
+    <Content Include="Img\music\beg.png" />
+    <Content Include="Img\music\end.png" />
+    <Content Include="Img\music\music.jpg" />
     <Content Include="Img\read\2_01.jpg" />
     <Content Include="Img\read\2_02-04.jpg" />
     <Content Include="Img\read\2_02.jpg" />
@@ -969,7 +972,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Our\Models\" />
     <Folder Include="Areas\Our\Views\Shared\" />
-    <Folder Include="Img\music\" />
     <Folder Include="Node\src\tpl\ChannelManage\" />
     <Folder Include="Node\src\tpl\CourseManage\" />
     <Folder Include="Views\Base\" />
