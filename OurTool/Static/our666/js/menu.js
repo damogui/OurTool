@@ -2,7 +2,7 @@
 document.write ("<div class='head'>");
     document.write ("<div class='head_div'>");
         document.write ("<div class='head_left'>您好，欢迎来到<span>our666</span>！</div>");
-        document.write ("<div class='head_right'><a href='#' class='to_ri_sp1'>设为主页</a><a href='#' class='to_ri_sp2'>加入收藏</a></div>");
+        document.write("<div class='head_right'><a href='#'  class='to_ri_sp1' id='makeHome'>设为主页</a><a href='#' id='addBro' class='to_ri_sp2'>加入收藏</a></div>");
     document.write ("</div>");
 document.write ("</div>");
 document.write ("<div class='clear'></div>");
