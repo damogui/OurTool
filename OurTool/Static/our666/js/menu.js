@@ -19,16 +19,23 @@ document.write ("</div>");
 document.write ("<div class='clear'></div>");
 //<!-- 头部（logo + 日期） end -->
 //<!-- 搜索栏 -->
-document.write ("<div class='search'>");
+
+document.write("<div class='search'>");
+
     document.write ("<div class='ruzhu'><a href='#'><img src='images/ruzhu.png' width='208' height='49' alt='' title='' /></a></div>");
-    document.write ("<div class='sea'> ");
-        document.write ("<div class='sea_left'><p>综合搜索 ></p></div>");
+    document.write("<div class='sea'> ");
+    
+    document.write("<div class='sea_left'><p>百度</p></div>");
+    document.write("<form action='https://www.baidu.com/baidu' target='_blank'>");//表单开始
         document.write ("<div class='sea_center'>");
-		    document.write ("<div class='sea_center1'>");
-            document.write ("<input class='txtSearch' name='keyword' type='text' id='search' value='请输入关键字' />");
+        document.write("<div class='sea_center1'>");
+       
+        document.write("<input class='txtSearch' name='word' type='text' id='search' placeholder='请输入关键字'     />");
+
 			document.write ("</div>");
         document.write ("</div>");
-        document.write ("<input type='button' value='百度一下' class='sea_right' />");
+        document.write("<input type='submit' value='百度一下' class='sea_right' />");
+        document.write(" </form>");//提交尾部
         document.write ("<div class='sea_bottom'>");
             document.write ("<span class='span1'>热门：</span>");
             document.write ("<span><a href='#'>医药招商</a></span>");
@@ -39,7 +46,8 @@ document.write ("<div class='search'>");
             document.write ("<span><a href='#'>医药公司</a></span>");
             document.write ("<span><a href='#'>修正药业</a></span>");
         document.write ("</div>");
-    document.write ("</div>");
+        document.write("</div>");
+       
 document.write ("</div>");
 document.write ("<div class='search_bottom'></div>");
 document.write ("<div class='clear'></div>");

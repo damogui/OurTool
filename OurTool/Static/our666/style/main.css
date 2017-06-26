@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 *{ margin:0; padding:0; color:#333333;  font-family: font: 14px/100% arial,宋体; }
 body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,img{margin:0;padding:0; border:0}
 body,button,input,select,textarea{font:12px/1.5 "宋体" ,Simsun,"Arial Unicode MS",Mingliu,Helvetica;}
@@ -38,7 +38,7 @@ body{ background-color:#fcfcfc;}
 .sea_left p {/*padding:6px 0 0 11px; */ line-height:30px; text-align:center; font-size:13px; }
 .sea_center{ width:440px; height:30px; border:solid #009b4d 1px; float:left; margin:18px 0 0 5px; *margin:18px 0 0 5px; *float:left; }
 /*.sea_center1{ *float:left; }*/
-.txtSearch{ width:435px; height:28px; line-height:26px; padding-left:5px; font-size:13px; color:#aaaaaa; padding-top:2px; *padding-top:0px; }
+.txtSearch{ width:435px; height:28px; line-height:26px; padding-left:5px; font-size:13px;  padding-top:2px; *padding-top:0px; }
 .sea_right{ width:95px; height:32px; background:url(../images/sea_right_bj.jpg) repeat-x; border:solid #009b4d 1px; float:right; margin:18px 103px 0 0; font-size:14px;}
 .sea_bottom{ float:left; margin:3px 0 0 50px;}
 .sea_bottom .span1{ color:#f08300; }
