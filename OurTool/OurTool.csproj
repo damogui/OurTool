@@ -918,10 +918,7 @@
     <Content Include="Static\our666\images\6.jpg" />
     <Content Include="Static\our666\images\7.jpg" />
     <Content Include="Static\our666\images\8.jpg" />
-    <Content Include="Static\our666\images\adv01.png" />
     <Content Include="Static\our666\images\adv02.png" />
-    <Content Include="Static\our666\images\adv05.png" />
-    <Content Include="Static\our666\images\adv06.png" />
     <Content Include="Static\our666\images\af1.png" />
     <Content Include="Static\our666\images\af2.png" />
     <Content Include="Static\our666\images\area.jpg" />
