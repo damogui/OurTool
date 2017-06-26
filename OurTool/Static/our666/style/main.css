@@ -189,8 +189,13 @@ div.slider-nav span.left{background:url(../images/left.png);left:0; }
 .right1 .gold1 li .ar9 { background:url(../icon/rIcon.png) no-repeat  0px -357px ; line-height:30px; padding:3px 0 0 23px; }
 .right1 .gold1 li .ar10 { background:url(../icon/rIcon.png) no-repeat  0px -439px ; line-height:30px; padding:3px 0 0 23px; }
 .right1 .gold1 li .ar11 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
-.right1 .gold1 li .ar12 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
-.right1 .gold1 li .ar13 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
+    .right1 .gold1 li .ar13 {
+        background: url('../icon/jd.png') no-repeat;
+        /*background-image: url('../icon/jd.png');*/
+        line-height: 30px;
+        padding: 3px 0 0 23px;
+    }
+/*.right1 .gold1 li .ar13 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }*/
 .right1 .gold1 li .ar14 { background:url(../icon/rIcon.png) no-repeat  0px -518px ; line-height:30px; padding:3px 0 0 23px; }
 .right1 .gold1 li .ar15 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
 .right1 .gold1 li .ar16 { background:url(../icon/rIcon.png) no-repeat  0px -479px ; line-height:30px; padding:3px 0 0 23px; }
