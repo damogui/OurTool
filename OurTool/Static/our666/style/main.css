@@ -174,7 +174,33 @@ div.slider-nav span.left{background:url(../images/left.png);left:0; }
 .right1{ overflow:hidden; border-top:solid #cecece 1px; /*009b4d*/  border-right:solid #cecece 1px; border-bottom:solid #cecece 1px; border-left:solid #cecece 1px; background:#fff; }
 .right1 .gold1 { overflow:hidden; margin:8px 0 10px 5px; background:url(../images/fengexian1.jpg) no-repeat bottom; padding-bottom:10px; }
 .right1 .gold1 li { font-size:14px; width:100px; float:left; margin:0 10px 0 11px; text-indent:inherit; }
-.right1 .gold1 li a { background:url(http://s0.hao123img.com/res/img/defaultIcon0708.png) no-repeat  0px -199px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li a { background:url(../icon/rIcon.png) no-repeat  0px -199px ; line-height:30px; padding:3px 0 0 23px; }
+/*黄金广告位图标beg*/
+.right1 .gold1 li .ar1 { background:url(../icon/rIcon.png) no-repeat  0px -199px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar2 { background:url(../icon/rIcon.png) no-repeat  0px -280px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar3 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar4 { background:url(../icon/rIcon.png) no-repeat  0px -40px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar5 { background:url(../icon/rIcon.png) no-repeat  0px -157px ; line-height:30px; padding:3px 0 0 23px; }
+
+.right1 .gold1 li .ar6 { background:url(../icon/rIcon.png) no-repeat  0px -399px ; line-height:30px; padding:3px 0 0 23px; }
+
+.right1 .gold1 li .ar7 { background:url(../icon/rIcon.png) no-repeat  0px -239px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar8 { background:url(../icon/rIcon.png) no-repeat  0px -640px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar9 { background:url(../icon/rIcon.png) no-repeat  0px -357px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar10 { background:url(../icon/rIcon.png) no-repeat  0px -439px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar11 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar12 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar13 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar14 { background:url(../icon/rIcon.png) no-repeat  0px -518px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar15 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
+.right1 .gold1 li .ar16 { background:url(../icon/rIcon.png) no-repeat  0px -479px ; line-height:30px; padding:3px 0 0 23px; }
+
+.right1 .gold1 li .ar17 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
+
+.right1 .gold1 li .ar18 { background:url(../icon/rIcon.png) no-repeat  0px -319px ; line-height:30px; padding:3px 0 0 23px; }
+
+
+/*黄金广告位图标end*/
 .right1 .gold2 { overflow:hidden; margin:8px 0 5px 5px;}
 .right1 .gold2 li { font-size:14px; width:100px; float:left; margin:0 10px 0 11px; line-height:30px;}
 .right1 .gold2 li span{ color:#f08300; }
