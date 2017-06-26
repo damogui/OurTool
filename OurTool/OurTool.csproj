@@ -910,6 +910,7 @@
     <Content Include="Static\our666\b.jpg" />
     <Content Include="Static\our666\icon\jd.png" />
     <Content Include="Static\our666\icon\rIcon.png" />
+    <Content Include="Static\our666\icon\wy.png" />
     <Content Include="Static\our666\images\1.jpg" />
     <Content Include="Static\our666\images\2.jpg" />
     <Content Include="Static\our666\images\3.jpg" />
