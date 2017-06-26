@@ -24,8 +24,18 @@ namespace OurTool.Controllers
             //ViewBag.Url = xx;
             //ViewBag.Name = config.signature;
 
-            return View("OurIndex");
+            return View("Index");
         }
+        /// <summary>
+        /// 最新our66新首页
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult OurIndex()
+        {
+            return View("OurIndex");
+
+        }
+
         //二维码生成
         public ActionResult MTCode()
         {
