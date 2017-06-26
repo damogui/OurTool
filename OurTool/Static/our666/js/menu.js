@@ -38,13 +38,13 @@ document.write("<div class='search'>");
         document.write(" </form>");//提交尾部
         document.write ("<div class='sea_bottom'>");
             document.write ("<span class='span1'>热门：</span>");
-            document.write ("<span><a href='#'>医药招商</a></span>");
-            document.write ("<span><a href='#'>交易平台</a></span>");
-            document.write ("<span><a href='#'>国家药监局</a></span>");
-            document.write ("<span><a href='#'>原料企业</a></span>");
-            document.write ("<span><a href='#'>制药设备</a></span>");
-            document.write ("<span><a href='#'>医药公司</a></span>");
-            document.write ("<span><a href='#'>修正药业</a></span>");
+            document.write ('<span><a href="http://edu.sina.com.cn/gaokao/" target="_blank">2017年高考专区</a></span>');
+            document.write ('<span><a href="http://www.zhongkao.com" target="_blank">2017年查分入口</a></span>');
+            //document.write ("<span><a href='#'>国家药监局</a></span>");
+            //document.write ("<span><a href='#'>原料企业</a></span>");
+            //document.write ("<span><a href='#'>制药设备</a></span>");
+            //document.write ("<span><a href='#'>医药公司</a></span>");
+            //document.write ("<span><a href='#'>修正药业</a></span>");
         document.write ("</div>");
         document.write("</div>");
        
