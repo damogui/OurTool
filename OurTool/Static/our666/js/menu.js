@@ -9,11 +9,11 @@ document.write ("<div class='clear'></div>");
     document.write ("<div class='header'>");
 	
 document.write ("<div class='top'>");
-    document.write ("<div class='logo'><a href='index.html'><img src='images/logo.png' width='230' height='73' alt='our666' title='our666' /></a></div>");
+document.write("<div class='logo'><a href='/Home/Index'><img src='/Static/our666/images/logo.png' width='230' height='73' alt='our666' title='our666' /></a></div>");
     document.write ("<div class='date'>");
         document.write ("<div class='time'><a href='#'>7月25日 周五六月廿九</a></div>");
         document.write ("<div class='weather'><iframe width='455' scrolling='no' height='75' frameborder='0' allowtransparency='true' src='http://i.tianqi.com/index.php?c=code&id=38&icon=1&num=2&align=left'></iframe></div>");
-        //document.write ("<a href='#'><div class='adv1'><img src='images/guanggao1.jpg' width='178' height='55' alt='our666' title='our666' /></div></a>");
+        //document.write ("<a href='#'><div class='adv1'><img src='/Static/our666/images//guanggao1.jpg' width='178' height='55' alt='our666' title='our666' /></div></a>");
     document.write ("</div>");
 document.write ("</div>");
 document.write ("<div class='clear'></div>");
@@ -22,7 +22,7 @@ document.write ("<div class='clear'></div>");
 
 document.write("<div class='search'>");
 
-    document.write ("<div class='ruzhu'><a href='#'><img src='images/ruzhu.png' width='208' height='49' alt='' title='' /></a></div>");
+    document.write ("<div class='ruzhu'><a href='#'><img src='/Static/our666/images//ruzhu.png' width='208' height='49' alt='' title='' /></a></div>");
     document.write("<div class='sea'> ");
     
     document.write("<div class='sea_left'><p>百度</p></div>");

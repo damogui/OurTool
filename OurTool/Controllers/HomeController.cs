@@ -24,7 +24,7 @@ namespace OurTool.Controllers
             //ViewBag.Url = xx;
             //ViewBag.Name = config.signature;
 
-            return View();
+            return View("OurIndex");
         }
         //二维码生成
         public ActionResult MTCode()
