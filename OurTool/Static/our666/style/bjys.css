@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,img{margin:0;padding:0; border:0}
+body,button,input,select,textarea{font:12px/1.5 "宋体" ,Simsun,"Arial Unicode MS",Mingliu,Helvetica;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}ul,ol{list-style:none;}
+ul,ol{list-style:none;}
+li{margin:0; padding:0; list-sytle:none}
+a{ target:_blank;text-decoration:none;outline:none;color:#5a5858;}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover { color:#f08300; text-decoration:underline; }
+a:active {text-decoration: none; }
+.clear {clear: both;}
+body {font-family:"宋体";font-size:12px;color:#5a5858; background:url(../images/bjys/bg.jpg);margin:0px;}
+a img {border:none;}
+
+.jmybm {width:1000px; overflow:hidden; margin:0 auto; margin-top:10px;}
+.jmyleft{width:750px; overflow:hidden; float:left;}
+.jmyhdp{background:#99CC00;height:388px;width:748px;border:1px solid #cecece;}
+
+.focus{ position:relative; width:748px; height:388px; background-color: #000;}  
+.focus img{ width: 748px; height: 388PX;} 
+.focus .shadow .title{width: 260px;height: 65px;padding-top: 20px;padding-left: 30px;}
+.focus .shadow .title a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; }
+.focus .btn{ position:absolute; bottom:34px; left:510px; overflow:hidden; zoom:1;} 
+.focus .btn a{position:relative; display:inline; width:13px; height:13px; border-radius:7px; margin:0 5px;color:#B0B0B0; text-decoration:none; text-align:center; outline:0; float:left; background:#D9D9D9; }  
+.focus .btn a:hover,.focus .btn a.current{  cursor:pointer;background:#fc114a;}  
+.focus .fPic{ position:absolute; left:0px; top:0px; }  
+.focus .D1fBt{ overflow:hidden; zoom:1;  height:50px; z-index:10; padding-top:11px;  }  
+.focus .shadow{ width:100%; position:absolute; bottom:0; left:0px; z-index:10; height:40px; line-height: 40px; background:rgba(0,0,0,0.6);    
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9; display:block; text-align:left;}
+.focus .shadow a{ width:555px; float:left; color:#fff; font-size:14px; font-weight:bold; text-decoration:none; margin-left:10px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}  
+.focus .fcon{ position:relative; width:100%; float:left;  display:none; background:#000  }  
+.focus .fcon img{ display:block; }  
+.focus .fbg{bottom:20px; right:40px; position:absolute; height:21px; text-align:center; z-index: 200; }  
+.focus .fbg div{margin:4px auto 0;overflow:hidden;zoom:1;height:14px}    
+.focus .D1fBt a{position:relative; display:inline; width:12px; height:12px; border-radius:7px; margin:0 5px;color:#B0B0B0; text-decoration:none; text-align:center; outline:0; float:left; background:#D9D9D9; }    
+.focus .D1fBt .current,.focus .D1fBt a:hover{background:#fc114a;}    
+.focus .D1fBt img{display:none;}    
+.focus .D1fBt i{display:none; font-style:normal; }    
+.focus .prev,.focus .next{position:absolute;width:40px;height:74px;background: url(../images/bjys/focus_btn.png) no-repeat;}
+.focus .prev{top: 50%;margin-top: -37px; left: 0;background-position:0 -74px; cursor:pointer; }  
+.focus .next{top: 50%;margin-top: -37px; right: 0;  background-position:-40px -74px;  cursor:pointer;}  
+.focus .prev:hover{  background-position:0 0; }  
+.focus .next:hover{  background-position:-40px 0;}
+
+.jmyejlm{ width:748px; height:348px;margin:0  auto 0  auto; border:1px solid #cecece;margin-top:10px;}
+.jmyejlmc1{ width:345px; height:160px; margin:10px 0 0 20px; float:left}
+.jmyejlmc1 .span1{ width:335px; overflow:hidden; margin-top:5px;font-size:14px; font-weight:bold; color:#333; white-space:nowrap; text-overflow:ellipsis;}
+.jmyejlmc1 .span2{ margin-top:15px;line-height:22px; text-indent:2em; overflow:hidden; }
+.jmyejlmc1 .span2 a{ font-size:12px; color:#ff6600; float:right; margin-right:10px; bottom:0px;}
+.jmyejtt{ width:748px; height:325px;margin:0  auto 0  auto; border:1px solid #cecece;margin-top:10px;}
+.jmyejttc1{ width:360px; height:150px; margin:10px 0 0 10px; float:left; }
+.jmyejttc2{ border:1px solid #000000; width:320px;height:0px;}
+*html.jmyejttc2{ border:1px solid #000000; width:320px;height:0px;}
+.jinzuoxx h1{ width:325px; font-size:14px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.jinzuoxx h1 a:hover{ text-decoration:none;}
+.jin00 img{ width:100px; height:100px; margin:15px 0 0 0; float:left}
+.jin999{ float:left; margin-left:20px;}
+.jin999 ul{}
+.jin999 ul li{ margin-top:10px; width:200px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.jin999 ul li a:hover{ color:#FF0000}
+.jmyright{background:fff;width:240px; overflow:hidden; float:right;}
+.jmyup{height:28px;width:238px;border:1px solid #cecece; margin-bottom:10px;}
+.jmyup a{background:#fff;font-size:20px}
+.jmyup p{font-size:20px;font-weight: bolder;}
+#scrollWrap{width:238px;height:28px;overflow:hidden;background:#fff;}
+#scrollMsg li{height:31px;line-height:20px;overflow:hidden;font-size:15px;padding:0 10px;text-align: center;} 
+.jmybjys{background:#fff;height:348px;width:238px;border:1px solid #cecece;}
+.jmyzyys{background:#fff;height:325px;width:238px;border:1px solid #cecece;margin-top:10px;}
+.jmydbysys{background:#fff;height:398px;width:238px;border:1px solid #cecece;float:right;margin-top:10px;}
+.jmybjystop{width:223px; height:35px; background:url(../images/bjys/left1_top_bj.jpg) repeat-x; padding-left:15px; font-size:14px; font-weight:bold; border-bottom:solid #cecece 1px; }
+.jmybjystop span{background:url(../images/bjys/icon1.jpg) no-repeat; padding-left:20px; line-height:35px;}
+.jmybjysmain ul{ padding:8px 10px 8px 18px; }
+.jmybjysmain ul li{ width:200px; float:left; font-size:12px; background:url(../images/bjys/icon2.jpg) no-repeat left center; color:#333; padding-left:10px; line-height:29px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}                 /* ...................................................... */
+.jmybjtx{background:#fff;height:348px;width:238px;margin-top:10px;border:1px solid #cecece;}
+#focus_image{height:348px;position:relative;z-index:20;overflow:hidden;width:238px}
+#focus_image .pages{width:238px;height:300px;background:#212121}
+#focus_image .pages .item{position:absolute;left:310px;top:0;width:238px;height:300px;z-index:5;text-decoration:none}
+#focus_image .pages .item.cur{display:block;z-index:10}
+#focus_image .pages .item .poster{display:block;width:238px;height:300px}
+#focus_image .pages .item b{background:#333;opacity:.8;filter:alpha(opacity=80);position:absolute;width:238px;height:25px;left:0;bottom:0;z-index:1; color:#fff;-moz-transition:opacity .2s ease-in;-webkit-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;transition:opacity .2s ease-in;cursor:pointer}#focus_image .pages .item:hover b{opacity:.6;filter:alpha(opacity=60)}
+#focus_image .pages .item i{position:absolute;width:238px;padding:0 5px;height:25px;left:0;bottom:0;line-height:25px;font-size:12px;color:#fff;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;cursor:pointer;font-style: normal; z-index:2000}
+#focus_image .controler{display:block;width:238px;height:50px;line-height:50px;text-align:center;-moz-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none}
+#focus_image .controler b{display:inline-block;width:20px;height:20px;margin:10px 4px;background:#333;cursor:pointer;line-height:20px;font-weight:700;color:#fff;position:relative}
+#focus_image .controler b i{display:none}
+#focus_image .controler b.down{background:#A91F01;color:#FFF}
+#focus_image .controler b.down i{position:absolute;display:block;border:5px dashed transparent;border-bottom:5px solid #A91F01;top:-9px;left:5px;width:0;height:0;line-height:0}  
+
+.jmydb{width:1000px; overflow:hidden; float:left;margin:10px 0;}
+.jmydbzdtp{width:998px;}
+.Div1{width:1000px;margin:0px auto;overflow:hidden;position:relative;}
+.Div1_title{height:32px;width:998px;padding-bottom:3px;background:url(../images/bjys/lizi_img001.jpg) repeat-x;}
+.Div1_title em{float:left;font-style:normal;line-height:32px;padding-left:13px;font-size:14px;}
+.Div1_title span{float:right;display:block;padding:8px 15px 0 0;height: 20px;}
+.Div1_title span b , .Div1_title span a{display:block;float:left;}
+.Div1_title span b , .Div1_title span b img{width:11px;height:11px;}
+.Div1_title span b img{cursor:pointer;}
+.Div1_title span a{font-size:12px;background:url(../images/bjys/lizi_img005.jpg) no-repeat left center;padding-left:15px;margin-right:10px;}
+.Div1_title span a:hover{color:#f34d01;background:url(../images/bjys/lizi_img004.jpg) no-repeat left center;}
+.Div1_title span a.Div1_title_a1{color:#f34d01;background:url(../images/bjys/lizi_img004.jpg) no-repeat left center;}
+.Div1_main{height:225px;width:3000px;overflow:hidden;position:relative;z-index:1; }
+.Div1_main div{width:998px;height:205px;float:left; border:solid #cecece 1px; padding-top:10px;}
+.Div1_main div span{width:237px; margin-left:10px; height:205px; display:block;float:left;}
+.Div1_main div span a{display:block;}
+.Div1_main_a1{ margin-bottom:0px;}
+.Div1_main_a1 img{width:237px;height:180px;}
+.Div1_main_a2{ width:100%; height:25px; color:#333; text-align:center; line-height:26px; float:left; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; margin:0 2%; }
+.Div1 .Div1_prev1 ,.Div1 .Div1_next1{display:block;width:31px;height:30px;position:absolute;cursor:pointer;z-index:2;top:90px; opacity:0.7;.filter:alpha(opacity=70)}
+.Div1 .Div1_prev1 img ,.Div1 .Div1_next1 img{width:31px;height:30px;}
+.Div1 .Div1_prev1:hover ,.Div1 .Div1_next1:hover{opacity:0.9;.filter:alpha(opacity=90)}
+.Div1 .Div1_prev1{left:10px;}
+.Div1 .Div1_next1{left:958px;}
+
+.jmydbzllm { background:#fff; height:398px;width:748px; float:left; margin-top:10px; border:1px solid #CCCCCC;}
+.jmydbzllm_tb{ background:#fff;height:120px;width:165px;float:left;margin:10px 10px 0 14px;}
+.jmydbzllm_bt{ background:#fff;height:120px;width:170px; float:left; margin:10px 8px 0 0;}
+.jmydbzllm_bttb{width:170px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.jmydbzllm_bttb a{width:170px;height:30px;font-size:14px;font-weight: bolder;vertical-align:super;}
+.jmydbzllm_btnr{ background:#fff;width:170px;height:80px;}
+.jmydbzllm_btnr ul li{margin:10px 0 0 10px;font-size:12px;width:170px;height:50px;}
+.jmydbzllm_btnr ul li a p{font-size:12px; color:#ff6600; float:right; margin-right:3px;}
