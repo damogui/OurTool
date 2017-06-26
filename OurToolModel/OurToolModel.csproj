@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Card\CardUser.cs" />
+    <Compile Include="Card\CardUserRecode.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="OurUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
