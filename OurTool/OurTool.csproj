@@ -216,8 +216,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Img\logo\2wm.jpg" />
     <Content Include="Img\logo\logo.ico" />
+    <Content Include="Img\logo\logo.jpg" />
     <Content Include="Img\logo\logo.png" />
-    <Content Include="Img\logo\logo4.jpg" />
     <Content Include="Img\logo\logo4.png" />
     <Content Include="Img\logo\mfg.jpg" />
     <Content Include="Img\logo\shizi.jpg" />
