@@ -190,7 +190,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Our\Controllers\CertificationOrgController.cs" />
     <Compile Include="Areas\Our\Controllers\PersonController.cs" />
+    <Compile Include="Areas\Our\Controllers\ThreeStageController.cs" />
     <Compile Include="Areas\Our\OurAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -887,6 +889,12 @@
     <Content Include="Node\src\tpl\tpla\a.tpl" />
     <Content Include="Node\src\tpl\tplb\b.tpl" />
     <Content Include="Node\src\tpl\tplb\c.tpl" />
+    <Content Include="Areas\Our\Views\CertificationOrg\Index.cshtml" />
+    <Content Include="Areas\Our\Views\CertificationOrg\SchoolAll.cshtml" />
+    <Content Include="Areas\Our\Views\ThreeStage\Index.cshtml" />
+    <Content Include="Areas\Our\Views\ThreeStage\SmallIndex.cshtml" />
+    <Content Include="Areas\Our\Views\ThreeStage\JuniorIndex.cshtml" />
+    <Content Include="Areas\Our\Views\ThreeStage\SeniorIndex.cshtml" />
     <None Include="Properties\PublishProfiles\web.config.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -1,16 +1,17 @@
 ﻿@{
     ViewBag.Title = "音标学习";
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
 }
 
 
 
-<div style="height: 100%; width: 100%">
-    <a class="button button-link button-nav pull-left back" href="/Home/Index">
+<div style="height: auto; width: 100%">
+    @*<a class="button button-link button-nav pull-left back" href="/Home/Index">
         <span class="icon icon-left"></span>
         返回
     </a>
-    <br/>
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<p class="lead">点读下面的音标发音</p>
+    <br/>*@
+    @*&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<p class="lead">点读下面的音标发音</p>*@
     <embed allowscriptaccess="never" allownetworking="internal" invokeurls="false" src="~/Tool/Read/read.swf"
            pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" quality="high" autostart="0" wmode="transparent"
            align="middle" style="width: 1000px; height: 600px">
