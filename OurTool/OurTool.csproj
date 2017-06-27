@@ -497,6 +497,9 @@
     <Content Include="Node\src\img\ok-img.png" />
     <Content Include="Node\src\img\operation-asynsis.png" />
     <Content Include="Node\src\img\org-add.png" />
+    <Content Include="Node\src\img\org\jr.jpg" />
+    <Content Include="Node\src\img\org\wb.jpg" />
+    <Content Include="Node\src\img\org\yf.jpg" />
     <Content Include="Node\src\img\parent-button.png" />
     <Content Include="Node\src\img\pc.png" />
     <Content Include="Node\src\img\per-srudy-see.png" />
