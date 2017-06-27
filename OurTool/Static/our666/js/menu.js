@@ -12,7 +12,7 @@ document.write ("<div class='top'>");
 document.write("<div class='logo'><a href='/Home/Index'><img src='/Static/our666/images/logo.png' width='230' height='73' alt='our666' title='our666' /></a></div>");
     document.write ("<div class='date'>");
     document.write("<div class='time'><a  target='_blank' href='https://www.baidu.com/s?word=%E6%97%A5%E5%8E%86&tn=siteour666&ie=utf-8' id='nowDateTimeSpan' >7月25日 周五六月廿九</a></div>");
-    document.write("<div class='weather'><iframe width='455' scrolling='no' height='75' frameborder='0' allowtransparency='true' src='https://is.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12'></iframe></div>");
+    document.write("<div class='weather'><iframe width='455' scrolling='no' height='75' frameborder='0' allowtransparency='true' src='https://is.tianqi.com/index.php?c=code&id=12&icon=1&num=3&site=12'></iframe></div>");
         //document.write ("<a href='#'><div class='adv1'><img src='/Static/our666/images//guanggao1.jpg' width='178' height='55' alt='our666' title='our666' /></div></a>");
     document.write ("</div>");
 document.write ("</div>");
