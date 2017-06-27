@@ -22,7 +22,7 @@ document.write ("<div class='clear'></div>");
 
 document.write("<div class='search'>");
 
-    document.write ("<div class='ruzhu'><a href='#'><img src='/Static/our666/images//ruzhu.png' width='208' height='49' alt='' title='' /></a></div>");
+document.write("<div class='ruzhu'><a href='/Our/Our/AdIndex'><img src='/Static/our666/images//ruzhu.png' width='208' height='49' alt='' title='' /></a></div>");
     document.write("<div class='sea'> ");
     
     document.write("<div class='sea_left'><p>百度</p></div>");

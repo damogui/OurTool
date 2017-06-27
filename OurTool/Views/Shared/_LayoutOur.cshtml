@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>our666</title>
+    <link rel="icon" href="~/Img/logo/logo.ico">
+    <link rel="stylesheet" type="text/css" href="~/Static/our666/style/tab.css" media="all" />
+    <link href="~/Static/our666/style/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="~/Static/our666/js/jquery.js"></script> <!-- 效果库 -->
+    <script type="text/javascript" src="~/Static/our666/js/jquery-1.10.2.min.js"></script> <!-- 效果库 -->
+   
+    <script type="text/javascript" src="~/Static/our666/js/noie.js"></script> <!-- 屏蔽IE6 -->
+
+    <script type="text/javascript">
+$(function(){
+	$('.tabPanel ._tab li').click(function(){
+		$(this).addClass('hit').siblings().removeClass('hit');
+		$('.panes>div:eq('+$(this).index()+')').show().siblings().hide();
+	})
+})
+    </script>
+</head>
+
+<body>
+    @RenderBody()
+
+
+    <script type="text/javascript" src="~/Static/our666/js/footer.js"></script> <!-- 网底 -->
+
+</body>
+
+</html>
+

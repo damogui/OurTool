@@ -191,6 +191,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Our\Controllers\CertificationOrgController.cs" />
+    <Compile Include="Areas\Our\Controllers\OurController.cs" />
     <Compile Include="Areas\Our\Controllers\PersonController.cs" />
     <Compile Include="Areas\Our\Controllers\ThreeStageController.cs" />
     <Compile Include="Areas\Our\OurAreaRegistration.cs" />
@@ -895,6 +896,10 @@
     <Content Include="Areas\Our\Views\ThreeStage\SmallIndex.cshtml" />
     <Content Include="Areas\Our\Views\ThreeStage\JuniorIndex.cshtml" />
     <Content Include="Areas\Our\Views\ThreeStage\SeniorIndex.cshtml" />
+    <Content Include="Areas\Our\Views\Our\Index.cshtml" />
+    <Content Include="Areas\Our\Views\Our\AdIndex.cshtml" />
+    <Content Include="Areas\Our\Views\Our\WebMessage.cshtml" />
+    <Content Include="Areas\Our\Views\Our\ContactUs.cshtml" />
     <None Include="Properties\PublishProfiles\web.config.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -1109,6 +1114,7 @@
     <Content Include="Views\Weather\Index.cshtml" />
     <Content Include="Views\Home\OurIndex.cshtml" />
     <Content Include="Views\Shared\_LayoutOur666.cshtml" />
+    <Content Include="Views\Shared\_LayoutOur.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
