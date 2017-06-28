@@ -924,6 +924,8 @@
     <Content Include="Static\Img\baidu.gif" />
     <Content Include="Static\Mp3\Fade.mp3" />
     <Content Include="Static\our666\b.jpg" />
+    <Content Include="Static\our666\icon\58.png" />
+    <Content Include="Static\our666\icon\gj.jpg" />
     <Content Include="Static\our666\icon\jd.png" />
     <Content Include="Static\our666\icon\rIcon.png" />
     <Content Include="Static\our666\icon\wy.png" />
