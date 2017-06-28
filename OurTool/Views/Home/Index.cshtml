@@ -1,13 +1,14 @@
 ﻿@using System.Text.RegularExpressions
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Our666";
+    Layout = "~/Views/Shared/_LayoutGoodUi.cshtml";
 }
 
 @*<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>*@
 <script src="~/Scripts/jweixin-1.0.0.js"></script>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 @{
-    
+
     bool ismobile = false;
     string u = Request.ServerVariables["HTTP_USER_AGENT"];
     Regex b = new Regex(@"(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino", RegexOptions.IgnoreCase | RegexOptions.Multiline);
@@ -23,179 +24,233 @@
 }
 @*判断是手机还是电脑*@
 <script type="text/javascript">
-    var xx = "@ismobile";
+    @*var xx = "@ismobile";
     debugger;
     if (xx == "True") {
        //手机
     } else {
         this.window.location.href = "/Home/OurIndex";
-    }
+    }*@
 
 </script>
 
 
+<div class="container body-content">
+    <div style="display: none">
+        <audio src="~/Static/Mp3/Fade.mp3" controls="controls" id="audio"></audio>
+    </div>
+    @*logo和天气*@
+    <div>
+        <img src="~/Img/logo/logo4.png" style="width: 10%; height: 10%; " />
+        <img src="~/Img/music/beg.png" style="width: 5%; height: 5%; " onclick="document.getElementById('audio').play(); return false;" id="beg" />
+        <img src="~/Img/music/end.png" style="width:  5%; height: 5%;display: none " onclick="document.getElementById('audio').pause(); return false;" id="end" />
 
-@*logo和天气*@
-<div >
-    <img src="~/Img/logo/logo4.png" style="width: 10%; height: 10%; " />
-    <img src="~/Img/music/beg.png" style="width: 5%; height: 5%; "   onclick="document.getElementById('audio').play(); return false;" id="beg" />
-    <img src="~/Img/music/end.png" style="width:  5%; height: 5%;display: none " onclick="document.getElementById('audio').pause(); return false;"  id="end"/>
-  
-    <iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="https://is.tianqi.com/index.php?c=code&id=12&icon=1&num=2&site=12"></iframe>
-   
-</div>
+        <iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="https://is.tianqi.com/index.php?c=code&id=12&icon=1&num=2&site=12"></iframe>
 
-<div id="weather">
-    
-</div>
-<div id="content"></div>
-<div class="jumbotron" style="background-color:#ffffff ">
-    
-    <form action="https://www.baidu.com/baidu" target="_blank">
-        <div align="center">
-            <table style="background-color: #FFFFFF">
-                <tr>
-                    <td>
-                        <input name=tn type="hidden">
-                        <a href="https://www.baidu.com/">
-                            <img src="~/Static/Img/baidu.gif" alt="Baidu" class="img" />
-                        </a>
-                        <input type=text name=word  class="input text" placeholder="请输入关键字">
-                        <input type="submit" class="btn btn-primary btn-lg" value="百度搜索">
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </form>
-</div>
-<div class="row">
-
-    <div class="col-md-4">
-        <h2>音标点读</h2>
-        <p>
-            <a href="/Home/Read" class="btn btn-primary btn-lg">去学习</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>二维码生成</h2>
-        <p><a href="/Home/MTCode/" class="btn btn-primary btn-lg">去生成</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>安卓学习</h2>
-        <p><a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" class="btn btn-primary btn-lg">去学习</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>c#学习</h2>
-        <p><a href="http://www.runoob.com/csharp/csharp-tutorial.html" class="btn btn-primary btn-lg">去学习</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>java学习</h2>
-        <p><a href="http://www.runoob.com/java/java-tutorial.html" class="btn btn-primary btn-lg">去学习</a>
-        </p>
     </div>
 
-</div>
+    <div id="weather">
+
+    </div>
+    <div id="content"></div>
+    <div class="jumbotron" style="background-color: #ffffff">
+
+        <form action="https://www.baidu.com/baidu" target="_blank">
+            <div align="center">
+                <table style="background-color: #FFFFFF">
+                    <tr>
+                        <td>
+                            <input name=tn type="hidden">
+                            <a href="https://www.baidu.com/">
+                                <img src="~/Static/Img/baidu.gif" alt="Baidu" style="vertical-align: bottom;" />
+                            </a>
+                            <input type=text name=word placeholder="请输入关键字" style="vertical-align: bottom;margin-bottom: 0px">
+                            <input type="submit" class="btn btn-primary btn-lg" style="vertical-align: bottom;" value="百度搜索">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    <div style="margin-left: 10%">
+        <div class="placeholder"></div>
+        <section class="container">
+            <div class="content-wrap">
+                <div class="content">
+
+                    <article class="excerpt">
+                        <div class="focus">
+                            <a href="http://www.tsinghua.edu.cn/publish/newthu/index.html" class="thumbnail" target="_blank">
+                                <img src="~/Node/src/img/org/qh.png" alt="清华大学" data-bd-imgshare-binded="1">
+                            </a>
+                        </div>
+                        <header>
+                            <h2>
+                                <a href="http://www.tsinghua.edu.cn/publish/newthu/index.html" title="清华大学" target="_blank">清华大学</a>
+                            </h2>
+                        </header>
+                        <p class="note">
+                            电话：010-62793001<br>邮箱：webmaster@tsinghua.edu.cn<br>地址：北京市海淀区清华大学
+                        </p>
+
+                    </article>
+                    <article class="excerpt">
+                        <div class="focus">
+                            <a href="http://www.pku.edu.cn/" class="thumbnail" target="_blank">
+                                <img src="~/Node/src/img/org/bd.png" style="background-color: #8F000B" alt="北京大学" data-bd-imgshare-binded="1">
+                            </a>
+                        </div>
+                        <header>
+                            <h2>
+                                <a href="http://www.pku.edu.cn/" title="北京大学" target="_blank">北京大学</a>
+                            </h2>
+                        </header>
+                        <p class="note">
+                            电话：010-62751407<br>邮箱：webmaster@pku.edu.cn<br>地址：北京市海淀区颐和园路5号
+                        </p>
+
+                    </article>
+
+                    <article class="excerpt">
+                        <div class="focus">
+                            <a href="http://www.fudan.edu.cn/index.html" class="thumbnail" target="_blank">
+                                <img src="~/Node/src/img/org/fudan.png" alt="复旦大学" data-bd-imgshare-binded="1">
+                            </a>
+                        </div>
+                        <header>
+                            <h2>
+                                <a href="http://www.fudan.edu.cn/index.html" title="复旦大学" target="_blank">复旦大学</a>
+                            </h2>
+                        </header>
+                        <p class="note">
+                            电话：021-65642222 <br>邮编：200433 <br>地址：上海市杨浦区邯郸路220
+                        </p>
+
+                    </article>
+
+                    <article class="excerpt">
+                        <div class="focus">
+                            <a href="http://www.ruc.edu.cn/" class="thumbnail" target="_blank">
+                                <img src="~/Node/src/img/org/rd.png" alt="人民大学" data-bd-imgshare-binded="1">
+                            </a>
+                        </div>
+                        <header>
+                            <h2>
+                                <a href="http://www.ruc.edu.cn/" title="人民大学" target="_blank">人民大学</a>
+                            </h2>
+                        </header>
+                        <p class="note">
+                            电话：400-0123-517<br>邮箱：web@ruc.edu.cn<br>地址：北京市海淀区中关村大街59号
+                        </p>
+
+                    </article>
+                </div>
+            </div>
+
+        </section>
 
 
-<script type="text/javascript">
-    $(function () {
-        //alert(location.href.split('#')[0])
-        var myAuto = document.getElementById('audio');
-        myAuto.volume = 0.06;//声音控制
-        myAuto.pause();
-        $("#beg").click(function() {
-            $("#end").css("display", "");
-            $("#beg").css("display", "none");
-            myAuto.play();
-          
-        });
-        $("#end").click(function () {
-            $("#beg").css("display", "");
-            $("#end").css("display", "none");
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            //alert(location.href.split('#')[0])
+            var myAuto = document.getElementById('audio');
+            myAuto.volume = 0.06;//声音控制
             myAuto.pause();
+            $("#beg").click(function () {
+                $("#end").css("display", "");
+                $("#beg").css("display", "none");
+                myAuto.play();
+
+            });
+            $("#end").click(function () {
+                $("#beg").css("display", "");
+                $("#end").css("display", "none");
+                myAuto.pause();
+            });
+
+        })
+        //document.addEventListener('touchstart', function () {
+        //    audio.play();
+        //}, false);
+
+    </script>
+
+    <script>
+
+
+        wx.config(@Html.Raw(ViewBag.config));
+        wx.ready(function () {
+
+            wx.onMenuShareAppMessage({
+                title: '欢迎您',
+                desc: '欢迎您使用工具。',
+                link: 'https://www.our666.com/Home/Index/?from=singlemessage&isappinstalled=0', // 分享链接
+                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+
+                success: function (res) {
+                    //alert('已分享');
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+
+                    alert("信息" + JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareTimeline({
+                title: '欢迎您',
+                desc: '欢迎您使用工具。',
+                link: 'https://www.our666.com/Home/Index/?from=timeline&isappinstalled=0', // 分享链接
+                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+
+                success: function (res) {
+                    //alert('已分享');
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+
+                    alert("朋友圈" + JSON.stringify(res));
+                }
+            });
+
+
+            wx.onMenuShareQQ({
+                title: '欢迎您',
+                desc: '欢迎您使用工具。',
+                link: 'https://www.our666.com/Home/Index/?from=singlemessage&isappinstalled=1', // 分享链接
+                imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
+
+                success: function (res) {
+                    //alert('已分享');
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+
+                    alert("qq" + JSON.stringify(res));
+                }
+            });
+
+        });
+        wx.error(function (res) {
+
+            //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+
         });
 
-    })
-    //document.addEventListener('touchstart', function () {
-    //    audio.play();
-    //}, false);
-
-</script>
-
-<script>
-
-
-    wx.config(@Html.Raw(ViewBag.config));
-    wx.ready(function() {
-       
-        wx.onMenuShareAppMessage({
-            title: '欢迎您',
-            desc: '欢迎您使用工具。',
-            link: 'https://www.our666.com/Home/Index/?from=singlemessage&isappinstalled=0', // 分享链接
-            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
-              
-            success: function(res) {
-                //alert('已分享');
-            },
-            cancel: function(res) {
-                //alert('已取消');
-            },
-            fail: function (res) {
-
-                alert("信息"+JSON.stringify(res));
-            }
-        });
-
-        wx.onMenuShareTimeline({
-            title: '欢迎您',
-            desc: '欢迎您使用工具。',
-            link: 'https://www.our666.com/Home/Index/?from=timeline&isappinstalled=0', // 分享链接
-            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
-               
-            success: function (res) {
-                //alert('已分享');
-            },
-            cancel: function (res) {
-                //alert('已取消');
-            },
-            fail: function (res) {
-
-                alert("朋友圈"+JSON.stringify(res));
-            }
-        });
-
-
-        wx.onMenuShareQQ({
-            title: '欢迎您',
-            desc: '欢迎您使用工具。',
-            link: 'https://www.our666.com/Home/Index/?from=singlemessage&isappinstalled=1', // 分享链接
-            imgUrl: 'http://pic4.mofangge.com/upload/other/201706/12/b3810addd0e84de3a6d2af3d2dfb7f3e.jpg', // 分享图标
-               
-            success: function (res) {
-                //alert('已分享');
-            },
-            cancel: function (res) {
-                //alert('已取消');
-            },
-            fail: function (res) {
-
-                alert("qq" + JSON.stringify(res));
-            }
-        });
-
-    });
-    wx.error(function(res) {
-
-        //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
-
-    });
 
 
 
 
-  
 
-</script>
+    </script>
+</div>
