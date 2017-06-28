@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0029)http://www.xueui.cn/tutorials -->
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>列表</title>
+
+    <link rel="stylesheet" id="mycred-front-css" href="~/GoodUI/css/mycred-front.css" type="text/css" media="all">
+    <link rel="stylesheet" id="open-social-style-css" href="~/GoodUI/css/os.css" type="text/css" media="all">
+    <meta name="keywords" content="our666">
+    <meta name="description" content="our666;导航;">
+    <link rel="stylesheet" href="~/GoodUI/css/style.css" media="all">
+    <link href="~/GoodUI/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <!--[if lt IE 9]><script src="http://www.xueui.cn/wp-content/themes/xueui/js/html5.js"></script><![endif]-->
+    <script src="~/GoodUI/js/jquery.js"></script>
+
+
+    <script type="text/javascript">
+	$(function(){
+		$(window).scroll(function(){
+			$offset = $('.placeholder').offset();//不能用自身的div，不然滚动起来会很卡
+			if($(window).scrollTop()>$offset.top){
+				$('.header').css({'position':'fixed','top':'0px','left':$offset.left+'px','z-index':'999'});
+				$(".container").css({"margin-top":"93px"});
+			}else{
+				$('.header').removeAttr('style');
+				$('.container').removeAttr('style');
+			}
+		});
+	})
+    </script>
+
+</head>
+<body class="archive category category-tutorials category-19">
+    @RenderBody()
+
+
+
+
+
+
+
+<!--single-->
+<!--global-->
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $("#signupwrap").hover(function() {
+            $(this).find(".signup-btn a").css("background", "#414141");
+            $(this).find(".signup-list").show();
+        }, function() {
+            $(this).find(".signup-btn a").css("background", "none");
+            $(this).find(".signup-list").hide();
+        });
+
+        $("#loginwrap").hover(function() {
+            $(this).find(".login-list").show();
+        }, function() {
+            $(this).find(".login-list").hide();
+        });
+
+    });
+</script>
+
+
+</body>
+</html>

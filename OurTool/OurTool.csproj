@@ -217,6 +217,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="GoodUI\css\font-awesome.min.css" />
+    <Content Include="GoodUI\css\imgshare.css" />
+    <Content Include="GoodUI\css\mycred-front.css" />
+    <Content Include="GoodUI\css\os.css" />
+    <Content Include="GoodUI\css\share_style0_16.css" />
+    <Content Include="GoodUI\css\slide_share.css" />
+    <Content Include="GoodUI\css\style.css" />
+    <Content Include="GoodUI\img\cover2.jpg" />
+    <Content Include="GoodUI\img\cover3.png" />
+    <Content Include="GoodUI\img\cover：2017-06-19.jpg" />
+    <Content Include="GoodUI\img\Dazaixi-love_tutorial_cover.jpg" />
+    <Content Include="GoodUI\js\jquery.js" />
+    <Content Include="GoodUI\js\os.js" />
+    <Content Include="GoodUI\js\share.js" />
     <Content Include="GoodUI\JxUI.html" />
     <Content Include="GoodUI\JxUI_files\cover2.jpg" />
     <Content Include="GoodUI\JxUI_files\cover3.png" />
@@ -1140,6 +1154,7 @@
     <Content Include="Views\Home\OurIndex.cshtml" />
     <Content Include="Views\Shared\_LayoutOur666.cshtml" />
     <Content Include="Views\Shared\_LayoutOur.cshtml" />
+    <Content Include="Views\Shared\_LayoutGoodUi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
