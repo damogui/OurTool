@@ -7,6 +7,20 @@
 @*<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>*@
 <script src="~/Scripts/jweixin-1.0.0.js"></script>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<style type="text/css">
+    .bbtn {
+          
+    cursor: pointer;
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium
+    }
+</style>
 @{
 
     bool ismobile = false;
@@ -24,13 +38,13 @@
 }
 @*判断是手机还是电脑*@
 <script type="text/javascript">
-    @*var xx = "@ismobile";
-    debugger;
-    if (xx == "True") {
+    var ismobile = "@ismobile";
+   
+    if (ismobile == "True") {
        //手机
     } else {
         this.window.location.href = "/Home/OurIndex";
-    }*@
+    }
 
 </script>
 
@@ -65,7 +79,7 @@
                                 <img src="~/Static/Img/baidu.gif" alt="Baidu" style="vertical-align: bottom;" />
                             </a>
                             <input type=text name=word placeholder="请输入关键字" style="vertical-align: bottom;margin-bottom: 0px">
-                            <input type="submit" class="btn btn-primary btn-lg" style="vertical-align: bottom;" value="百度搜索">
+                            <input type="submit" class="btn-primary" style="vertical-align: bottom;margin-left: 22.6%; margin-top: 2%;" value="百度搜索">
                         </td>
                     </tr>
                 </table>
@@ -80,67 +94,67 @@
 
                     <article class="excerpt">
                         <div class="focus">
-                            <a href="http://www.tsinghua.edu.cn/publish/newthu/index.html" class="thumbnail" target="_blank">
-                                <img src="~/Node/src/img/org/qh.png" alt="清华大学" data-bd-imgshare-binded="1">
+                            <a href="/Home/MTCode/" class="thumbnail" target="_blank">
+                                <img src="~/GoodUI/img/ewm.gif" alt="二维码生成" data-bd-imgshare-binded="1">
                             </a>
                         </div>
                         <header>
                             <h2>
-                                <a href="http://www.tsinghua.edu.cn/publish/newthu/index.html" title="清华大学" target="_blank">清华大学</a>
+                                <a href="/Home/MTCode/" title="二维码生成" target="_blank">二维码生成</a>
                             </h2>
                         </header>
                         <p class="note">
-                            电话：010-62793001<br>邮箱：webmaster@tsinghua.edu.cn<br>地址：北京市海淀区清华大学
+                           你可以在微信中打开网址把想说的话生成二维码然后发送给对方，很好玩的啊。。。
                         </p>
 
                     </article>
                     <article class="excerpt">
                         <div class="focus">
-                            <a href="http://www.pku.edu.cn/" class="thumbnail" target="_blank">
-                                <img src="~/Node/src/img/org/bd.png" style="background-color: #8F000B" alt="北京大学" data-bd-imgshare-binded="1">
+                            <a href="http://www.xueui.cn/" class="thumbnail" target="_blank">
+                                <img src="~/GoodUI/img/erm2.jpg"style="background-color: #8F000B" alt="漂亮UI" data-bd-imgshare-binded="1">
                             </a>
                         </div>
                         <header>
                             <h2>
-                                <a href="http://www.pku.edu.cn/" title="北京大学" target="_blank">北京大学</a>
+                                <a href="http://www.xueui.cn/" title="漂亮" target="_blank">漂亮UI学习</a>
                             </h2>
                         </header>
                         <p class="note">
-                            电话：010-62751407<br>邮箱：webmaster@pku.edu.cn<br>地址：北京市海淀区颐和园路5号
-                        </p>
-
-                    </article>
-
-                    <article class="excerpt">
-                        <div class="focus">
-                            <a href="http://www.fudan.edu.cn/index.html" class="thumbnail" target="_blank">
-                                <img src="~/Node/src/img/org/fudan.png" alt="复旦大学" data-bd-imgshare-binded="1">
-                            </a>
-                        </div>
-                        <header>
-                            <h2>
-                                <a href="http://www.fudan.edu.cn/index.html" title="复旦大学" target="_blank">复旦大学</a>
-                            </h2>
-                        </header>
-                        <p class="note">
-                            电话：021-65642222 <br>邮编：200433 <br>地址：上海市杨浦区邯郸路220
+                            想不想学习最流行的ui教程呢，这里的ui最炫最酷~~
                         </p>
 
                     </article>
 
                     <article class="excerpt">
                         <div class="focus">
-                            <a href="http://www.ruc.edu.cn/" class="thumbnail" target="_blank">
-                                <img src="~/Node/src/img/org/rd.png" alt="人民大学" data-bd-imgshare-binded="1">
+                            <a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" class="thumbnail" target="_blank">
+                                <img src="~/GoodUI/img/cn.png" alt="手机编程" data-bd-imgshare-binded="1">
                             </a>
                         </div>
                         <header>
                             <h2>
-                                <a href="http://www.ruc.edu.cn/" title="人民大学" target="_blank">人民大学</a>
+                                <a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" title="手机编程" target="_blank">手机编程</a>
                             </h2>
                         </header>
                         <p class="note">
-                            电话：400-0123-517<br>邮箱：web@ruc.edu.cn<br>地址：北京市海淀区中关村大街59号
+                            小猪的教程尽量以路线图 + 核心知识讲解 + 代码实例，来帮助大家学习Android！当然有些东西你一开始可能并不了解，不过你以后回过头来看，会发现这些东西很有用！好了，唠嗑就到这里！
+                        </p>
+
+                    </article>
+
+                    <article class="excerpt">
+                        <div class="focus">
+                            <a href="http://gaokao.chsi.com.cn/" class="thumbnail" target="_blank">
+                                <img src="~/GoodUI/img/yg.jpg" alt="阳光高考" data-bd-imgshare-binded="1">
+                            </a>
+                        </div>
+                        <header>
+                            <h2>
+                                <a href="http://gaokao.chsi.com.cn/" title="阳光高考" target="_blank">阳光高考</a>
+                            </h2>
+                        </header>
+                        <p class="note">
+                            刚刚经历过中考、高考，这里查信息最可靠！
                         </p>
 
                     </article>

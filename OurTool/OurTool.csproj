@@ -224,10 +224,14 @@
     <Content Include="GoodUI\css\share_style0_16.css" />
     <Content Include="GoodUI\css\slide_share.css" />
     <Content Include="GoodUI\css\style.css" />
+    <Content Include="GoodUI\img\cn.png" />
     <Content Include="GoodUI\img\cover2.jpg" />
     <Content Include="GoodUI\img\cover3.png" />
     <Content Include="GoodUI\img\cover：2017-06-19.jpg" />
     <Content Include="GoodUI\img\Dazaixi-love_tutorial_cover.jpg" />
+    <Content Include="GoodUI\img\erm2.jpg" />
+    <Content Include="GoodUI\img\ewm.gif" />
+    <Content Include="GoodUI\img\yg.jpg" />
     <Content Include="GoodUI\js\jquery.js" />
     <Content Include="GoodUI\js\os.js" />
     <Content Include="GoodUI\js\share.js" />
