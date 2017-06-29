@@ -22,28 +22,14 @@
         border-bottom: 1px solid #2d78f4;
         outline: medium
     }
-</style>
-
-<style type="text/css">
-    /*.auto {
-        display: none;
-        width:auto;
-        border: 1px #74c0f9 solid;
-        background: #FFF;
-        position: relative;
-        top: 31px;
-        left: 0;
-        color: #323232;
+    body iframe{
+      
+        overflow-y: scroll;
+        
+      
     }
-
-   .text {
-        width: 500px;
-        left: 228px;
-       
-        position: relative;
-        top: 0;
-    }*/
 </style>
+
 @{
 
     bool ismobile = false;
@@ -83,23 +69,23 @@
 </script>
 
 
-
-<div  >
+@*//scroll*@
+<div  style="overflow-x: hidden;" >
     <div style="display: none">
         <audio src="~/Static/Mp3/Fade.mp3" controls="controls" id="audio"></audio>
     </div>
     @*logo和天气*@
-    <div style="position: fixed; margin-left: 8%;margin-top: 7%">
+    <div style="position: absolute; margin-left: 8%;margin-top: 7%">
         <img src="~/Img/logo/logo4.png" style="width: 10%; height: 10%; " />
         <img src="~/Img/music/beg.png" style="width: 5%; height: 5%; " onclick="document.getElementById('audio').play(); return false;" id="beg" />
         <img src="~/Img/music/end.png" style="width:  5%; height: 5%;display: none " onclick="document.getElementById('audio').pause(); return false;" id="end" />
 
-        <iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="https://is.tianqi.com/index.php?c=code&id=12&icon=1&num=2&site=12"></iframe>
+        <iframe  scrolling="no"  frameborder="0" allowtransparency="true" src="https://is.tianqi.com/index.php?c=code&id=12&icon=1&num=2&site=12"></iframe>
 
     </div>
 
 
-    <div class="search" style="position: absolute">
+    <div class="search" style="position: absolute; z-index: 3">
 
         <form action="https://www.baidu.com/baidu" target="_blank" id="form">
 
@@ -113,7 +99,7 @@
         </form>
     </div>
    
-    <div style="position: fixed; margin-top: 30%;z-index: -3" >
+    <div style="position: absolute; margin-top: 40%;" >
         <div class="placeholder"></div>
         <section class="container">
          

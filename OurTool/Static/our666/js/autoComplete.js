@@ -24,7 +24,7 @@ function FillUrls() {
     //发jsonp（跨域请求js）
     $.ajax({
         async: false,
-        url: "http://suggestion.baidu.com/su",
+        url: "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/",
         type: "GET",
         dataType: 'jsonp',
         jsonp: 'jsoncallback',
