@@ -29,8 +29,8 @@ document.write("<div class='ruzhu'><a href='/Our/Our/AdIndex'><img src='/Static/
     document.write("<form action='https://www.baidu.com/baidu/s' target='_blank'  id='form'>");//表单开始
         document.write ("<div class='sea_center'>");
         document.write("<div class='sea_center1'>");
-       
-        document.write("<input class='txtSearch text' autocomplete='off'   name='word' type='text' id='searchText' placeholder='请输入关键字'     /> <div id='auto'  class='auto'> </div>");
+      
+        document.write("<input class='txtSearch text' style='position: absolute' autocomplete='off'   name='word' type='text' id='searchText' placeholder='请输入关键字' /> <div id='auto'  class='auto'> </div>");
 
 			document.write ("</div>");
         document.write ("</div>");
