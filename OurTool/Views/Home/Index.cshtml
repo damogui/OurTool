@@ -7,18 +7,41 @@
 @*<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>*@
 <script src="~/Scripts/jweixin-1.0.0.js"></script>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Static/our666/js/autoComplete.js"></script><!-- 自动搜索 -->
+<link href="~/Static/our666/bd/style.css" rel="stylesheet" />
 <style type="text/css">
     .bbtn {
-          
-    cursor: pointer;
-    width: 100px;
-    height: 36px;
-    color: white;
-    font-size: 15px;
-    letter-spacing: 1px;
-    background: #3385ff;
-    border-bottom: 1px solid #2d78f4;
-    outline: medium
+
+        cursor: pointer;
+        width: 100px;
+        height: 36px;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background: #3385ff;
+        border-bottom: 1px solid #2d78f4;
+        outline: medium
+    }
+</style>
+
+<style type="text/css">
+    .auto {
+        display: none;
+        width:auto;
+        border: 1px #74c0f9 solid;
+        background: #FFF;
+        position: relative;
+        top: 31px;
+        left: 0;
+        color: #323232;
+    }
+
+   .text {
+        width: 500px;
+        left: 228px;
+        /*position:relative;*/
+        position: relative;
+        top: 0;
     }
 </style>
 @{
@@ -38,13 +61,13 @@
 }
 @*判断是手机还是电脑*@
 <script type="text/javascript">
-    var ismobile = "@ismobile";
+    @*var ismobile = "@ismobile";
 
     if (ismobile == "True") {
         //手机
     } else {
         this.window.location.href = "/Home/OurIndex";
-    }
+    }*@
 
 </script>
 <script type="text/javascript">
@@ -52,7 +75,7 @@
     $(function () {
         $('body').bind('keypress', function (event) {
             if (event.keyCode == "13") {
-                $("#form1").submit();//进行提交表单
+                $("#form").submit();//进行提交表单
 
             }
         });
@@ -75,30 +98,22 @@
 
     </div>
 
-    <div id="weather">
-
-    </div>
+   
     <div id="content"></div>
-    <div class="jumbotron" style="background-color: #ffffff">
+    <div class="search">
 
-        <form action="https://www.baidu.com/baidu" target="_blank" id="form1">
-            <div align="center">
-                <table style="background-color: #FFFFFF">
-                    <tr>
-                        <td>
-                            <input name=tn type="hidden">
-                            <a href="https://www.baidu.com/">
-                                <img src="~/Static/Img/baidu.gif" alt="Baidu" style="vertical-align: bottom;" />
-                            </a>
-                            <input type=text name=word placeholder="请输入关键字" style="vertical-align: bottom;margin-bottom: 0px">
-                            @*<input type="submit" class="btn-primary" style="vertical-align: bottom;margin-left: 50%; margin-top: 2%;" value="百度搜索">*@
-                        </td>
-                    </tr>
-                </table>
+        <form action="https://www.baidu.com/baidu" target="_blank" id="form">
+           
+            <div class="text">
+                <input type=text class="" autocomplete='off' name=word id="searchText" placeholder="百度一下">
+                <div id="auto" class="auto">
+                </div>
             </div>
+            
+           
         </form>
     </div>
-    <div style="margin-left: 10%">
+    <div >
         <div class="placeholder"></div>
         <section class="container">
             <div class="content-wrap">
