@@ -39,14 +39,26 @@
 @*判断是手机还是电脑*@
 <script type="text/javascript">
     var ismobile = "@ismobile";
-   
+
     if (ismobile == "True") {
-       //手机
+        //手机
     } else {
         this.window.location.href = "/Home/OurIndex";
     }
 
 </script>
+<script type="text/javascript">
+    //回车事件
+    $(function () {
+        $('body').bind('keypress', function (event) {
+            if (event.keyCode == "13") {
+                $("#form1").submit();//进行提交表单
+
+            }
+        });
+    });
+</script>
+
 
 
 <div class="container body-content">
@@ -69,7 +81,7 @@
     <div id="content"></div>
     <div class="jumbotron" style="background-color: #ffffff">
 
-        <form action="https://www.baidu.com/baidu" target="_blank">
+        <form action="https://www.baidu.com/baidu" target="_blank" id="form1">
             <div align="center">
                 <table style="background-color: #FFFFFF">
                     <tr>
@@ -79,7 +91,7 @@
                                 <img src="~/Static/Img/baidu.gif" alt="Baidu" style="vertical-align: bottom;" />
                             </a>
                             <input type=text name=word placeholder="请输入关键字" style="vertical-align: bottom;margin-bottom: 0px">
-                            <input type="submit" class="btn-primary" style="vertical-align: bottom;margin-left: 50%; margin-top: 2%;" value="百度搜索">
+                            @*<input type="submit" class="btn-primary" style="vertical-align: bottom;margin-left: 50%; margin-top: 2%;" value="百度搜索">*@
                         </td>
                     </tr>
                 </table>
