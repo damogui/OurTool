@@ -1,0 +1,132 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font:12px  "宋体" ;
+}
+a{
+	text-decoration:none;
+	outline:none;
+	font-size:14px;
+	cursor:pointer;
+}
+img{
+	border:none;
+}
+ul{
+	list-style:none;
+}
+input{
+	outline:none;
+}
+body{
+	background:#FFF;
+}
+div.main_inner{
+	width:960px;
+	margin:0 auto;
+}
+
+div.main_C{
+	clear:both;
+	height:88px;
+	background:url(../images/search_bg.jpg) no-repeat 0 0;
+	margin-top:60px;
+	margin-bottom:10px;
+	border:1px #74c0f9 solid;
+	-webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+		  position:relative;
+		  z-index:999;
+}
+ul.nav {
+	height:22px;
+	margin:6px 0 2px 230px;
+}
+ul.nav li{
+	float:left;
+}
+ul.nav li a{
+	display:block;
+	width:40px;
+	line-height:22px;
+	-webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+    font-size:14px;
+	color:#323232;
+    margin-right:6px;
+    text-align:center;
+}
+ul.nav li a.gaoliang{
+	background:#74C0F9;
+	color:#FFF;
+}
+ul.nav li a:hover{
+	background:#74C0F9;
+	color:#FFF;
+}
+div.search{
+	clear:both;
+	position:relative;
+}
+div.search img,div.search div.text,div.search input.but{
+	position:absolute;
+	top:0;
+}
+div.search img{
+	left:138px;
+}
+div.search div.text{
+	width:500px;
+	left:228px;
+	position:relative;
+}
+div.search div.text input{
+	width:500px;
+	padding:6px 0 5px;
+	border:1px #74c0f9 solid;
+	background:#FFF;
+	padding-left:6px;
+	outline:none;
+	font:16px Arial, Helvetica, sans-serif;
+}
+div.search div.text div#auto{
+	display:none;
+	width:506px; 
+	border:1px #74c0f9 solid;
+	background:#FFF;
+	position:absolute;
+	top:31px;
+	left:0;
+	color:#323232;
+}
+div.search input.but{
+	width:82px;
+	font-size:14px;
+	height:32px;
+	border:1px #74c0f9 solid;
+	cursor:pointer;
+	background:#E1E1E1 url(../images/but_bg.png) no-repeat center -2px;
+	color:#323232;
+	right:130px;
+}
+div.search input.but:hover{
+	background:#E1E1E1 url(../images/but_bg.png) no-repeat center -36px;
+}
+div.main_C p{
+	display:none;
+	padding-top:5px;
+	margin-left:226px;
+	_padding-top:2px;
+
+}
+div.main_C p#pagesZone{
+	display:block;
+}
+div.main_C p input{
+	vertical-align:middle;
+	margin:0 3px 0 20px;
+}

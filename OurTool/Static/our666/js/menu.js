@@ -26,15 +26,15 @@ document.write("<div class='ruzhu'><a href='/Our/Our/AdIndex'><img src='/Static/
     document.write("<div class='sea'> ");
     
     document.write("<div class='sea_left'><p>百度</p></div>");
-    document.write("<form action='https://www.baidu.com/baidu' target='_blank'>");//表单开始
+    document.write("<form action='https://www.baidu.com/baidu' target='_blank'  id='form'>");//表单开始
         document.write ("<div class='sea_center'>");
         document.write("<div class='sea_center1'>");
        
-        document.write("<input class='txtSearch' name='word' type='text' id='search' placeholder='请输入关键字'     />");
+        document.write("<input class='txtSearch text'   name='word' type='text' id='searchText' placeholder='请输入关键字'     /> <div id='auto'  class='auto'> </div>");
 
 			document.write ("</div>");
         document.write ("</div>");
-        document.write("<input type='submit' value='百度一下' class='sea_right' />");
+        document.write("<input type='submit' value='百度一下' class='sea_right'  id='btnSearch' />");
         document.write(" </form>");//提交尾部
         document.write ("<div class='sea_bottom'>");
             document.write ("<span class='span1'>热门：</span>");

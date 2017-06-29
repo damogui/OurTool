@@ -15,22 +15,50 @@
     <!--<script type="text/javascript" src="js/scroll.js"></script>--> <!-- 滚动条特效 -->
     <script type="text/javascript" src="~/Static/our666/js/search.js"></script> <!-- 搜索栏 -->
     <script type="text/javascript" src="~/Static/our666/js/noie.js"></script> <!-- 屏蔽IE6 -->
-
+    <script src="~/Static/our666/js/autoComplete.js"></script><!-- 自动搜索 -->
+    @*<link href="~/Static/our666/bd/style.css" rel="stylesheet" />*@
     <script type="text/javascript">
-$(function(){
-	$('.tabPanel ._tab li').click(function(){
-		$(this).addClass('hit').siblings().removeClass('hit');
-		$('.panes>div:eq('+$(this).index()+')').show().siblings().hide();
-	})
-})
+        $(function() {
+            $('.tabPanel ._tab li').click(function() {
+                $(this).addClass('hit').siblings().removeClass('hit');
+                $('.panes>div:eq(' + $(this).index() + ')').show().siblings().hide();
+            })
+        })
     </script>
+
+
+    <style type="text/css">
+      .auto{
+	display:none;
+	/*width:506px;*/ 
+	border:1px #74c0f9 solid;
+	background:#FFF;
+	position:relative;
+	top:31px;
+	left:0;
+	color:#323232;
+     
+   
+}
+        div.sea div.text{
+	width:500px;
+	left:228px;
+	/*position:relative;*/
+    position:relative;
+	top:0;
+          
+
+}
+    </style>
+
+
 </head>
 
-<body>
+<body style="position:relative; z-index:-10;">
     @RenderBody()
 <div style="width: 1000px; margin: 10px auto;">
 <script type="text/javascript" src="~/Static/our666/js/menu.js"></script>
-<div class="tabPanel">
+<div class="tabPanel" style="z-index:-10;">
 <ul class="_tab">
     <li class="nav01 hit"><span>网址大全</span></li>
     <li class="nav04"><span>认证机构</span></li>

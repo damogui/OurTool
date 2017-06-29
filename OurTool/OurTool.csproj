@@ -966,6 +966,7 @@
     <Content Include="Static\Img\baidu.gif" />
     <Content Include="Static\Mp3\Fade.mp3" />
     <Content Include="Static\our666\b.jpg" />
+    <Content Include="Static\our666\bd\style.css" />
     <Content Include="Static\our666\icon\58.png" />
     <Content Include="Static\our666\icon\gj.jpg" />
     <Content Include="Static\our666\icon\jd.png" />
@@ -1066,6 +1067,7 @@
     <Content Include="Static\our666\images\yyzs\zsli02.jpg" />
     <Content Include="Static\our666\images\zhongbiao.png" />
     <Content Include="Static\our666\index.html" />
+    <Content Include="Static\our666\js\autoComplete.js" />
     <Content Include="Static\our666\js\demo.js" />
     <Content Include="Static\our666\js\footer.js" />
     <Content Include="Static\our666\js\jquery-1.10.2.min.js" />
