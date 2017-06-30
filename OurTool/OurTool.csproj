@@ -249,6 +249,7 @@
     <Content Include="GoodUI\JxUI_files\slide_share.css" />
     <Content Include="GoodUI\JxUI_files\style.css" />
     <Content Include="Img\logo\2wm.jpg" />
+    <Content Include="Img\logo\cn.png" />
     <Content Include="Img\logo\fx.png" />
     <Content Include="Img\logo\logo.ico" />
     <Content Include="Img\logo\logo.jpg" />
