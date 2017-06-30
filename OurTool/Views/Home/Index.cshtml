@@ -4,39 +4,15 @@
     Layout = "~/Views/Shared/_LayoutMobile.cshtml";
 }
 
-@*<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>*@
 <script src="~/Scripts/jweixin-1.0.0.js"></script>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Static/our666/js/autoComplete.js"></script><!-- 自动搜索 -->
-<link href="~/Static/our666/bd/style.css" rel="stylesheet" />
-<style type="text/css">
-    .bbtn {
-
-        cursor: pointer;
-        width: 100px;
-        height: 36px;
-        color: white;
-        font-size: 15px;
-        letter-spacing: 1px;
-        background: #3385ff;
-        border-bottom: 1px solid #2d78f4;
-        outline: medium
-    }
-    body iframe{
-      
-        overflow-y: scroll;
-        
-      
-    }
-</style>
-
-
 <script type="text/javascript">
     //回车事件
-    $(function () {
-        $('body').bind('keypress', function (event) {
+    $(function() {
+        $('body').bind('keypress', function(event) {
             if (event.keyCode == "13") {
-                $("#form").submit();//进行提交表单
+                $("#baiduForm").submit(); //进行提交表单
 
             }
         });
@@ -44,216 +20,75 @@
 </script>
 
 
-@*//scroll*@
-<div  style="overflow-x: hidden;" >
-    <div style="display: none">
-        <audio src="~/Static/Mp3/Fade.mp3" controls="controls" id="audio"></audio>
-    </div>
-    @*logo和天气*@
-    <div style="position: absolute; margin-left: 8%;margin-top: 7%">
-        <img src="~/Img/logo/logo4.png" style="width: 10%; height: 10%; " />
-        <img src="~/Img/music/beg.png" style="width: 5%; height: 5%; " onclick="document.getElementById('audio').play(); return false;" id="beg" />
-        <img src="~/Img/music/end.png" style="width:  5%; height: 5%;display: none " onclick="document.getElementById('audio').pause(); return false;" id="end" />
-
-        <iframe  scrolling="no"  frameborder="0" allowtransparency="true" src="https://is.tianqi.com/index.php?c=code&id=12&icon=1&num=2&site=12"></iframe>
-
-    </div>
+<script>
 
 
-    <div class="search" style="position: absolute; z-index: 3">
+    wx.config(@Html.Raw(ViewBag.config));
+    wx.ready(function() {
 
-        <form action="https://www.baidu.com/baidu" target="_blank" id="form">
+        wx.onMenuShareAppMessage({
+            title: 'our666',
+            desc: '欢迎您使用our666,最简单的导航伴侣',
+            link: 'https://www.our666.com/Home/Index/?from=singlemessage&isappinstalled=0', // 分享链接
+            imgUrl: 'https://www.our666.com/Static/our666/images/logo.png', // 分享图标
 
-            <div class="text" style="left: 12%;margin-top: 30%">
-                <input type=text class="" autocomplete='off' name=word id="searchText" placeholder="百度一下"  style="width: 50%;">
-                <div id="auto" class="auto" style="width: 51.1%">
-                </div>
-            </div>
+            success: function(res) {
+                //alert('已分享');
+            },
+            cancel: function(res) {
+                //alert('已取消');
+            },
+            fail: function(res) {
 
-
-        </form>
-    </div>
-   
-    <div style="position: absolute; margin-top: 40%;" >
-        <div class="placeholder"></div>
-        <section class="container">
-         
-            <div class="content-wrap">
-                <div class="content">
-                  
-                    <article class="excerpt">
-                        <div class="focus">
-                            <a href="/Home/MTCode/" class="thumbnail" target="_blank">
-                                <img src="~/GoodUI/img/ewm.gif" alt="二维码生成" data-bd-imgshare-binded="1">
-                            </a>
-                        </div>
-                        <header>
-                            <h2>
-                                <a href="/Home/MTCode/" title="二维码生成" target="_blank">二维码生成</a>
-                            </h2>
-                        </header>
-                        <p class="note">
-                            你可以在微信中打开网址把想说的话生成二维码然后发送给对方，很好玩的啊。。。
-                        </p>
-
-                    </article>
-                    <article class="excerpt">
-                        <div class="focus">
-                            <a href="http://www.xueui.cn/" class="thumbnail" target="_blank">
-                                <img src="~/GoodUI/img/erm2.jpg"style="background-color: #8F000B" alt="漂亮UI" data-bd-imgshare-binded="1">
-                            </a>
-                        </div>
-                        <header>
-                            <h2>
-                                <a href="http://www.xueui.cn/" title="漂亮" target="_blank">漂亮UI学习</a>
-                            </h2>
-                        </header>
-                        <p class="note">
-                            想不想学习最流行的ui教程呢，这里的ui最炫最酷~~
-                        </p>
-
-                    </article>
-
-                    <article class="excerpt">
-                        <div class="focus">
-                            <a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" class="thumbnail" target="_blank">
-                                <img src="~/GoodUI/img/cn.png" alt="手机编程" data-bd-imgshare-binded="1">
-                            </a>
-                        </div>
-                        <header>
-                            <h2>
-                                <a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" title="手机编程" target="_blank">手机编程</a>
-                            </h2>
-                        </header>
-                        <p class="note">
-                            小猪的教程尽量以路线图 + 核心知识讲解 + 代码实例，来帮助大家学习Android！当然有些东西你一开始可能并不了解，不过你以后回过头来看，会发现这些东西很有用！好了，唠嗑就到这里！
-                        </p>
-
-                    </article>
-
-                    <article class="excerpt">
-                        <div class="focus">
-                            <a href="http://gaokao.chsi.com.cn/" class="thumbnail" target="_blank">
-                                <img src="~/GoodUI/img/yg.jpg" alt="阳光高考" data-bd-imgshare-binded="1">
-                            </a>
-                        </div>
-                        <header>
-                            <h2>
-                                <a href="http://gaokao.chsi.com.cn/" title="阳光高考" target="_blank">阳光高考</a>
-                            </h2>
-                        </header>
-                        <p class="note">
-                            刚刚经历过中考、高考，这里查信息最可靠！
-                        </p>
-
-                    </article>
-                </div>
-            </div>
-
-        </section>
-
-
-    </div>
-
-
-
-    <script type="text/javascript">
-        $(function () {
-            //alert(location.href.split('#')[0])
-            var myAuto = document.getElementById('audio');
-            myAuto.volume = 0.06;//声音控制
-            myAuto.pause();
-            $("#beg").click(function () {
-                $("#end").css("display", "");
-                $("#beg").css("display", "none");
-                myAuto.play();
-
-            });
-            $("#end").click(function () {
-                $("#beg").css("display", "");
-                $("#end").css("display", "none");
-                myAuto.pause();
-            });
-
-        })
-        //document.addEventListener('touchstart', function () {
-        //    audio.play();
-        //}, false);
-
-    </script>
-
-    <script>
-
-
-        wx.config(@Html.Raw(ViewBag.config));
-        wx.ready(function () {
-
-            wx.onMenuShareAppMessage({
-                title: 'our666',
-                desc: '欢迎您使用our666,最简单的导航伴侣',
-                link: 'https://www.our666.com/Home/Index/?from=singlemessage&isappinstalled=0', // 分享链接
-                imgUrl: 'https://www.our666.com/Img/logo/fx.png', // 分享图标
-
-                success: function (res) {
-                    //alert('已分享');
-                },
-                cancel: function (res) {
-                    //alert('已取消');
-                },
-                fail: function (res) {
-
-                    alert("信息" + JSON.stringify(res));
-                }
-            });
-
-            wx.onMenuShareTimeline({
-                title: '欢迎您',
-                desc: '欢迎您使用工具。',
-                link: 'https://www.our666.com/Home/Index/?from=timeline&isappinstalled=0', // 分享链接
-                imgUrl: 'https://www.our666.com/Img/logo/fx.png', // 分享图标
-
-                success: function (res) {
-                    //alert('已分享');
-                },
-                cancel: function (res) {
-                    //alert('已取消');
-                },
-                fail: function (res) {
-
-                    alert("朋友圈" + JSON.stringify(res));
-                }
-            });
-
-
-            wx.onMenuShareQQ({
-                title: '欢迎您',
-                desc: '欢迎您使用工具。',
-                link: 'https://www.our666.com/Home/Index/?from=singlemessage&isappinstalled=1', // 分享链接
-                imgUrl: 'https://www.our666.com/Img/logo/fx.png', // 分享图标
-
-                success: function (res) {
-                    //alert('已分享');
-                },
-                cancel: function (res) {
-                    //alert('已取消');
-                },
-                fail: function (res) {
-
-                    alert("qq" + JSON.stringify(res));
-                }
-            });
-
+                alert("信息" + JSON.stringify(res));
+            }
         });
-        wx.error(function (res) {
 
-            //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+        wx.onMenuShareTimeline({
+            title: '欢迎您',
+            desc: '欢迎您使用工具。',
+            link: 'https://www.our666.com/Home/Index/?from=timeline&isappinstalled=0', // 分享链接
+            imgUrl: 'https://www.our666.com/Static/our666/images/logo.png', // 分享图标
 
+            success: function(res) {
+                //alert('已分享');
+            },
+            cancel: function(res) {
+                //alert('已取消');
+            },
+            fail: function(res) {
+
+                alert("朋友圈" + JSON.stringify(res));
+            }
         });
 
 
+        wx.onMenuShareQQ({
+            title: '欢迎您',
+            desc: '欢迎您使用工具。',
+            link: 'https://www.our666.com/Home/Index/?from=singlemessage&isappinstalled=1', // 分享链接
+            imgUrl: 'https://www.our666.com/Static/our666/images/logo.png', // 分享图标
+
+            success: function(res) {
+                //alert('已分享');
+            },
+            cancel: function(res) {
+                //alert('已取消');
+            },
+            fail: function(res) {
+
+                alert("qq" + JSON.stringify(res));
+            }
+        });
+
+    });
+    wx.error(function(res) {
+
+        //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+
+    });
 
 
+</script>
 
 
-    </script>
-</div>

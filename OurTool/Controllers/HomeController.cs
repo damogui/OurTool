@@ -13,7 +13,7 @@ namespace OurTool.Controllers
         {
            
             ViewBag.config = GetWchatConfig(); 
-            return View("MIndex");
+            return View("Index");
         }
         /// <summary>
         /// 最新our66新首页
