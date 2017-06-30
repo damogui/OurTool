@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Our666";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+<script src="~/Static/our666/js/autoComplete.js"></script><!-- 自动搜索 -->
+<script type="text/javascript">
+    //回车事件
+    $(function () {
+        $('body').bind('keypress', function (event) {
+            if (event.keyCode == "13") {
+                $("#baiduForm").submit();//进行提交表单
+
+            }
+        });
+    });
+</script>

@@ -253,6 +253,7 @@
     <Content Include="Img\logo\logo.ico" />
     <Content Include="Img\logo\logo.jpg" />
     <Content Include="Img\logo\logo.png" />
+    <Content Include="Img\logo\logo3.png" />
     <Content Include="Img\logo\logo4.png" />
     <Content Include="Img\logo\mfg.jpg" />
     <Content Include="Img\logo\shizi.jpg" />
@@ -292,6 +293,27 @@
     <Content Include="Img\read\2_31.jpg" />
     <Content Include="Img\read\2_32.jpg" />
     <Content Include="Img\read\分隔符.gif" />
+    <Content Include="MobileUI\default.htm" />
+    <Content Include="MobileUI\gw.html" />
+    <Content Include="MobileUI\index.html" />
+    <Content Include="MobileUI\js.html" />
+    <Content Include="MobileUI\lx.html" />
+    <Content Include="MobileUI\static\css\v1\min.duba.touch.css" />
+    <Content Include="MobileUI\static\images\v1\arrow.png" />
+    <Content Include="MobileUI\static\images\v1\class_icons.png" />
+    <Content Include="MobileUI\static\images\v1\logo.png" />
+    <Content Include="MobileUI\static\images\v1\logos_1.png" />
+    <Content Include="MobileUI\static\images\v1\logos_2.png" />
+    <Content Include="MobileUI\static\images\v1\logos_3.png" />
+    <Content Include="MobileUI\static\images\v1\logos_4.png" />
+    <Content Include="MobileUI\static\images\v1\nbsp.gif" />
+    <Content Include="MobileUI\static\images\v1\share_icons.png" />
+    <Content Include="MobileUI\static\images\v1\share_logo.jpg" />
+    <Content Include="MobileUI\static\images\v1\tools_icons_new.png" />
+    <Content Include="MobileUI\static\images\v1\weather_btn.png" />
+    <Content Include="MobileUI\static\images\v1\w_icons.png" />
+    <Content Include="MobileUI\static\js\v1\min.touch.js" />
+    <Content Include="MobileUI\xw.html" />
     <Content Include="Node\.debug.js" />
     <Content Include="Node\gulpfile.js" />
     <Content Include="Node\gulp\config.js" />
@@ -945,6 +967,9 @@
     <Content Include="GoodUI\JxUI_files\os.js" />
     <Content Include="GoodUI\JxUI_files\share.js" />
     <Content Include="GoodUI\JxUI_files\z_stat.php" />
+    <Content Include="MobileUI\static\images\v1\wb_" />
+    <Content Include="MobileUI\static\images\v1\w_" />
+    <Content Include="MobileUI\static\js\v1\min.touch.js%40v=201312091625" />
     <None Include="Properties\PublishProfiles\web.config.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -1162,6 +1187,8 @@
     <Content Include="Views\Shared\_LayoutOur666.cshtml" />
     <Content Include="Views\Shared\_LayoutOur.cshtml" />
     <Content Include="Views\Shared\_LayoutGoodUi.cshtml" />
+    <Content Include="Views\Shared\_LayoutMobile.cshtml" />
+    <Content Include="Views\Home\MIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
