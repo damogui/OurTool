@@ -301,7 +301,8 @@
     <Content Include="MobileUI\index.html" />
     <Content Include="MobileUI\js.html" />
     <Content Include="MobileUI\lx.html" />
-    <Content Include="MobileUI\static\css\v1\min.duba.touch.css" />
+    <Content Include="MobileUI\static\css\v1\hot-joke.css" />
+    <Content Include="MobileUI\static\css\v1\min.our666.touch.css" />
     <Content Include="MobileUI\static\images\v1\arrow.png" />
     <Content Include="MobileUI\static\images\v1\class_icons.png" />
     <Content Include="MobileUI\static\images\v1\logo.png" />
@@ -315,6 +316,7 @@
     <Content Include="MobileUI\static\images\v1\tools_icons_new.png" />
     <Content Include="MobileUI\static\images\v1\weather_btn.png" />
     <Content Include="MobileUI\static\images\v1\w_icons.png" />
+    <Content Include="MobileUI\static\js\v1\min.script.js" />
     <Content Include="MobileUI\static\js\v1\min.touch.js" />
     <Content Include="MobileUI\xw.html" />
     <Content Include="Node\.debug.js" />
