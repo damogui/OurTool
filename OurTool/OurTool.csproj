@@ -303,10 +303,13 @@
     <Content Include="MobileUI\lx.html" />
     <Content Include="MobileUI\static\css\v1\hot-joke.css" />
     <Content Include="MobileUI\static\css\v1\min.our666.touch.css" />
+    <Content Include="MobileUI\static\images\link\ajk.jpg" />
     <Content Include="MobileUI\static\images\link\bd.png" />
     <Content Include="MobileUI\static\images\link\fh.png" />
+    <Content Include="MobileUI\static\images\link\gjw.jpg" />
     <Content Include="MobileUI\static\images\link\jd.png" />
     <Content Include="MobileUI\static\images\link\sh.png" />
+    <Content Include="MobileUI\static\images\link\tm.jpg" />
     <Content Include="MobileUI\static\images\link\tx.png" />
     <Content Include="MobileUI\static\images\link\yk.png" />
     <Content Include="MobileUI\static\images\v1\arrow.png" />
