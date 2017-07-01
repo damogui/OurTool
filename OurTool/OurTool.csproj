@@ -303,6 +303,12 @@
     <Content Include="MobileUI\lx.html" />
     <Content Include="MobileUI\static\css\v1\hot-joke.css" />
     <Content Include="MobileUI\static\css\v1\min.our666.touch.css" />
+    <Content Include="MobileUI\static\images\link\bd.png" />
+    <Content Include="MobileUI\static\images\link\fh.png" />
+    <Content Include="MobileUI\static\images\link\jd.png" />
+    <Content Include="MobileUI\static\images\link\sh.png" />
+    <Content Include="MobileUI\static\images\link\tx.png" />
+    <Content Include="MobileUI\static\images\link\yk.png" />
     <Content Include="MobileUI\static\images\v1\arrow.png" />
     <Content Include="MobileUI\static\images\v1\class_icons.png" />
     <Content Include="MobileUI\static\images\v1\logo.png" />
@@ -312,7 +318,6 @@
     <Content Include="MobileUI\static\images\v1\logos_4.png" />
     <Content Include="MobileUI\static\images\v1\nbsp.gif" />
     <Content Include="MobileUI\static\images\v1\share_icons.png" />
-    <Content Include="MobileUI\static\images\v1\share_logo.jpg" />
     <Content Include="MobileUI\static\images\v1\tools_icons_new.png" />
     <Content Include="MobileUI\static\images\v1\weather_btn.png" />
     <Content Include="MobileUI\static\images\v1\w_icons.png" />
