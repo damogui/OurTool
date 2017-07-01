@@ -213,6 +213,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Duba\duba.html" />
+    <Content Include="Duba\duba_files\min.style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -971,6 +973,7 @@
     <Content Include="MobileUI\static\images\v1\wb_" />
     <Content Include="MobileUI\static\images\v1\w_" />
     <Content Include="MobileUI\static\js\v1\min.touch.js%40v=201312091625" />
+    <Content Include="Duba\duba_files\min.script.js" />
     <None Include="Properties\PublishProfiles\web.config.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
