@@ -1,6 +1,6 @@
 ﻿document.write ("<div class='footer'>");
     document.write ("<div class='footer_nav'>");
-    document.write("<a href='/Home/Index'>our666</a> 丨 <a href='/Our/Our/AdIndex'>广告服务</a>丨 ");
+    document.write("<a href='/Home/Index'>our666</a> 丨 <a href='https://www.fixmath.com/'>fixmath</a>丨 ");
     document.write(" <a href='/Our/Our/WebMessage'>网站留言</a> 丨 <a href='/Our/Our/ContactUs'>联系我们</a>");
     document.write ("</div>");
     document.write ("<div class='fengexian'></div>");
