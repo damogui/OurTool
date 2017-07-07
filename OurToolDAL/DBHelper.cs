@@ -12,7 +12,7 @@ namespace mfg_word_Dal
     public class DBHelper
     {
         //数据库连接字符串(web.config来配置)，可以动态更改connectionString支持多数据库.		
-        public static string connectionString = ConfigurationManager.ConnectionStrings["wordConn"].ConnectionString;
+        public static string connectionString = ConfigurationManager.ConnectionStrings["ourConn"].ConnectionString;
 
         #region 工厂模式的连接数据库
         #region 全局变量

@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OurToolBll.News;
+using OurToolModel.News;
 using OurWechatSdkCore;
 
 namespace OurTool.Controllers
 {
     public class HomeController : BaseController
     {
+        NewsBll newsBll=new NewsBll();
         public ActionResult Index()
         {
-           
-            ViewBag.config = GetWchatConfig(); 
+            ViewBag.config = GetWchatConfig();
+            string news = newsBll.GetNewsList();
+            ViewBag.News = news;
             return View("Index");
         }
         /// <summary>

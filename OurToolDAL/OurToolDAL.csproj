@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Card\CardDal.cs" />
     <Compile Include="DBHelper.cs" />
+    <Compile Include="News\NewsDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlTran\DataRecord.cs" />
     <Compile Include="UserDal\UserDal.cs" />
