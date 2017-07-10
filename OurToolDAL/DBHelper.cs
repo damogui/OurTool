@@ -24,15 +24,19 @@ namespace mfg_word_Dal
         #endregion
         private static void InitFactory()
         {
-
-            if (DbConnection == null || DbTransaction == null)
+            using (DbConnection)
             {
-                DbProviderFactory = DbProviderFactories.GetFactory(new MySqlConnection());
-                DbConnection = DbProviderFactory.CreateConnection();
-                DbConnection.ConnectionString = connectionString;
+
+
+
+                if (DbConnection == null || DbTransaction == null)
+                {
+                    DbProviderFactory = DbProviderFactories.GetFactory(new MySqlConnection());
+                    DbConnection = DbProviderFactory.CreateConnection();
+                    DbConnection.ConnectionString = connectionString;
+                }
+
             }
-
-
 
 
         }
@@ -300,7 +304,7 @@ namespace mfg_word_Dal
             DbCommand?.Dispose();
             DbTransaction?.Dispose();
         }
-      
+
         #endregion
         #endregion
 
@@ -364,35 +368,40 @@ namespace mfg_word_Dal
         {
             InitFactory();
 
-            #region 释放资源的命令在调用方法中执行
-            DbCommand = DbProviderFactory.CreateCommand();
-            if (DbCommand != null)
+
+            using (DbCommand)
             {
-                DbCommand.Connection = DbConnection;
-                DbCommand.CommandText = sqlStr;
-                DbCommand.CommandType = commandType;
-                DbCommand.CommandTimeout = 30;
-                if (dbParameters.Length > 0)
+                
+           
+                #region 释放资源的命令在调用方法中执行
+                DbCommand = DbProviderFactory.CreateCommand();
+                if (DbCommand != null)
                 {
-                    foreach (var item in dbParameters)
+                    DbCommand.Connection = DbConnection;
+                    DbCommand.CommandText = sqlStr;
+                    DbCommand.CommandType = commandType;
+                    DbCommand.CommandTimeout = 30;
+                    if (dbParameters.Length > 0)
                     {
-                        DbCommand.Parameters.Add(item);
+                        foreach (var item in dbParameters)
+                        {
+                            DbCommand.Parameters.Add(item);
+                        }
                     }
                 }
-            }
-            if (DbConnection.State == ConnectionState.Open) return;
-            try
-            {
-                DbConnection.Open();
-            }
-            catch (DbException dbException)
-            {
-                throw dbException;
-            }
+                if (DbConnection.State == ConnectionState.Open) return;
+                try
+                {
+                    DbConnection.Open();
+                }
+                catch (DbException dbException)
+                {
+                    throw dbException;
+                }
 
-            #endregion
+                #endregion
 
-
+            }
 
         }
 
@@ -490,9 +499,7 @@ namespace mfg_word_Dal
             }
             else
             {
-                using (DbConnection)
-                {
-
+              
 
                     DbDataReader reader = GetDataReader(sqlStr, dbParameters);
                     var list = new List<T>();
@@ -504,7 +511,7 @@ namespace mfg_word_Dal
                         }
                     }
                     return list;
-                }
+              
 
             }
 
@@ -519,6 +526,7 @@ namespace mfg_word_Dal
             try
             {
                 reader = DbCommand.ExecuteReader(CommandBehavior.CloseConnection);
+               
 
             }
             catch (DbException dbException)
