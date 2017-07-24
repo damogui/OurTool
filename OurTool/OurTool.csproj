@@ -341,6 +341,7 @@
     <Content Include="Node\gulp\util\handleErrors.js" />
     <Content Include="Node\index.htm" />
     <Content Include="Node\read.js" />
+    <Content Include="Node\ReadMe.txt" />
     <Content Include="Node\sm.mp3" />
     <Content Include="Node\src\dep\echarts.min.js" />
     <Content Include="Node\src\dep\zip\deflate.js" />
