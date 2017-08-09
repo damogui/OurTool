@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OurTool.Wechat;
 using OurToolBll.News;
 using OurToolModel.News;
 using OurWechatSdkCore;
@@ -77,6 +78,13 @@ namespace OurTool.Controllers
             //signature应该和signatureMy相等
 
             return echostr;
+        }
+
+        public int InsertUser()
+        {
+            new Wxapi().ProcessRequest(System.Web.HttpContext.Current);
+
+            return 1;
         }
 
 
