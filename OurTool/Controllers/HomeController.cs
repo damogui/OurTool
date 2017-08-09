@@ -80,19 +80,6 @@ namespace OurTool.Controllers
         }
 
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
 
         /// <summary>
         /// 发音界面
@@ -115,6 +102,10 @@ namespace OurTool.Controllers
 
             return View();
         }
+
+
+
+
 
     }
 }
