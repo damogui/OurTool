@@ -4,9 +4,9 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using MySql.Data.MySqlClient;
 
 namespace OurTool.Wechat
 {
@@ -34,8 +34,8 @@ namespace OurTool.Wechat
                 context.Response.Write(ex.ToString());
             }
 
-            string Appid = "wxdb2641f85b04f1b3";
-            string Secret = "8591d8cd7197b9197e17b3275329a1e7";
+            string Appid = "wxa89da5b83536b33a";
+            string Secret = "ccec6297c6137167d7684fdc080c366d";
             string grant_type = "authorization_code";
 
             //向微信服务端 使用登录凭证 code 获取 session_key 和 openid   
@@ -101,18 +101,18 @@ namespace OurTool.Wechat
 
 
                 //创建连接池对象（与数据库服务器进行连接）  
-                SqlConnection conn = new SqlConnection("server=127.0.0.1;database=Test;uid=sa;pwd=1");
+                MySqlConnection conn = new MySqlConnection("Data Source=101.201.69.84;Port=3306;User=root;Password=qsx123456;CharSet=utf8;Allow User Variables=True;Connect Timeout=300;");
                 //打开连接池  
                 conn.Open();
                 //创建命令对象  
                 string Qrystr = "SELECT * FROM WeChatUsers WHERE openId='" + userInfo.openId + "'";
-                SqlCommand cmdQry = new SqlCommand(Qrystr, conn);
+                MySqlCommand cmdQry = new MySqlCommand(Qrystr, conn);
                 object obj = cmdQry.ExecuteScalar();
                 if ((Object.Equals(obj, null)) || (Object.Equals(obj, System.DBNull.Value)))
                 {
-                    string str = "INSERT INTO WeChatUsers ([UnionId] ,[OpenId],[NickName],[Gender],[City],[Province],[Country],[AvatarUrl],[Appid],[Timestamp],[Memo],[counts])VALUES('" + userInfo.unionId + "','" + userInfo.openId + "','" + userInfo.nickName + "','" + userInfo.gender + "','" + userInfo.city + "','" + userInfo.province + "','" + userInfo.country + "','" + userInfo.avatarUrl + "','" + appid.ToString() + "','" + timestamp.ToString() + "','来自微信小程序','1')";
+                    string str = "INSERT INTO WeChatUsers ([UnionId] ,[OpenId],[NickName],[Gender],[City],[Province],[Country],[AvatarUrl],[Appid],[Timestamp],[Memo],[Counts])VALUES('" + userInfo.unionId + "','" + userInfo.openId + "','" + userInfo.nickName + "','" + userInfo.gender + "','" + userInfo.city + "','" + userInfo.province + "','" + userInfo.country + "','" + userInfo.avatarUrl + "','" + appid.ToString() + "','" + timestamp.ToString() + "','来自微信小程序','1')";
 
-                    SqlCommand cmdUp = new SqlCommand(str, conn);
+                    MySqlCommand cmdUp = new MySqlCommand(str, conn);
                     // 执行操作  
                     try
                     {
@@ -127,7 +127,7 @@ namespace OurTool.Wechat
                 {
                     //多次访问，记录访问次数counts   更新unionId是预防最初没有，后期关联后却仍未记录  
                     string str = "UPDATE dbo.WeChatUsers SET counts = counts+1，UnionId = '" + userInfo.unionId + "' WHERE OpenId='" + userInfo.openId + "'";
-                    SqlCommand cmdUp = new SqlCommand(str, conn);
+                    MySqlCommand cmdUp = new MySqlCommand(str, conn);
                     int row = cmdUp.ExecuteNonQuery();
                 }
 
