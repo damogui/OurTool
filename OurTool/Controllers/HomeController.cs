@@ -49,6 +49,37 @@ namespace OurTool.Controllers
 
         }
 
+        /// <summary>
+        /// 生成签名串
+        /// </summary>
+        /// <returns></returns>
+        public string GetSignStr()
+        {
+
+           
+            string signature = Request["signature"];
+            string echostr = Request["echostr"];//返回的随机字符串
+          
+
+            string timestamp = Request["timestamp"];
+            string nonce = Request["nonce"];
+            string token = "our666";
+
+
+            Dictionary<string, string> signData = new Dictionary<string, string>() {
+                 {"timestamp",timestamp},
+                 {"nonce",nonce},
+                 {"token",token}
+               
+             };
+
+            string signatureMy = new Signature().Sign(signData);//获取的签名
+            //signature应该和signatureMy相等
+
+            return echostr;
+        }
+
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
