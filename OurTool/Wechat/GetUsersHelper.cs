@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
@@ -21,6 +22,8 @@ namespace OurTool.Wechat
             try
             {
                 System.Net.WebRequest wReq = System.Net.WebRequest.Create(Url);
+                wReq.Timeout = 10000;
+                wReq.Credentials = CredentialCache.DefaultCredentials;
                 // Get the response instance.  
                 System.Net.WebResponse wResp = wReq.GetResponse();
                 System.IO.Stream respStream = wResp.GetResponseStream();
@@ -47,7 +50,7 @@ namespace OurTool.Wechat
         /// <param name="AesKey">key</param>  
         /// <param name="AesIV">向量128</param>  
         /// <returns name="result">解密后的字符串</returns>  
-        public string AESDecrypt(string inputdata)
+        public static string AESDecrypt(string inputdata)
         {
             try
             {
@@ -67,9 +70,9 @@ namespace OurTool.Wechat
 
                 return result;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                return ex.Message;
 
             }
         }
