@@ -239,8 +239,8 @@ namespace OurTool.Controllers
                 Response.Write("code:" + code + "|iv:" + iv + "|encryptedData:" + encryptedData);
             }
 
-            string Appid = "wxa89da5b83536b33a";
-            string Secret = "ccec6297c6137167d7684fdc080c366d";
+            string Appid = "wxba92380dc6210082";//资讯的
+            string Secret = "8938f3c2513bfc3883038284b67e0316";
             string grant_type = "authorization_code";
 
             //向微信服务端 使用登录凭证 code 获取 session_key 和 openid   
