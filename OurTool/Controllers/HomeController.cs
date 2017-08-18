@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using MySql.Data.MySqlClient;
@@ -318,6 +319,35 @@ namespace OurTool.Controllers
 
             return result;
         }
+
+
+
+
+
+        /// <summary>
+        /// 调用其他接口返回数据
+        /// </summary>
+        /// <returns></returns>
+        public JsonResult GetStockData()
+        {
+            JsonResult  json=new JsonResult() {JsonRequestBehavior = JsonRequestBehavior.AllowGet};
+            string obj = Request["code"]??"";
+            if (string.IsNullOrEmpty(obj))
+            {
+
+                json.Data = "1=1";
+                return json;
+            }
+
+            string url = string.Format("http://hq.sinajs.cn/list={0}", obj);
+            string type = "gb2312";
+            GetUsersHelper GetUsersHelper = new GetUsersHelper();
+            string j = GetUsersHelper.GetUrltoHtml(url, type);//获取微信服务器返回字符串  
+            json.Data = j;
+            return json;
+
+        }
+
 
 
 
