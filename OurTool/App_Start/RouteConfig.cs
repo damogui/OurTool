@@ -16,7 +16,7 @@ namespace OurTool
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "OurIndex", id = UrlParameter.Optional }
+                defaults: new { controller = "Send", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
