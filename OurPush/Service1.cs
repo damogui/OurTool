@@ -21,8 +21,20 @@ namespace OurPush
         {
         }
 
+
+       
+
         protected override void OnStop()
         {
+        }
+
+        /// <summary>
+        /// 进行推送
+        /// </summary>
+        private void DoPush()
+        {
+
+
         }
     }
 }
