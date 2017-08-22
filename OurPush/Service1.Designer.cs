@@ -1,6 +1,6 @@
 ﻿namespace OurPush
 {
-    partial class Service1
+    partial class OurService
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            // 
+            // OurService
+            // 
             this.ServiceName = "Service1";
+
         }
 
         #endregion

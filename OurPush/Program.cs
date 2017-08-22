@@ -17,7 +17,7 @@ namespace OurPush
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new OurService()
             };
             ServiceBase.Run(ServicesToRun);
         }

@@ -13,13 +13,13 @@ using OurToolCommon;
 
 namespace OurPush
 {
-    public partial class Service1 : ServiceBase
+    public partial class OurService : ServiceBase
     {
 
         private int flagPush = 0;//是否已经推送0今天未推送，1已经推送
         //StudentManageBll _studentManageBll = new StudentManageBll();
         int isP = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["isPush"]);
-        public Service1()
+        public OurService()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace OurPush
         protected override void OnStart(string[] args)
         {
 
-            System.Threading.Timer timer2 = new System.Threading.Timer(DoPush, null, 0, 1000 * 30);//6秒执行一次
+            System.Threading.Timer timer2 = new System.Threading.Timer(DoPush, null, 0, 1000 * 6);//6秒执行一次
         }
 
 
@@ -57,7 +57,7 @@ namespace OurPush
                                    "\"template_id\": \"" + tempId + "\", " +
                                       "\"page\": \"" + "pages/index/index" + "\", " +
 
-                                   "\"form_id\": \"" + "4869e640a35dd5de019f8f6d99a8c00e" + "\", " +
+                                   "\"form_id\": \"" + "b38b707abf0f48025f362e57eb454439" + "\", " +
                                    "\"data\": " +
                                    "{\"keyword1\": {\"value\": \"" + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "\",\"color\": \"#173177\"}," +
                                    //"\"keyword1\": { \"value\": \"《" + "书名"+ "》\",\"color\": \"#173177\"}," +
