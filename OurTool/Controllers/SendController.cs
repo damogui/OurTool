@@ -26,8 +26,8 @@ namespace OurTool.Controllers
         public int GetPushInfo(string str)
         {
 
-            List<string> openIds = new List<string>() { "oEMsK0ZAughkZOZ8nFLD8y5DNsxc" };//我自己 ozmxY0rJ3qWyq8QWzXE-6GBRXUzo
-            string tempId = "P9j5WqDjmy1gcK8WDavSDFuPLHos1fenHkcONFqbJ-c";//获取机构的退课模板
+            List<string> openIds = new List<string>() { "o6rQe0aKEzmBTecAaPCjRK_Kc5z4" };//我自己 ozmxY0rJ3qWyq8QWzXE-6GBRXUzo
+            string tempId = "q_B2s9FepOU4pMBXQKPLgTsoDO9P6dQD7dxzq6VWGhw";//获取机构的退课模板
             
             int numExec = 0;
             StringBuilder sb = new StringBuilder();
@@ -35,17 +35,17 @@ namespace OurTool.Controllers
             {
                 sb.Append("{\"touser\": \"" + item + "\"," +
                            "\"template_id\": \"" + tempId + "\", " +
-                              "\"page\": \"" + "index" + "\", " +
-                            "\"url\": \"" + "fd"+ "\", " +
-                           "\"form_id\": \"\", " +
+                              "\"page\": \"" + "pages/index/index" + "\", " +
+
+                           "\"form_id\": \"" + "4869e640a35dd5de019f8f6d99a8c00e" + "\", " +
                            "\"data\": " +
-                           "{\"first\": {\"value\": \"" +"内容" + "\",\"color\": \"#173177\"}," +
-                           "\"keyword1\": { \"value\": \"《" + "书名"+ "》\",\"color\": \"#173177\"}," +
+                           "{\"keyword1\": {\"value\": \"" + "内容" + "\",\"color\": \"#173177\"}," +
+                           //"\"keyword1\": { \"value\": \"《" + "书名"+ "》\",\"color\": \"#173177\"}," +
                            "\"keyword2\": { \"value\": \"" + "已取消" + "\",\"color\": \"#173177\"}," +
                                  "\"keyword3\": { \"value\": \"" + "已取消" + "\",\"color\": \"#173177\"}," +
 
                            "\"keyword4\": {\"value\": \"" + "备注" + "\",\"color\": \"#173177\" }}}");
-                SendTempletMessge(sb.ToString(), "wxa89da5b83536b33a", "ccec6297c6137167d7684fdc080c366d");
+                SendTempletMessge(sb.ToString(), "wxba92380dc6210082", "8938f3c2513bfc3883038284b67e0316");
 
                 numExec += 1;
                 sb.Clear();
