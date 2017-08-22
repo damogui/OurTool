@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurWechatSdkCore", "OurWech
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurWechatSdkUtility", "OurWechatSdkUtility\OurWechatSdkUtility.csproj", "{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurPush", "OurPush\OurPush.csproj", "{5890800E-7BB6-459A-8DA1-775EFCD73D3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F29D5E5-34A8-43BB-9C6A-6BA84DB0A209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5890800E-7BB6-459A-8DA1-775EFCD73D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5890800E-7BB6-459A-8DA1-775EFCD73D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5890800E-7BB6-459A-8DA1-775EFCD73D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5890800E-7BB6-459A-8DA1-775EFCD73D3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
