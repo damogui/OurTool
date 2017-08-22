@@ -31,7 +31,7 @@
             // 
             // OurService
             // 
-            this.ServiceName = "Service1";
+            this.ServiceName = "OurService";
 
         }
 
