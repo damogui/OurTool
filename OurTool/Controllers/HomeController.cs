@@ -351,6 +351,65 @@ namespace OurTool.Controllers
             return "code:" + code + "|iv:" + iv + "|encryptedData:" + encryptedData + "openId:" + res.openid;
         }
 
+
+        /// <summary>
+        /// 插入表单
+        /// </summary>
+        /// <returns></returns>
+        public string InsertUserForm()
+        {
+            string openId = "";
+            string formId = "";
+          
+            try
+            {
+                openId = HttpContext.Request.QueryString["openId"].ToString();
+                formId = HttpContext.Request.QueryString["formId"].ToString();
+              
+            }
+
+
+            catch (Exception ex)
+            {
+                Response.Write("openId:" + openId + "|formId:" + formId );
+            }
+
+           
+                #region   插入数据库
+
+
+                //创建连接池对象（与数据库服务器进行连接）  
+                MySqlConnection conn = new MySqlConnection("Database=ourtool;Data Source=101.201.69.84;Port=3306;User=root;Password=qsx123456;CharSet=utf8;Allow User Variables=True;Connect Timeout=300;");
+                //打开连接池  
+                conn.Open();
+                //创建命令对象  
+                List<MySqlParameter>listParameters=new List<MySqlParameter>();
+            string Qrystr =
+                "INSERT INTO `ourtool`.`FormInfo` (  `OpenId`, `FormId`, `CreateTime`, `EditeTime`, `Type` ) VALUES ( @OpenId, @FormId, now(), now(), 2 ) ; ";
+      
+            //listParameters.Add(new MySqlParameter("@OpenId",openId));
+            //listParameters.Add(new MySqlParameter("@FormId", formId));
+
+            MySqlCommand cmdQry = new MySqlCommand(Qrystr, conn);//listParameters
+
+            cmdQry.Parameters.Add(new MySqlParameter("@OpenId", openId));
+            cmdQry.Parameters.Add(new MySqlParameter("@FormId", formId));
+
+
+            object obj = cmdQry.ExecuteScalar();
+               
+
+                //关闭连接池  
+                conn.Close();
+                #endregion
+
+                //返回解密后的用户数据  
+                //Response.Write(result);
+          
+
+            return "openId:" + openId + "|formId:" + formId ;
+        }
+
         /// <summary>
         /// 发音界面
         /// </summary>
