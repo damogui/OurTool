@@ -9,15 +9,50 @@
         border-style: inset;
     }
 </style>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <div>
-    <h2 style="color: #FCA300">程序员节日</h2>
+    <div id="div" style="height:100%;width:100%">
+     
+        <img src="~/Img/music/cxy.jpg" style="margin-left: 20%" />
+        <audio id="m1"></audio>
+
+    </div>
+  
     @*<img src="~/Img/logo/2wm.jpg" style="float: right; width: 20%;height: 20%">*@
-    <img src="~/Img/music/cxy.jpg" />
-
    
-</div>
 
+
+</div>
+<script>
+        $(function() {
+            Read();
+
+
+
+
+            $('html').on('click', function() {
+                Read();
+            });
+
+
+        });
+
+
+        function Read() {
+
+            var zhText = encodeURI("程序员是伟大的职业，祝所有程序员节日快乐");
+
+            let m = document.getElementById('m1');
+            $("#m1").attr("src", "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=2&text=" + zhText + "");
+            m.playbackRate = 1.5;
+
+            //m.load(); //加载
+            m.play(); //播放
+
+        }
+</script>
 <script type="text/javascript" language="javascript">
+
 
 function iFrameHeight() {
 var ifm= document.getElementById("iframepage");
