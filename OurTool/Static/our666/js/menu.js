@@ -1,4 +1,18 @@
-﻿//<!-- 头部（logo + 日期） -->
+﻿//获取热点新闻数据
+var arrLink = [];//连接
+var arrTitle = [];//title
+$(function() {
+
+
+
+});
+
+
+
+
+
+
+//<!-- 头部（logo + 日期） -->
 document.write ("<div class='head'>");
     document.write ("<div class='head_div'>");
         document.write ("<div class='head_left'>您好，欢迎来到<span>our666</span>！</div>");

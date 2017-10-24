@@ -46,5 +46,15 @@ namespace OurToolBll.News
 
 
         }
+        /// <summary>
+        /// 获取热点新闻
+        /// </summary>
+        /// <returns></returns>
+        public List<HotNews> GetHotNewsList()
+        {
+            List<HotNews> list = userDal.GetHotNewsList();
+
+            return list;
+        }
     }
 }

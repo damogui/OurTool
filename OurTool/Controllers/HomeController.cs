@@ -55,6 +55,18 @@ namespace OurTool.Controllers
         }
 
         /// <summary>
+        /// 祝福卡片
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Wish()
+        {
+            ViewBag.config = GetWchatConfig();
+
+            return View();
+
+        }
+
+        /// <summary>
         /// 生成签名串
         /// </summary>
         /// <returns></returns>
@@ -577,6 +589,23 @@ namespace OurTool.Controllers
             string j = GetUsersHelper.GetUrltoHtml(url, type);//获取微信服务器返回字符串  
             json.Data = j;
             return json;
+
+        }
+        /// <summary>
+        /// 获取热点新闻
+        /// </summary>
+        /// <returns></returns>
+        public JsonResult GetHotNews()
+        {
+
+            JsonResult jsonResult=new JsonResult() ;
+
+            List<HotNews> listHot = newsBll.GetHotNewsList();
+            jsonResult.Data = listHot;
+
+            return jsonResult;
+
+
 
         }
 
