@@ -48,7 +48,7 @@ document.write("<div class='ruzhu'><a href='/Our/Our/AdIndex'><img src='/Static/
 
 			document.write ("</div>");
         document.write ("</div>");
-        document.write("<input type='submit' value='百度一下' class='sea_right'  id='btnSearch' />");
+        document.write("<input type='submit' value='百度一下' class='sea_right'  id='btnSearch' style='cursor:pointer' />");
         document.write(" </form>");//提交尾部
         document.write ("<div class='sea_bottom'>");
             document.write ("<span class='span1'>热门：</span>");
