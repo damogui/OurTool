@@ -33,7 +33,7 @@ namespace OurTool.Controllers
             var hotNews = GetHotNewsList();
 
             ViewBag.ArrLink1 =string.Format("{0}-{1}", hotNews[0].Href, hotNews[0].Title);//热点新闻1
-            ViewBag.ArrLink2 = ViewBag.ArrLink1 = string.Format("{0}-{1}", hotNews[1].Href, hotNews[1].Title);//热点新闻2
+            ViewBag.ArrLink2 =string.Format("{0}-{1}", hotNews[1].Href, hotNews[1].Title);//热点新闻2
 
             return View("OurIndex");
 

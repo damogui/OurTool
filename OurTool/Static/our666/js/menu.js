@@ -41,11 +41,9 @@ document.write(" </form>");//提交尾部
 document.write("<div class='sea_bottom'>");
 document.write("<span class='span1'>热门：</span>");
 
-
-
 var arrLink1 = $("#arrLink1").val();//连接1
 var arrLink2 = $("#arrLink2").val();//连接2
-  
+
 document.write('<span><a href="' + arrLink1.split('-')[0] + '" target="_blank">' + arrLink1.split('-')[1] + '</a></span>');
 document.write('<span><a href="' + arrLink2.split('-')[0] + '" target="_blank">' + arrLink2.split('-')[1] + '</a></span>');
 
