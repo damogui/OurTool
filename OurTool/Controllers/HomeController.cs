@@ -30,6 +30,11 @@ namespace OurTool.Controllers
         /// <returns></returns>
         public ActionResult OurIndex()
         {
+            var hotNews = GetHotNewsList();
+
+            ViewBag.ArrLink1 =string.Format("{0}-{1}", hotNews[0].Href, hotNews[0].Title);//热点新闻1
+            ViewBag.ArrLink2 = ViewBag.ArrLink1 = string.Format("{0}-{1}", hotNews[1].Href, hotNews[1].Title);//热点新闻2
+
             return View("OurIndex");
 
         }
@@ -604,6 +609,19 @@ namespace OurTool.Controllers
             jsonResult.Data = listHot;
 
             return jsonResult;
+
+
+
+        }
+        /// <summary>
+        /// 获取热点新闻集合
+        /// </summary>
+        /// <returns></returns>
+        public List<HotNews> GetHotNewsList()
+        {
+            List<HotNews> listHot = newsBll.GetHotNewsList();
+           
+            return listHot;
 
 
 

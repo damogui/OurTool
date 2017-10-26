@@ -24,6 +24,9 @@
                 $('.panes>div:eq(' + $(this).index() + ')').show().siblings().hide();
             })
         })
+
+     
+
     </script>
 
 
@@ -56,16 +59,20 @@
 
 </head>
 
-<body style="position:relative; z-index:-10;">
-    @RenderBody()
+<body style="position: relative; z-index: -10;">
+    @*隐藏热点新闻*@
+<input type="hidden" value="@ViewBag.ArrLink1" id="arrLink1"/>
+    <input type="hidden" value="@ViewBag.ArrLink2" id="arrLink2" />
+
+@RenderBody()
 <div style="width: 1000px; margin: 10px auto;">
 <script type="text/javascript" src="~/Static/our666/js/menu.js"></script>
-<div class="tabPanel" style="z-index:-10;">
+<div class="tabPanel" style="z-index: -10;">
 <ul class="_tab">
     <li class="nav01 hit"><span>网址大全</span></li>
     <li class="nav04"><span>认证机构</span></li>
     <li class="nav02"><span>名校大全</span></li>
-  
+
     <!--<li class="nav06"><span>安卓学习</span></li>-->
     <li class="nav05"><span>幼儿园</span></li>
     <li class="nav07"><span>小学生</span></li>
@@ -74,192 +81,192 @@
     <li class="nav03"><span>音标点读</span></li>
     <li class="nav03"><span>二维码</span></li>
 
-    
+
 </ul>
- <div class="panes">
-<div class="pane" style="display: block; height: auto; width: auto">
-<div class="conter">
-<!-- 主体信息 -->
-<div class="wzdq">
-<div class="main">
-<div class="lleft">
-    <div class="left">
-        <!-- 名站推荐 -->
-        <div class="lefts">
-            <div class="lefts_top"><span>名站推荐</span></div>
-            <div class="lefts_main">
-                <ul>
-                    <li class="lefts_adv1">
-                        <a href="http://www.mofangge.com/" target="_blank"><img src="~/Static/our666/images/adv01.jpg" width="90" height="41" alt="魔方格" title="魔方格"></a>
-                    </li>
-                    <li class="lefts_adv2">
-                        <a href="http://www.zxxk.com/" target="_blank"><img src="~/Static/our666/images/adv02.png" width="90" height="41" alt="学科网" title="学科网"></a>
-                    </li>
-                    <li class="lefts_adv3">
-                        <a href="http://www.7wenta.com/" target="_blank"><img src="~/Static/our666/images/adv03.png" width="90" height="41" alt="问他" title="问他"></a>
-                    </li>
-                    <li class="lefts_adv4">
-                        <a href="http://www.yuantiku.com/" target="_blank"><img src="~/Static/our666/images/adv04.png" width="90" height="41" alt="猿题库" title="猿题库"></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="lefts_bottom">
-                <ul>
-                    <li><a class="af1" target="_blank" href="http://www.hjenglish.com/">沪江英语</a></li>
-                    <li><a class="af2" target="_blank" href="http://yingyu.xdf.cn/">新东方英语</a></li>
-                    <li><a class="af3" target="_blank" href="http://www.tingroom.com/">英语听力室</a></li>
-                    <li><a class="af4" target="_blank" href="http://toefl.zhan.com/">托福英语</a></li>
-                    <li><a class="af5" target="_blank" href="http://ielts.zhan.com/">雅思英语</a></li>
-                    <li><a class="af6" target="_blank" href="http://www.jpwind.com/">和风日语网</a></li>
-                    <li><a class="af7" target="_blank" href="http://www.kantsuu.com/">贯通日本语</a></li>
-                    <li><a class="af8" target="_blank" href="http://kr.tingroom.com/rumen/">韩语学习网</a></li>
-                    <li><a class="af9" target="_blank" href="http://fr.tingroom.com/">法语学习网</a></li>
-                    <li><a class="af10" target="_blank" href="http://ru.tingroom.com/">俄语学习网</a></li>
-                    @*<li><a class="af11" target="_blank" href="http://sp.tingroom.com/">西语学习网</a></li>*@
-                    @*<li><a href="#" class="af12">北京同仁堂</a></li>
+<div class="panes">
+    <div class="pane" style="display: block; height: auto; width: auto">
+        <div class="conter">
+            <!-- 主体信息 -->
+            <div class="wzdq">
+                <div class="main">
+                    <div class="lleft">
+                        <div class="left">
+                            <!-- 名站推荐 -->
+                            <div class="lefts">
+                                <div class="lefts_top"><span>名站推荐</span></div>
+                                <div class="lefts_main">
+                                    <ul>
+                                        <li class="lefts_adv1">
+                                            <a href="http://www.mofangge.com/" target="_blank"><img src="~/Static/our666/images/adv01.jpg" width="90" height="41" alt="魔方格" title="魔方格"></a>
+                                        </li>
+                                        <li class="lefts_adv2">
+                                            <a href="http://www.zxxk.com/" target="_blank"><img src="~/Static/our666/images/adv02.png" width="90" height="41" alt="学科网" title="学科网"></a>
+                                        </li>
+                                        <li class="lefts_adv3">
+                                            <a href="http://www.7wenta.com/" target="_blank"><img src="~/Static/our666/images/adv03.png" width="90" height="41" alt="问他" title="问他"></a>
+                                        </li>
+                                        <li class="lefts_adv4">
+                                            <a href="http://www.yuantiku.com/" target="_blank"><img src="~/Static/our666/images/adv04.png" width="90" height="41" alt="猿题库" title="猿题库"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="lefts_bottom">
+                                    <ul>
+                                        <li><a class="af1" target="_blank" href="http://www.hjenglish.com/">沪江英语</a></li>
+                                        <li><a class="af2" target="_blank" href="http://yingyu.xdf.cn/">新东方英语</a></li>
+                                        <li><a class="af3" target="_blank" href="http://www.tingroom.com/">英语听力室</a></li>
+                                        <li><a class="af4" target="_blank" href="http://toefl.zhan.com/">托福英语</a></li>
+                                        <li><a class="af5" target="_blank" href="http://ielts.zhan.com/">雅思英语</a></li>
+                                        <li><a class="af6" target="_blank" href="http://www.jpwind.com/">和风日语网</a></li>
+                                        <li><a class="af7" target="_blank" href="http://www.kantsuu.com/">贯通日本语</a></li>
+                                        <li><a class="af8" target="_blank" href="http://kr.tingroom.com/rumen/">韩语学习网</a></li>
+                                        <li><a class="af9" target="_blank" href="http://fr.tingroom.com/">法语学习网</a></li>
+                                        <li><a class="af10" target="_blank" href="http://ru.tingroom.com/">俄语学习网</a></li>
+                                        @*<li><a class="af11" target="_blank" href="http://sp.tingroom.com/">西语学习网</a></li>*@
+                                        @*<li><a href="#" class="af12">北京同仁堂</a></li>
                     <li><a href="#" class="af13">药房网商城</a></li>
                     <li><a href="#" class="af14">吉林敖东</a></li>*@
-                </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 名站推荐 end -->
+
+
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <!-- 黄金广告位 -->
+                        <div class="right1">
+                            <ul class="gold1">
+                                <li><a class="ar1" target="_blank" href="https://www.baidu.com/?tn=siteour666">百度</a></li>
+                                <li><a class="ar2" target="_blank" href="http://weibo.com/">微博</a></li>
+                                <li><a class="ar3" target="_blank" href="http://bj.ganji.com/">赶集</a></li>
+                                <li><a class="ar4" target="_blank" href="http://www.qq.com/">腾讯</a></li>
+                                <li><a class="ar5" target="_blank" href="http://www.163.com/">网易</a></li>
+                                <li><a class="ar6" target="_blank" href="http://www.youku.com/">优酷</a></li>
+                                <li><a class="ar7" target="_blank" href="http://www.ifeng.com/">凤凰网</a></li>
+                                <li><a class="ar8" target="_blank" href="http://bj.58.com/">58</a></li>
+                                <li><a class="ar16" target="_blank" href="https://www.tmall.com">天猫</a></li>
+                                <li><a class="ar9" target="_blank" href="https://www.taobao.com/">淘宝网</a></li>
+                                <li><a class="ar14" target="_blank" href="http://www.autohome.com.cn">汽车之家</a></li>
+                                <li ><a class="ar13" target="_blank" href="https://www.jd.com/">京东商城</a></li>
+
+                            </ul>
+
+                            <ul class="gold2">
+                                <li><a target="_blank" href="http://www.eol.cn/">中国教育在线</a></li>
+                                <li><a target="_blank" href="http://www.moe.edu.cn/">国家教育部</a></li>
+                                <li><a target="_blank" href="http://www.edu.cn/">中国教育网</a></li>
+                                <li><a target="_blank" href="http://www.neea.edu.cn/">中国教育考试网</a></li>
+                                <li><a target="_blank" href="http://www.jyb.cn/">中国教育新闻网</a></li>
+                                <li><a target="_blank" href="http://www.centv.cn/">教育电视台</a></li>
+                                <li><a target="_blank" href="http://edu.sina.com.cn/">新浪教育</a></li>
+                                <li><a target="_blank" href="http://edu.163.com/">网易教育</a></li>
+                                <li><a target="_blank" href="http://learning.sohu.com/">腾讯教育</a></li>
+                                <li><a target="_blank" href="http://www.zhan.com/">小站教育</a></li>
+                                <li><a target="_blank" href="http://www.jd100.com/?c=vip805613">简单学习网</a></li>
+                                <li><a target="_blank" href="http://www.hujiang.com/">沪江网校</a></li>
+
+                                <li><a target="_blank" href="http://www.21cnjv.com/">21世纪教育</a></li>
+                                <li><a target="_blank" href="http://www.g12e.com/">中小学教育网</a></li>
+                                <li><a target="_blank" href="http://www.zxxk.com/">中学学科网</a></li>
+                                <li><a target="_blank" href="http://www.dearedu.com/">第二教育网</a></li>
+                                <li><a target="_blank" href="http://www.aoshu.com/">奥数网</a></li>
+                                <li><a target="_blank" href="http://www.zuowen.com/">作文网</a></li>
+                                <li><a target="_blank" href="http://www.e-huaxue.com/">中学化学资料网</a></li>
+                                <li><a target="_blank" href="http://www.xj5u.com/">小学资源网</a></li>
+                                <li><a target="_blank" href="http://www.kaoyan.com/">考研帮</a></li>
+                                <li><a target="_blank" href="http://www.medkaoyan.net/">医学考研网</a></li>
+                                <li><a target="_blank" href="http://www.chengkao365.com/">成人高等教育网</a></li>
+                                <li><a target="_blank" href="http://www.zikao365.com/">自考365</a></li>
+
+                                <li><a target="_blank" href="http://zige.eol.cn/">资格考试网</a></li>
+                                <li><a target="_blank" href="http://www.zqks.com/">中国证券考试网</a></li>
+                                <li><a target="_blank" href="http://www.coc.gov.cn/">中国建造师考试</a></li>
+                                <li><a target="_blank" href="http://www.moj.gov.cn/sfkss/node_226.htm">国家司法考试</a></li>
+                                <li><a target="_blank" href="http://www.cfachina.org/">中国期货协会</a></li>
+                                <li><a target="_blank" href="http://www.bjy.net.cn/">报检员资格网</a></li>
+                                <li><a target="_blank" href="http://www.chinaacc.com/">会计资格考试</a></li>
+                                <li><a target="_blank" href="http://www.ntce.com/">教师资格考试</a></li>
+                                <li><a target="_blank" href="http://www.catti.net.cn/">翻译专业考试</a></li>
+                                <li><a target="_blank" href="http://sk.neea.edu.cn/jsjdj/">计算机等级考试</a></li>
+                                <li><a target="_blank" href="http://mnks.jxedt.com/">驾校一点通</a></li>
+
+                            </ul>
+                        </div>
+                        <!-- 黄金广告位 end -->
+                        <!-- 小字广告 -->
+                        <div class="right2">
+                            <span><a target="_blank" href="http://edu.sina.com.cn/gaokao/">新浪高考</a></span>
+                            <span><a target="_blank" href="http://gaokao.chsi.com.cn/">阳光高考</a></span>
+                            <span><a target="_blank" href="http://www.gaokao.com/">高考网</a></span>
+                            <span><a  target="_blank"    href="http://www.ks5u.com/">高考资源网</a></span>
+                            <span><a  target="_blank"    href="http://www.zhongkao.com/">中考网</a></span>
+                            <span><a  target="_blank"    href="http://www.zk5u.com/">中考资源网</a></span>
+                            <span><a  target="_blank"    href="http://zhongkao.eol.cn/">中考频道</a></span>
+                            <span><a  target="_blank"    href="http://www.eol.cn/html/zhongxue/2016zuowen/index.shtml">全国中考作文</a></span>
+                            <span><a  target="_blank"    href="http://gkcx.eol.cn/">估分选大学</a></span>
+                            <span><a  target="_blank"    href="http://www.jd100.com/z/">高考知识点</a></span>
+
+                        </div>
+                        <!-- 小字广告 end -->
+
+
+
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+
+
+
+
             </div>
+            <!-- 热门+其它+地区 end -->
+            <!-- 主体信息 end -->
+
         </div>
-        <!-- 名站推荐 end -->
 
+        <!-- 联系方式浮窗 -->
+        <div class="suspend" style="display: none">
+            <dl>
+                <dt class="IE6PNG"></dt>
+                <dd class="suspendQQ"><a target="_blank" href="tencent://message/?uin=00000000&Site=&Menu=yes"></a></dd>
+                <dd class="suspendTel"><a href="javascript:void(0);"></a></dd>
+            </dl>
+        </div>
+        <!-- 联系方式浮窗 -->
 
+        <script type="text/javascript" src="~/Static/our666/js/scroll.js"></script> <!-- 滚动条 -->
+        <script type="text/javascript" src="~/Static/our666/js/return_top.js"></script> <!-- 返回顶部特效代码 -->
+        <!--<script type="text/javascript" src="js/index_lxwm.js"></script>--> <!-- 联系方式浮窗特效 -->
+        <script type="text/javascript" src="~/Static/our666/js/threeinone.js"></script> <!-- 九宫格特效 + 两个翻页特效 threeinone -->
     </div>
-</div>
+    <div class="pane" style="height: 500px"><iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/CertificationOrg/Index"></iframe>
+    </div>
+    <div class="pane" style="height: 900px"><iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/CertificationOrg/SchoolAll"></iframe>
+    </div>
 
-<div class="right">
-<!-- 黄金广告位 -->
-<div class="right1">
-    <ul class="gold1">
-        <li><a  class="ar1"  target="_blank" href="https://www.baidu.com/?tn=siteour666">百度</a></li>
-        <li><a   class="ar2"    target="_blank"    href="http://weibo.com/">微博</a></li>
-        <li><a  class="ar3" target="_blank"    href="http://bj.ganji.com/">赶集</a></li>
-        <li><a  class="ar4" target="_blank"    href="http://www.qq.com/">腾讯</a></li>
-        <li><a  class="ar5" target="_blank"    href="http://www.163.com/">网易</a></li>
-        <li><a  class="ar6" target="_blank"    href="http://www.youku.com/">优酷</a></li>
-        <li><a  class="ar7" target="_blank"    href="http://www.ifeng.com/">凤凰网</a></li>
-        <li><a class="ar8" target="_blank"    href="http://bj.58.com/">58</a></li>
-        <li><a class="ar16" target="_blank"    href="https://www.tmall.com">天猫</a></li>
-        <li><a class="ar9" target="_blank"    href="https://www.taobao.com/">淘宝网</a></li>
-        <li><a class="ar14" target="_blank"    href="http://www.autohome.com.cn">汽车之家</a></li>
-        <li ><a class="ar13" target="_blank"    href="https://www.jd.com/">京东商城</a></li>
-       
-    </ul>
+    <div class="pane" style="height: 300px">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/ThreeStage/Index"></iframe>
+    </div>
+    <div class="pane" style="height: 200px">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/ThreeStage/SmallIndex"></iframe>
+    </div>
+    <div class="pane" style="height: 200px">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/ThreeStage/JuniorIndex"></iframe>
+    </div>
+    <div class="pane" style="height: 200px">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/ThreeStage/SeniorIndex"></iframe>
+    </div>
 
-    <ul class="gold2">
-        <li><a  target="_blank" href="http://www.eol.cn/">中国教育在线</a></li>
-        <li><a  target="_blank" href="http://www.moe.edu.cn/">国家教育部</a></li>
-        <li><a  target="_blank" href="http://www.edu.cn/">中国教育网</a></li>
-        <li><a  target="_blank" href="http://www.neea.edu.cn/">中国教育考试网</a></li>
-        <li><a  target="_blank" href="http://www.jyb.cn/">中国教育新闻网</a></li>
-        <li><a  target="_blank" href="http://www.centv.cn/">教育电视台</a></li>
-        <li><a  target="_blank" href="http://edu.sina.com.cn/">新浪教育</a></li>
-        <li><a  target="_blank" href="http://edu.163.com/">网易教育</a></li>
-        <li><a  target="_blank" href="http://learning.sohu.com/">腾讯教育</a></li>
-        <li><a  target="_blank" href="http://www.zhan.com/">小站教育</a></li>
-        <li><a  target="_blank" href="http://www.jd100.com/?c=vip805613">简单学习网</a></li>
-        <li><a  target="_blank" href="http://www.hujiang.com/">沪江网校</a></li>
-
-        <li><a  target="_blank" href="http://www.21cnjv.com/">21世纪教育</a></li>
-        <li><a  target="_blank" href="http://www.g12e.com/">中小学教育网</a></li>
-        <li><a  target="_blank" href="http://www.zxxk.com/">中学学科网</a></li>
-        <li><a  target="_blank" href="http://www.dearedu.com/">第二教育网</a></li>
-        <li><a  target="_blank" href="http://www.aoshu.com/">奥数网</a></li>
-        <li><a  target="_blank" href="http://www.zuowen.com/">作文网</a></li>
-        <li><a  target="_blank" href="http://www.e-huaxue.com/">中学化学资料网</a></li>
-        <li><a  target="_blank" href="http://www.xj5u.com/">小学资源网</a></li>
-        <li><a  target="_blank" href="http://www.kaoyan.com/">考研帮</a></li>
-        <li><a  target="_blank" href="http://www.medkaoyan.net/">医学考研网</a></li>
-        <li><a  target="_blank" href="http://www.chengkao365.com/">成人高等教育网</a></li>
-        <li><a  target="_blank" href="http://www.zikao365.com/">自考365</a></li>
-
-        <li><a  target="_blank" href="http://zige.eol.cn/">资格考试网</a></li>
-        <li><a  target="_blank" href="http://www.zqks.com/">中国证券考试网</a></li>
-        <li><a  target="_blank" href="http://www.coc.gov.cn/">中国建造师考试</a></li>
-        <li><a  target="_blank" href="http://www.moj.gov.cn/sfkss/node_226.htm">国家司法考试</a></li>
-        <li><a  target="_blank" href="http://www.cfachina.org/">中国期货协会</a></li>
-        <li><a  target="_blank" href="http://www.bjy.net.cn/">报检员资格网</a></li>
-        <li><a  target="_blank" href="http://www.chinaacc.com/">会计资格考试</a></li>
-        <li><a  target="_blank" href="http://www.ntce.com/">教师资格考试</a></li>
-        <li><a  target="_blank" href="http://www.catti.net.cn/">翻译专业考试</a></li>
-        <li><a  target="_blank" href="http://sk.neea.edu.cn/jsjdj/">计算机等级考试</a></li>
-        <li><a  target="_blank" href="http://mnks.jxedt.com/">驾校一点通</a></li>
-
-    </ul>
-</div>
-<!-- 黄金广告位 end -->
-<!-- 小字广告 -->
-<div class="right2">
-    <span><a target="_blank" href="http://edu.sina.com.cn/gaokao/">新浪高考</a></span>
-    <span><a target="_blank" href="http://gaokao.chsi.com.cn/">阳光高考</a></span>
-    <span><a target="_blank" href="http://www.gaokao.com/">高考网</a></span>
-    <span><a  target="_blank"    href="http://www.ks5u.com/">高考资源网</a></span>
-    <span><a  target="_blank"    href="http://www.zhongkao.com/">中考网</a></span>
-    <span><a  target="_blank"    href="http://www.zk5u.com/">中考资源网</a></span>
-    <span><a  target="_blank"    href="http://zhongkao.eol.cn/">中考频道</a></span>
-    <span><a  target="_blank"    href="http://www.eol.cn/html/zhongxue/2016zuowen/index.shtml">全国中考作文</a></span>
-    <span><a  target="_blank"    href="http://gkcx.eol.cn/">估分选大学</a></span>
-    <span><a  target="_blank"    href="http://www.jd100.com/z/">高考知识点</a></span>
-
-</div>
-<!-- 小字广告 end -->
-
-
-
-</div>
-
-</div>
-<div class="clear"></div>
-
-
-
-
-</div>
-<!-- 热门+其它+地区 end -->
-<!-- 主体信息 end -->
-
-</div>
-
-<!-- 联系方式浮窗 -->
-<div class="suspend" style="display: none">
-    <dl>
-        <dt class="IE6PNG"></dt>
-        <dd class="suspendQQ"><a target="_blank" href="tencent://message/?uin=00000000&Site=&Menu=yes"></a></dd>
-        <dd class="suspendTel"><a href="javascript:void(0);"></a></dd>
-    </dl>
-</div>
-<!-- 联系方式浮窗 -->
-
-<script type="text/javascript" src="~/Static/our666/js/scroll.js"></script> <!-- 滚动条 -->
-<script type="text/javascript" src="~/Static/our666/js/return_top.js"></script> <!-- 返回顶部特效代码 -->
-<!--<script type="text/javascript" src="js/index_lxwm.js"></script>--> <!-- 联系方式浮窗特效 -->
-<script type="text/javascript" src="~/Static/our666/js/threeinone.js"></script> <!-- 九宫格特效 + 两个翻页特效 threeinone -->
-</div>
-<div class="pane" style="height: 500px"><iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/CertificationOrg/Index"></iframe>
-</div>
-<div class="pane" style="height: 900px"><iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/CertificationOrg/SchoolAll"></iframe>
-</div>
-
-     <div class="pane" style="height: 300px">
-         <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/ThreeStage/Index"></iframe>
-     </div>
-     <div class="pane" style="height: 200px">
-         <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/ThreeStage/SmallIndex"></iframe>
-     </div>
-     <div class="pane" style="height: 200px">
-         <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/ThreeStage/JuniorIndex"></iframe>
-     </div>
-     <div class="pane" style="height: 200px">
-         <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Our/ThreeStage/SeniorIndex"></iframe>
-     </div>
-   
-     <div class="pane" style="height:600px">
-         <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Home/Read"></iframe>
-     </div>
-     <div class="pane" style="height: 450px">
-         <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Home/MTCode"></iframe>
-     </div>
+    <div class="pane" style="height: 600px">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Home/Read"></iframe>
+    </div>
+    <div class="pane" style="height: 450px">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="/Home/MTCode"></iframe>
+    </div>
 </div>
 </div>
 
