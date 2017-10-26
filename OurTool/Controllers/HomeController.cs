@@ -603,7 +603,7 @@ namespace OurTool.Controllers
         public JsonResult GetHotNews()
         {
 
-            JsonResult jsonResult=new JsonResult() ;
+            JsonResult jsonResult=new JsonResult() {JsonRequestBehavior = JsonRequestBehavior.AllowGet};
 
             List<HotNews> listHot = newsBll.GetHotNewsList();
             jsonResult.Data = listHot;
