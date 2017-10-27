@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using mfg_word_Dal;
+using MySql.Data.MySqlClient;
 using OurToolDAL.SqlTran;
 using OurToolModel.News;
 
@@ -59,5 +60,16 @@ namespace OurToolDAL.News
             hotNews.Title = DataRecord.GetString(arg, "Title");
             return hotNews;
         }
+        /// <summary>
+        /// 插入地理位置信息
+        /// </summary>
+        /// <param name="locInfo"></param>
+        /// <returns></returns>
+       public int InsertLoctInfo(string locInfo)
+       {
+            string sql = "INSERT INTO `ourtool`.`LoctionInfo` ( `PrinvceName`, `CityName`, `CountryName`, `CreateTime` ) VALUES (@PrinvceName, @CityName, @CountryName, NOW() ) ;";
+
+            return DBHelper.ExecuteSql(sql,new MySqlParameter[] {new MySqlParameter("@PrinvceName", locInfo.Split('-')[0]), new MySqlParameter("@CityName", locInfo.Split('-')[1]), new MySqlParameter("@CountryName", locInfo.Split('-')[2]) });
+       }
     }
 }

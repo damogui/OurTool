@@ -51,32 +51,30 @@
                             alert("没获取到信息");
 
                         }
+                        var locName = "" + province + "-" + city + "-" + area + "";
+                       
 
+                        $.ajax({
+                            type: 'post',
+                            url: '/Card/InsertLoctInfo', dataType: 'json',
+                            data: { locInfo: encodeURI(locName) },
+                            success: function (data) {
+                                //if (data && data.Data > 0) {
+
+                                //} else {
+                                //    alert('提交失败');
+                                //}
+                            }
+                        });
+
+                        
+
+
+
+                    
 
                        
-                        // $.ajax({
-                        //     type: 'POST',
-                        //     url: "http://localhost:11111/api/BDCheckCity/", //根据城市名称，查询城市Id
-                        //     data: {
-                        //         proName: province,
-                        //         cityName: city,
-                        //         areaName: area
-                        //     },
-                        //     success: function(data) {
-                        //         if (data.status) {
-                        //             //console.log(data)
-                        //             //绑定省市区定位城市
-                        //             html = '<li><span>' + province + '</span><i class="fa fa-angle-up" aria-hidden="true"></i></li>  <li><span>' + city + '</span><i class="fa fa-angle-up" aria-hidden="true"></i></li>  <li><span>' + area + '</span><i class="fa fa-angle-up" aria-hidden="true"></i></li>';
-
-                        //             $("#PCALi").html(html);
-                        //         } else {
-                        //             layer.open({
-                        //                 content: "正在获取GPS信息",
-                        //                 time: 2
-                        //             });
-                        //         }
-                        //     }
-                        // });
+                      
                     });
                 } else {
                     layer.open({
