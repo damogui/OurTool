@@ -2,8 +2,6 @@
     ViewBag.Title = "our666";
     Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
 }
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-
 <!-- 百度地图 -->
 <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=nzFoGveaumomu2CtVlAlME5eLtoycEfy"></script>
 <style type="text/css">
@@ -14,6 +12,83 @@
     }
 </style>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script src="~/Scripts/jweixin-1.0.0.js"></script>
+<script>
+
+
+    wx.config(@Html.Raw(ViewBag.config));
+    wx.ready(function () {
+        wx.onMenuShareAppMessage({
+            title: '获取你当前的地理位置',
+            desc: '获取你当前的地理位置，通过百度地图的接口调用',
+            link: 'https://www.our666.com/Card/Index/?from=singlemessage&isappinstalled=0', // 分享链接
+
+
+            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
+
+            success: function(res) {
+                //alert('已分享');
+            },
+            cancel: function(res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("信息"+JSON.stringify(res));
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title: '获取你当前的地理位置',
+            desc: '获取你当前的地理位置，通过百度地图的接口调用',
+            link: 'https://www.our666.com/Card/Index/?from=timeline&isappinstalled=0', // 分享链接
+
+            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("朋友圈"+JSON.stringify(res));
+            }
+        });
+
+
+        wx.onMenuShareQQ({
+            title: '获取你当前的地理位置',
+            desc: '获取你当前的地理位置，通过百度地图的接口调用',
+            link: 'https://www.our666.com/Card/Index/?from=singlemessage&isappinstalled=0', // 分享链接
+            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
+
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("qq" + JSON.stringify(res));
+            }
+        });
+
+    });
+    wx.error(function(res) {
+
+       alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+
+    });
+
+
+
+
+
+
+</script>
 <div>
     <label for="" id="ssx"></label>
 
@@ -99,79 +174,4 @@ if(ifm != null && subWeb != null) {
    ifm.width = subWeb.body.scrollWidth;
 }
 }
-</script>
-<script src="~/Scripts/jweixin-1.0.0.js"></script>
-<script>
-
-
-    wx.config(@Html.Raw(ViewBag.config));
-    wx.ready(function () {
-        Read();
-
-        wx.onMenuShareAppMessage({
-            title: '获取你当前的地理位置',
-            desc: '获取你当前的地理位置，通过百度地图的接口调用',
-            link: 'https://www.our666.com/Card/Index/?from=singlemessage&isappinstalled=0', // 分享链接
-            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
-
-            success: function(res) {
-                //alert('已分享');
-            },
-            cancel: function(res) {
-                //alert('已取消');
-            },
-            fail: function (res) {
-
-                alert("信息"+JSON.stringify(res));
-            }
-        });
-
-        wx.onMenuShareTimeline({
-            title: '获取你当前的地理位置',
-            desc: '获取你当前的地理位置，通过百度地图的接口调用',
-            link: 'https://www.our666.com/Card/Index/?from=singlemessage&isappinstalled=0', // 分享链接
-            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
-            success: function (res) {
-                //alert('已分享');
-            },
-            cancel: function (res) {
-                //alert('已取消');
-            },
-            fail: function (res) {
-
-                alert("朋友圈"+JSON.stringify(res));
-            }
-        });
-
-
-        wx.onMenuShareQQ({
-            title: '获取你当前的地理位置',
-            desc: '获取你当前的地理位置，通过百度地图的接口调用',
-            link: 'https://www.our666.com/Card/Index/?from=singlemessage&isappinstalled=0', // 分享链接
-            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
-
-            success: function (res) {
-                //alert('已分享');
-            },
-            cancel: function (res) {
-                //alert('已取消');
-            },
-            fail: function (res) {
-
-                alert("qq" + JSON.stringify(res));
-            }
-        });
-
-    });
-    wx.error(function(res) {
-
-        //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
-
-    });
-
-
-
-
-
-
 </script>
