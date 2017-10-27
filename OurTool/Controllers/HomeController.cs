@@ -626,8 +626,6 @@ namespace OurTool.Controllers
            
             return listHot;
 
-
-
         }
 
 

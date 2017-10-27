@@ -1,7 +1,175 @@
-﻿
-@{
-    ViewBag.Title = "开卡管理系统";
+﻿@{
+    ViewBag.Title = "our666";
     Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
 }
+<style type="text/css">
+    .video {
+        border: 1px;
+        border-color: #FCA300;
+        border-style: inset;
+    }
+</style>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<div>
+    <label for="" id="ssx"></label>
 
-<h2>开卡</h2>
+    @*<img src="~/Img/logo/2wm.jpg" style="float: right; width: 20%;height: 20%">*@
+
+
+
+</div>
+<script>
+        //获取地里位置 Start
+        $(function() {
+            $("#ssx").val("正在获取您的位置...");
+            var geolocation = new BMap.Geolocation();
+            var gc = new BMap.Geocoder();
+
+            geolocation.getCurrentPosition(function(r) {
+                if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                    //appLat = r.point.lat;
+                    //appLng = r.point.lng;
+
+                    var pt = r.point;
+                    gc.getLocation(pt, function(rs) {
+                        var addComp = rs.addressComponents;
+
+                        var province = addComp.province;
+                        var city = addComp.city;
+                        var area = addComp.district;
+
+                        if (province != "" && city != "" && area != "") {
+                           // $("#demo1").val(province + " " + city + " " + area);
+                            $("#ssx").html(province + " " + city + " " + area);
+
+                        } else {
+
+                            alert("没获取到信息");
+
+                        }
+
+
+                        debugger;
+                        // $.ajax({
+                        //     type: 'POST',
+                        //     url: "http://localhost:11111/api/BDCheckCity/", //根据城市名称，查询城市Id
+                        //     data: {
+                        //         proName: province,
+                        //         cityName: city,
+                        //         areaName: area
+                        //     },
+                        //     success: function(data) {
+                        //         if (data.status) {
+                        //             //console.log(data)
+                        //             //绑定省市区定位城市
+                        //             html = '<li><span>' + province + '</span><i class="fa fa-angle-up" aria-hidden="true"></i></li>  <li><span>' + city + '</span><i class="fa fa-angle-up" aria-hidden="true"></i></li>  <li><span>' + area + '</span><i class="fa fa-angle-up" aria-hidden="true"></i></li>';
+
+                        //             $("#PCALi").html(html);
+                        //         } else {
+                        //             layer.open({
+                        //                 content: "正在获取GPS信息",
+                        //                 time: 2
+                        //             });
+                        //         }
+                        //     }
+                        // });
+                    });
+                } else {
+                    layer.open({
+                        content: "定位失败，请重试!",
+                        time: 2
+                    });
+                }
+            }, {
+                enableHighAccuracy: true
+            });
+        });
+        //获取地里位置 End
+</script>
+<script type="text/javascript" language="javascript">
+
+
+function iFrameHeight() {
+var ifm= document.getElementById("iframepage");
+var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+if(ifm != null && subWeb != null) {
+   ifm.height = subWeb.body.scrollHeight;
+   ifm.width = subWeb.body.scrollWidth;
+}
+}
+</script>
+<script src="~/Scripts/jweixin-1.0.0.js"></script>
+<script>
+
+
+    wx.config(@Html.Raw(ViewBag.config));
+    wx.ready(function () {
+        Read();
+
+        wx.onMenuShareAppMessage({
+            title: '获取你当前的地理位置',
+            desc: '获取你当前的地理位置，通过百度地图的接口调用',
+            link: 'https://www.our666.com/Card/Index/?from=singlemessage&isappinstalled=0', // 分享链接
+            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
+
+            success: function(res) {
+                //alert('已分享');
+            },
+            cancel: function(res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("信息"+JSON.stringify(res));
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title: '获取你当前的地理位置',
+            desc: '获取你当前的地理位置，通过百度地图的接口调用',
+            link: 'https://www.our666.com/Card/Index/?from=singlemessage&isappinstalled=0', // 分享链接
+            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("朋友圈"+JSON.stringify(res));
+            }
+        });
+
+
+        wx.onMenuShareQQ({
+            title: '获取你当前的地理位置',
+            desc: '获取你当前的地理位置，通过百度地图的接口调用',
+            link: 'https://www.our666.com/Card/Index/?from=singlemessage&isappinstalled=0', // 分享链接
+            imgUrl: 'https://www.our666.com/Img/music/bddt.jpg', // 分享图标
+
+            success: function (res) {
+                //alert('已分享');
+            },
+            cancel: function (res) {
+                //alert('已取消');
+            },
+            fail: function (res) {
+
+                alert("qq" + JSON.stringify(res));
+            }
+        });
+
+    });
+    wx.error(function(res) {
+
+        //alert("接口验证失败，详细信息：\n" + JSON.stringify(res));
+
+    });
+
+
+
+
+
+
+</script>
