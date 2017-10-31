@@ -110,11 +110,22 @@ namespace OurTool.Controllers
             string code = "";
             string iv = "";
             string encryptedData = "";
+            string typeStr = "";//1小猪翻译2新闻3位置服务
+            int typeNum = 1;
+
             try
             {
                 code = HttpContext.Request.QueryString["code"].ToString();
                 iv = HttpContext.Request.QueryString["iv"].ToString();
                 encryptedData =Server.UrlDecode(HttpContext.Request.QueryString["encryptedData"].ToString()) ;
+                typeStr = Server.UrlDecode(HttpContext.Request.QueryString["type"].ToString());
+                if (typeStr=="3")
+                {
+                    typeNum = 3;
+                    typeStr = "来自位置服务";
+
+
+                }
             }
 
            
@@ -199,7 +210,7 @@ namespace OurTool.Controllers
                 object obj = cmdQry.ExecuteScalar();
                 if ((Object.Equals(obj, null)) || (Object.Equals(obj, System.DBNull.Value)))
                 {
-                    string str = "INSERT  into `ourtool`.`WeChatUsers` (   `OpenId`, `NickName`, `Gender`, `City`, `Province`, `Country`, `AvatarUrl`, `Appid`,  `Memo`, `Counts`,Type,CreateTime ) values('"+ userInfo.openId + "','" + userInfo.nickName + "','" + userInfo.gender + "','" + userInfo.city + "','" + userInfo.province + "','" + userInfo.country + "','" + userInfo.avatarUrl + "','" + appid.ToString()   + "','来自翻译小程序','1',1,now())";
+                    string str = "INSERT  into `ourtool`.`WeChatUsers` (   `OpenId`, `NickName`, `Gender`, `City`, `Province`, `Country`, `AvatarUrl`, `Appid`,  `Memo`, `Counts`,Type,CreateTime ) values('"+ userInfo.openId + "','" + userInfo.nickName + "','" + userInfo.gender + "','" + userInfo.city + "','" + userInfo.province + "','" + userInfo.country + "','" + userInfo.avatarUrl + "','" + appid.ToString()   + "','"+ typeStr + "','"+typeNum+"',1,now())";
 
                     MySqlCommand cmdUp = new MySqlCommand(str, conn);
                     // 执行操作  
