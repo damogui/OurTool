@@ -56,5 +56,16 @@ namespace OurToolBll.News
 
             return list;
         }
+        /// <summary>
+        /// 插入地理位置信息
+        /// </summary>
+        /// <param name="locInfo"></param>
+        /// <returns></returns>
+        public int InsertLoctInfo(string locInfo)
+        {
+            return userDal.InsertLoctInfo(locInfo);
+
+
+        }
     }
 }
