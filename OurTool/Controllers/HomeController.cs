@@ -110,7 +110,7 @@ namespace OurTool.Controllers
             string code = "";
             string iv = "";
             string encryptedData = "";
-            string typeStr = "";//1小猪翻译2新闻3位置服务
+            string typeStr = "来自翻译小程序";//1小猪翻译2新闻3位置服务
             int typeNum = 1;
 
             try
