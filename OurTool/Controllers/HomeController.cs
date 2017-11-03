@@ -112,18 +112,22 @@ namespace OurTool.Controllers
             string encryptedData = "";
             string typeStr = "来自翻译小程序";//1小猪翻译2新闻3位置服务
             int typeNum = 1;
-
+            string Appid = "wxa89da5b83536b33a";
+            string Secret = "ccec6297c6137167d7684fdc080c366d";
+            string grant_type = "authorization_code";
             try
             {
                 code = HttpContext.Request.QueryString["code"].ToString();
                 iv = HttpContext.Request.QueryString["iv"].ToString();
                 encryptedData =Server.UrlDecode(HttpContext.Request.QueryString["encryptedData"].ToString()) ;
                 typeStr = Server.UrlDecode(HttpContext.Request.QueryString["type"].ToString());
+              
                 if (typeStr=="3")
                 {
                     typeNum = 3;
                     typeStr = "来自位置服务";
-
+                     Appid = "wxbbacd54abf830355";
+                     Secret = "0d99dc74469905f54ac563d527b53749";
 
                 }
             }
@@ -134,9 +138,7 @@ namespace OurTool.Controllers
                 Response.Write("code:"+code+"|iv:"+ iv + "|encryptedData:" + encryptedData);
             }
           
-            string Appid = "wxa89da5b83536b33a";
-            string Secret = "ccec6297c6137167d7684fdc080c366d";
-            string grant_type = "authorization_code";
+          
 
             //向微信服务端 使用登录凭证 code 获取 session_key 和 openid   
             string url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + Appid + "&secret=" + Secret + "&js_code=" + code + "&grant_type=" + grant_type;
