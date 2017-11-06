@@ -82,9 +82,6 @@ namespace OurToolBll.News
                 result = userDal.GetOrgsList(paraList);
                
 
-
-
-
             }
             catch (Exception ex)
             {

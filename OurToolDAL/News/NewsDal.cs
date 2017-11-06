@@ -85,11 +85,11 @@ namespace OurToolDAL.News
 
             ManageResponse<List<Org>> result = new ManageResponse<List<Org>>();
 
-            string order = " o.UpdateTime";
+            string order = " o.UpdateTime DESC,o.OrgId desc";
 
-            string countSql = string.Format("SELECT `OrgId`, `ImgUrl`, `Content`, `ReMark`, `LInkMan`, `LinkTel`, `ProvinceId`, `CityId`, `CountyId`, `CreateTime`, `UpdateTime` FROM `ourtool`.`ParentsOrg`   {0} ;", whereClause);
+            string countSql = string.Format("SELECT   count(1) FROM `ourtool`.`ParentsOrg`  o  where 1=1  {0} ;", whereClause);
             //string bandSql = string.Format("SELECT   count(1)  FROM       `mfg_user`   u  WHERE      1=1  and   UserRole in (2,3,4)  and  u.IsEffect=1    AND  u.IsFrozen=1  {0} ;", whereClause);//禁用
-            string searchSql = string.Format("SELECT `OrgId`, `ImgUrl`, `Content`, `ReMark`, `LInkMan`, `LinkTel`, `ProvinceId`, `CityId`, `CountyId`, `CreateTime`, `UpdateTime` FROM `ourtool`.`ParentsOrg`     o  WHERE      1=1    {0} ORDER BY  {3}  DESC   LIMIT {1},{2};", whereClause, (paraList.PageIndex - 1) * paraList.PageSize, paraList.PageSize, order);
+            string searchSql = string.Format("SELECT `OrgId`, `ImgUrl`, `Content`, `ReMark`, `LInkMan`, `LinkTel`, `ProvinceId`, `CityId`, `CountyId`, `CreateTime`, `UpdateTime` FROM `ourtool`.`ParentsOrg`     o  WHERE      1=1    {0} ORDER BY  {3}     LIMIT {1},{2};", whereClause, (paraList.PageIndex - 1) * paraList.PageSize, paraList.PageSize, order);
 
             result.PageSum = Convert.ToInt32(DBHelper.GetScalarFile(countSql, mySqlParams.ToArray()));//总数
             //result.TagValue = DBHelper.GetScalarFile(bandSql, mySqlParams.ToArray()).ToString();//禁用人数
@@ -119,7 +119,7 @@ namespace OurToolDAL.News
             //搜索条件
             if (!string.IsNullOrEmpty(seachOrg.KeyWord))
             {
-                whereClause.Append(" AND (  o.LInkMan LIKE CONCAT('%', @str, '%')  or o. OrgId LIKE CONCAT('%', @str, '%')  or o. LinkTel LIKE CONCAT('%', @str, '%') )");//账号和姓名加上电话
+                whereClause.Append(" AND (  o.LInkMan LIKE CONCAT('%', @str, '%')  or o. Content LIKE CONCAT('%', @str, '%')  or o. LinkTel LIKE CONCAT('%', @str, '%') )");//账号和姓名加上电话
                 //list.Add(DBHelper.AddParameterWithValue("@str", searhOrg.KeyWord));
                 list.Add(new MySqlParameter("@str", seachOrg.KeyWord));
 
