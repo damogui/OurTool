@@ -73,7 +73,7 @@ namespace OurToolBll.News
         /// </summary>
         /// <param name="paraList"></param>
         /// <returns></returns>
-        public ManageResponse<List<Org>> GetOrgsList(ManagePara<SearhPre> paraList)
+        public ManageResponse<List<Org>> GetOrgsList(ManagePara<SearhOrg> paraList)
         {
             ManageResponse<List<Org>> result = new ManageResponse<List<Org>> { Ok = true };
             try

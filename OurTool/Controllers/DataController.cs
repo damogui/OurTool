@@ -23,19 +23,19 @@ namespace OurTool.Controllers
         /// 获取热点新闻
         /// </summary>
         /// <returns></returns>
-        public JsonResult GetHotNews()
+        public JsonResult GetOrgsList()
         {
 
-            string data = Request.Form.Get("data") ?? string.Empty;
-            SearhPre serPre = JsonConvert.DeserializeObject<SearhPre>(data);
-            serPre.KeyWord = Server.UrlDecode(serPre.KeyWord);
-            ManagePara<SearhPre> paraList = new ManagePara<SearhPre>();//参数类初始化
+            string data = Request.Form.Get("KeyWord") ?? string.Empty;
+            SearhOrg serPre = new SearhOrg(); //JsonConvert.DeserializeObject<SearhOrg>(data);
+            serPre.KeyWord = Server.UrlDecode(data);
+            ManagePara<SearhOrg> paraList = new ManagePara<SearhOrg>();//参数类初始化
             paraList.Para = serPre;
             paraList.PageIndex = Convert.ToInt32(Request.Form.Get("currentPage") ?? (1).ToString());//接收分页参数
             paraList.PageSize = Convert.ToInt32(Request.Form.Get("pageSize") ?? (10).ToString());
         
             ManageResponse<List<Org>> response = newsBll.GetOrgsList(paraList);
-            JsonResult json = new JsonResult { Data = response };
+            JsonResult json = new JsonResult { Data = response,JsonRequestBehavior = JsonRequestBehavior.AllowGet};
             return json;
             //JsonResult jsonResult = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 
