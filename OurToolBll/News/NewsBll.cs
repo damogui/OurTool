@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OurToolDAL.News;
 using OurToolModel;
 using OurToolModel.News;
+using OurToolModel.Parents;
 
 namespace OurToolBll.News
 {
@@ -66,6 +67,33 @@ namespace OurToolBll.News
             return userDal.InsertLoctInfo(locInfo);
 
 
+        }
+        /// <summary>
+        /// 获取机构列表
+        /// </summary>
+        /// <param name="paraList"></param>
+        /// <returns></returns>
+        public ManageResponse<List<Org>> GetOrgsList(ManagePara<SearhPre> paraList)
+        {
+            ManageResponse<List<Org>> result = new ManageResponse<List<Org>> { Ok = true };
+            try
+            {
+              
+                result = userDal.GetOrgsList(paraList);
+               
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                result.Ok = false;
+                result.Result ="异常";//CustomInfo
+                result.Code = "002";
+            }
+            return result;
         }
     }
 }

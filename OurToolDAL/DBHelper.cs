@@ -317,43 +317,23 @@ namespace mfg_word_Dal
         /// <returns></returns>
         public static object GetScalarFile(string sqlStr, params IDataParameter[] dbParameters)
         {
-            if (DbTransaction != null)
+            object queryObject = null;
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                object queryObject = null;
-                SetDbCommandOpen(sqlStr, CommandType.Text, dbParameters);
-                try
-                {
-                    queryObject = DbCommand.ExecuteScalar();
 
-                }
-                catch (DbException dbException)
-                {
-                    string msg = dbException.Message;
-
-                }
-                return queryObject;
-            }
-            else
-            {
-                using (DbConnection)
-                {
-                    object queryObject = null;
-                    SetDbCommandOpen(sqlStr, CommandType.Text, dbParameters);
-                    try
-                    {
-                        queryObject = DbCommand.ExecuteScalar();
-
-                    }
-                    catch (DbException dbException)
-                    {
-                        string msg = dbException.Message;
-
-                    }
-                    return queryObject;
+                MySqlCommand cmd = new MySqlCommand(sqlStr, conn);
+                using (cmd)
+                { //cmd.CommandTimeout = 3000;
+                    cmd.Parameters.AddRange(dbParameters);
+                    conn.Open();
+                    queryObject = cmd.ExecuteScalar();
 
                 }
 
             }
+
+            return queryObject;
         }
         #endregion
         #region SetCommand、Adapter
@@ -483,67 +463,30 @@ namespace mfg_word_Dal
         /// <returns></returns>
         public static List<T> GetDataInfolList<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters)
         {
-            if (DbTransaction != null)
+            var list = new List<T>();
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                DbDataReader reader = GetDataReader(sqlStr, dbParameters);
-                var list = new List<T>();
-                using (reader)
-                {
-                    while (reader.Read())
+                MySqlCommand cmd = new MySqlCommand(sqlStr, conn);
+                using (cmd)
+                {  //cmd.CommandTimeout = 3000;
+                    cmd.Parameters.AddRange(dbParameters);
+                    conn.Open();
+                    IDataReader rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
                     {
-                        list.Add(func(reader));
+                        list.Add(func(rdr));
                     }
+
                 }
-                return list;
 
             }
-            else
-            {
-              
 
-                    DbDataReader reader = GetDataReader(sqlStr, dbParameters);
-                    var list = new List<T>();
-                    using (reader)
-                    {
-                        while (reader.Read())
-                        {
-                            list.Add(func(reader));
-                        }
-                    }
-                    return list;
-              
-
-            }
+            return list;
 
 
         }
 
-        private static DbDataReader GetDataReader(string sqlStr, params IDataParameter[] dbParameters)
-        {
-            DbDataReader reader = null;
-
-            SetDbCommandOpen(sqlStr, CommandType.Text, dbParameters);
-            try
-            {
-                reader = DbCommand.ExecuteReader(CommandBehavior.CloseConnection);
-               
-
-            }
-            catch (DbException dbException)
-            {
-
-                throw dbException;
-
-            }
-            return reader;
-
-
-
-
-        }
-
-
-
+    
         public static DbParameter AddParameterWithValue(string parameterName, object value)
         {
             DbParameter dbParameter = GetDbParameter();

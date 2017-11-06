@@ -46,6 +46,11 @@
     <Compile Include="News\HotNews.cs" />
     <Compile Include="News\NewsShow.cs" />
     <Compile Include="OurUser.cs" />
+    <Compile Include="Parents\ManagePara.cs" />
+    <Compile Include="Parents\ManageResponse.cs" />
+    <Compile Include="Parents\Org.cs" />
+    <Compile Include="Parents\ParaBase.cs" />
+    <Compile Include="Parents\SearhOrg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
