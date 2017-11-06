@@ -17,6 +17,8 @@ namespace OurToolModel.Parents
         /// 主键
         /// </summary>
         public int OrgId { get; set; }
+        public string OrgName { get; set; }
+
         /// <summary>
         /// 图片地址
         /// </summary>
