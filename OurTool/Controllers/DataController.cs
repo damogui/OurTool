@@ -15,10 +15,10 @@ namespace OurTool.Controllers
 
         NewsBll newsBll = new NewsBll();
         // GET: Data
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
         /// <summary>
         /// 获取热点新闻
         /// </summary>
@@ -37,15 +37,7 @@ namespace OurTool.Controllers
             ManageResponse<List<Org>> response = newsBll.GetOrgsList(paraList);
             JsonResult json = new JsonResult { Data = response,JsonRequestBehavior = JsonRequestBehavior.AllowGet};
             return json;
-            //JsonResult jsonResult = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-
-            //List<Org> listHot = newsBll.GetOrgsList();
-            //jsonResult.Data = listHot;
-
-            //return jsonResult;
-
-
-
+           
         }
     }
 }
