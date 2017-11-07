@@ -32,14 +32,14 @@ namespace OurToolBll.News
                 {
                     sb.Append(string.Format("<ul class=\"tab-cnt on\">"));
                 }
-               
-                sb.Append(string.Format("<li><a href=\"{0}\" >{1}</a></li>",list[i].Href,list[i].Title));
+
+                sb.Append(string.Format("<li><a href=\"{0}\" >{1}</a></li>", list[i].Href, list[i].Title));
 
                 if (i == 9)
                 {
                     sb.Append(string.Format("</ul><ul class=\"tab-cnt\"> <li><a href =\"{0}\" >{1}</a></li>", list[i].Href, list[i].Title));
                 }
-                if (i==19)
+                if (i == 19)
                 {
                     sb.Append("</ul>");
                 }
@@ -81,16 +81,16 @@ namespace OurToolBll.News
             ManageResponse<List<Org>> result = new ManageResponse<List<Org>> { Ok = true };
             try
             {
-              
+
                 result = userDal.GetOrgsList(paraList);
-               
+
 
             }
             catch (Exception ex)
             {
 
                 result.Ok = false;
-                result.Result ="异常";//CustomInfo
+                result.Result = "异常";//CustomInfo
                 result.Code = "002";
             }
             return result;
@@ -126,10 +126,10 @@ namespace OurToolBll.News
         /// <returns></returns>
         public int PushSmall(SendSmall sendSmall)
         {
-           Org org= userDal.GetOrgDetailById(sendSmall.OrgId);
+            Org org = userDal.GetOrgDetailById(sendSmall.OrgId);
 
-            List<string> openIds = new List<string>() { "o6rQe0aKEzmBTecAaPCjRK_Kc5z4" };//我自己 ozmxY0rJ3qWyq8QWzXE-6GBRXUzo
-            string tempId = "q_B2s9FepOU4pMBXQKPLgTsoDO9P6dQD7dxzq6VWGhw";//获取机构的退课模板
+            List<string> openIds = new List<string>() { sendSmall.OpenId };//我自己 ozmxY0rJ3qWyq8QWzXE-6GBRXUzo
+            string tempId = "cfoCwUwZJXU2N7Tul9UsuR5hGOcEr-iN6ewHjyqsGjA";//推送模板
 
             int numExec = 0;
             StringBuilder sb = new StringBuilder();
@@ -137,16 +137,15 @@ namespace OurToolBll.News
             {
                 sb.Append("{\"touser\": \"" + item + "\"," +
                            "\"template_id\": \"" + tempId + "\", " +
-                              "\"page\": \"" + "details/details?orgId={{item.OrgId}}" + "\", " +
+                              "\"page\": \"" + "details/details?orgId=" + sendSmall.OrgId + "\", " +
 
-                           "\"form_id\": \"" + "4869e640a35dd5de019f8f6d99a8c00e" + "\", " +
+                           "\"form_id\": \"" + sendSmall.FormId + "\", " +
                            "\"data\": " +
-                           "{\"keyword1\": {\"value\": \"" + "内容" + "\",\"color\": \"#173177\"}," +
-                           //"\"keyword1\": { \"value\": \"《" + "书名"+ "》\",\"color\": \"#173177\"}," +
-                           "\"keyword2\": { \"value\": \"" + "已取消" + "\",\"color\": \"#173177\"}," +
-                                 "\"keyword3\": { \"value\": \"" + "已取消" + "\",\"color\": \"#173177\"}," +
-
-                           "\"keyword4\": {\"value\": \"" + "备注" + "\",\"color\": \"#173177\" }}}");
+                           "{\"keyword1\": {\"value\": \"" + org.OrgName + "\",\"color\": \"#173177\"}," +
+                           "\"keyword2\": { \"value\": \"" + org.Content + "\",\"color\": \"#173177\"}," +
+                                 "\"keyword3\": { \"value\": \"" + DateTime.Now + "\",\"color\": \"#173177\"}," +
+                                  "\"keyword4\": { \"value\": \"" + org.LInkMan + "\",\"color\": \"#173177\"}," +
+                           "\"keyword5\": {\"value\": \"" + org.LinkTel + "\",\"color\": \"#173177\" }}}");
                 SendTempletMessge(sb.ToString(), "wxba92380dc6210082", "8938f3c2513bfc3883038284b67e0316");
 
                 numExec += 1;
