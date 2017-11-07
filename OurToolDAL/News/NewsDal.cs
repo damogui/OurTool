@@ -89,7 +89,7 @@ namespace OurToolDAL.News
 
             string countSql = string.Format("SELECT   count(1) FROM `ourtool`.`ParentsOrg`  o  where 1=1  {0} ;", whereClause);
             //string bandSql = string.Format("SELECT   count(1)  FROM       `mfg_user`   u  WHERE      1=1  and   UserRole in (2,3,4)  and  u.IsEffect=1    AND  u.IsFrozen=1  {0} ;", whereClause);//禁用
-            string searchSql = string.Format("SELECT `OrgId`, `ImgUrl`, `Content`, `ReMark`, `LInkMan`, `LinkTel`, `ProvinceId`, `CityId`, `CountyId`, `CreateTime`, `UpdateTime`,OrgName  FROM `ourtool`.`ParentsOrg`     o  WHERE      1=1    {0} ORDER BY  {3}     LIMIT {1},{2};", whereClause, (paraList.PageIndex - 1) * paraList.PageSize, paraList.PageSize, order);
+            string searchSql = string.Format("SELECT `OrgId`, `ImgUrl`, `Content`, `ReMark`, `LInkMan`, `LinkTel`, `ProvinceId`, `CityId`, `CountyId`, `CreateTime`, `UpdateTime`,OrgName,Address  FROM `ourtool`.`ParentsOrg`     o  WHERE      1=1    {0} ORDER BY  {3}     LIMIT {1},{2};", whereClause, (paraList.PageIndex - 1) * paraList.PageSize, paraList.PageSize, order);
 
             result.PageSum = Convert.ToInt32(DBHelper.GetScalarFile(countSql, mySqlParams.ToArray()));//总数
             //result.TagValue = DBHelper.GetScalarFile(bandSql, mySqlParams.ToArray()).ToString();//禁用人数
@@ -157,7 +157,7 @@ namespace OurToolDAL.News
         /// <returns></returns>
        public Org GetOrgDetailById(int orgId)
        {
-            string searchSql = "SELECT `OrgId`, `ImgUrl`, `Content`, `ReMark`, `LInkMan`, `LinkTel`, `ProvinceId`, `CityId`, `CountyId`, `CreateTime`, `UpdateTime`,OrgName  FROM `ourtool`.`ParentsOrg`     o  WHERE      1=1  and OrgId=@OrgId   ;";
+            string searchSql = "SELECT `OrgId`, `ImgUrl`, `Content`, `ReMark`, `LInkMan`, `LinkTel`, `ProvinceId`, `CityId`, `CountyId`, `CreateTime`, `UpdateTime`,OrgName,Address  FROM `ourtool`.`ParentsOrg`     o  WHERE      1=1  and OrgId=@OrgId   ;";
 
             return DBHelper.GetDataInfo(searchSql, GetOrgListTran, new MySqlParameter("@OrgId", orgId));
        }
