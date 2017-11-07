@@ -145,5 +145,16 @@ namespace OurToolDAL.News
 
             return org;
         }
+        /// <summary>
+        /// 获取机构详情
+        /// </summary>
+        /// <param name="orgId"></param>
+        /// <returns></returns>
+       public Org GetOrgDetailById(int orgId)
+       {
+            string searchSql = "SELECT `OrgId`, `ImgUrl`, `Content`, `ReMark`, `LInkMan`, `LinkTel`, `ProvinceId`, `CityId`, `CountyId`, `CreateTime`, `UpdateTime`,OrgName  FROM `ourtool`.`ParentsOrg`     o  WHERE      1=1  and OrgId=@OrgId   ;";
+
+            return DBHelper.GetDataInfo(searchSql, GetOrgListTran, new MySqlParameter("@OrgId", orgId));
+       }
     }
 }

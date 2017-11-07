@@ -40,5 +40,25 @@ namespace OurTool.Controllers
             return json;
            
         }
+
+        /// <summary>
+        /// 获取机构详细信息
+        /// </summary>
+        /// <returns></returns>
+        public JsonResult GetOrgDetailById()
+        {
+            string data = Request["data"] ?? string.Empty;
+            int orgId = 0;
+            int.TryParse(data,out orgId);
+            if (orgId==0)
+            {
+                return null;
+            }
+            ManageResponse<Org> response = newsBll.GetOrgDetailById(orgId);
+//            Org  org = newsBll.GetOrgDetailById(orgId);
+            JsonResult json = new JsonResult { Data = response, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            return json;
+
+        }
     }
 }

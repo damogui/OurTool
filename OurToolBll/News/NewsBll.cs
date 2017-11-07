@@ -92,5 +92,29 @@ namespace OurToolBll.News
             }
             return result;
         }
+        /// <summary>
+        /// 获取机构详情根据机构id
+        /// </summary>
+        /// <param name="orgId"></param>
+        /// <returns></returns>
+        public ManageResponse<Org> GetOrgDetailById(int orgId)
+        {
+            ManageResponse<Org> result = new ManageResponse<Org>();
+            try
+            {
+
+                result.Data = userDal.GetOrgDetailById(orgId);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                result.Ok = false;
+                result.Result = "异常";//CustomInfo
+                result.Code = "002";
+            }
+            return result;
+        }
     }
 }
