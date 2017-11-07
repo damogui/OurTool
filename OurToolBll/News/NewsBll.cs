@@ -137,7 +137,7 @@ namespace OurToolBll.News
             {
                 sb.Append("{\"touser\": \"" + item + "\"," +
                            "\"template_id\": \"" + tempId + "\", " +
-                              "\"page\": \"" + "details/details?orgId=" + sendSmall.OrgId + "\", " +
+                              "\"page\": \"" + "pages/search/details/details?orgId=" + sendSmall.OrgId + "\", " +
 
                            "\"form_id\": \"" + sendSmall.FormId + "\", " +
                            "\"data\": " +
