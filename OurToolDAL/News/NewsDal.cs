@@ -141,6 +141,11 @@ namespace OurToolDAL.News
 
             org.ImgUrl = DataRecord.GetString(arg, "ImgUrl");
             org.Content = DataRecord.GetString(arg, "Content");
+            org.LinkTel = DataRecord.GetString(arg, "LinkTel");
+            org.LInkMan = DataRecord.GetString(arg, "LInkMan");
+            org.LInkMan = DataRecord.GetString(arg, "LInkMan");
+
+
             org.UpdateTime = DataRecord.GetDateTime(arg, "UpdateTime").ToString("yyyy-MM-dd HH:mm");
 
             return org;

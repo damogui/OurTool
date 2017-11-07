@@ -42,8 +42,11 @@ namespace OurToolModel.Parents
         public string CreateTime { get; set; }
         public string UpdateTime { get; set; }
 
+        public string Address { get; set; }
+
+
 
     }
 
-   
+
 }
