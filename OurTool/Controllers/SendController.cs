@@ -7,6 +7,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json;
+using OurToolModel;
 
 namespace OurTool.Controllers
 {
@@ -35,7 +36,7 @@ namespace OurTool.Controllers
             {
                 sb.Append("{\"touser\": \"" + item + "\"," +
                            "\"template_id\": \"" + tempId + "\", " +
-                              "\"page\": \"" + "pages/index/index" + "\", " +
+                              "\"page\": \"" + "details/details?orgId={{item.OrgId}}" + "\", " +
 
                            "\"form_id\": \"" + "4869e640a35dd5de019f8f6d99a8c00e" + "\", " +
                            "\"data\": " +
@@ -135,8 +136,5 @@ namespace OurTool.Controllers
 
     }
 
-    public class WXApi
-    {
-        public string access_token { set; get; }
-    }
+   
 }
