@@ -143,7 +143,7 @@ namespace OurToolDAL.News
             org.Content = DataRecord.GetString(arg, "Content");
             org.LinkTel = DataRecord.GetString(arg, "LinkTel");
             org.LInkMan = DataRecord.GetString(arg, "LInkMan");
-            org.LInkMan = DataRecord.GetString(arg, "LInkMan");
+            org.Address = DataRecord.GetString(arg, "Address");
 
 
             org.UpdateTime = DataRecord.GetDateTime(arg, "UpdateTime").ToString("yyyy-MM-dd HH:mm");
