@@ -144,8 +144,8 @@ namespace OurToolBll.News
                            "{\"keyword1\": {\"value\": \"" + org.OrgName + "\",\"color\": \"#173177\"}," +
                            "\"keyword2\": { \"value\": \"" + org.Content + "\",\"color\": \"#173177\"}," +
                                  "\"keyword3\": { \"value\": \"" + DateTime.Now + "\",\"color\": \"#173177\"}," +
-                                  "\"keyword4\": { \"value\": \"" + org.LInkMan + "\",\"color\": \"#173177\"}," +
-                           "\"keyword5\": {\"value\": \"" + org.LinkTel + "\",\"color\": \"#173177\" }}}");
+                                  "\"keyword4\": { \"value\": \"" + org.LinkTel + "\",\"color\": \"#173177\"}," +
+                           "\"keyword5\": {\"value\": \"" + org.LInkMan + "\",\"color\": \"#173177\" }}}");
                 SendTempletMessge(sb.ToString(), "wxba92380dc6210082", "8938f3c2513bfc3883038284b67e0316");
 
                 numExec += 1;
