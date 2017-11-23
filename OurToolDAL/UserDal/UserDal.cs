@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using mfg_word_Dal;
 using MySql.Data.MySqlClient;
 using OurToolDAL.SqlTran;
 using OurToolModel;

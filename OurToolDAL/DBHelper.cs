@@ -1,46 +1,19 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using System.Linq;
+using MySql.Data.MySqlClient;
 
-
-namespace mfg_word_Dal
+namespace OurToolDAL
 {
     public class DBHelper
     {
         //数据库连接字符串(web.config来配置)，可以动态更改connectionString支持多数据库.		
         public static string connectionString = ConfigurationManager.ConnectionStrings["ourConn"].ConnectionString;
 
-        #region 工厂模式的连接数据库
-        #region 全局变量
-        protected static DbCommand DbCommand;
-        protected static DbTransaction DbTransaction;
-        protected static DbProviderFactory DbProviderFactory;
-        protected static DbConnection DbConnection;
-        protected DbDataAdapter DbaAdapter;
-        #endregion
-        private static void InitFactory()
-        {
-            using (DbConnection)
-            {
-
-
-
-                if (DbConnection == null || DbTransaction == null)
-                {
-                    DbProviderFactory = DbProviderFactories.GetFactory(new MySqlConnection());
-                    DbConnection = DbProviderFactory.CreateConnection();
-                    DbConnection.ConnectionString = connectionString;
-                }
-
-            }
-
-
-        }
-        #endregion
+      
 
         #region 原生
         /// <summary>
@@ -264,49 +237,7 @@ namespace mfg_word_Dal
             }
         }
 
-        #region 事物的方法
-        /// <summary>
-        /// 开始一个ado.net 的事务
-        /// </summary>
-        public static void BeginTrancation()
-        {
-            InitFactory();
-            if (DbConnection.State != ConnectionState.Open)
-                DbConnection.Open();
-            DbTransaction = DbConnection.BeginTransaction();
-
-
-        }
-        /// <summary>
-        /// 提交一个事务
-        /// </summary>
-        public static void Commit()
-        {
-            DbTransaction.Commit();
-        }
-        /// <summary>
-        /// 回滚一个事务
-        /// </summary>
-        public static void Rollback()
-        {
-            if (DbTransaction == null)
-            {
-                return;
-            }
-            DbTransaction.Rollback();
-            DbTransaction.Dispose();
-        }
-
-        #region 执行完事务进行释放连接
-        public static void Dispose()
-        {
-            DbConnection?.Dispose();
-            DbCommand?.Dispose();
-            DbTransaction?.Dispose();
-        }
-
-        #endregion
-        #endregion
+    
 
         #region 获取单条记录
         /// <summary>
@@ -336,103 +267,11 @@ namespace mfg_word_Dal
             return queryObject;
         }
         #endregion
-        #region SetCommand、Adapter
+        #region 进行优化的dbhelper
 
-        /// <summary>
-        /// 设置dbcommand
-        /// </summary>
-        /// <param name="sqlStr"></param>
-        /// <param name="commandType"></param>
-        /// <param name="dbParameters"></param>
-        private static void SetDbCommandOpen(string sqlStr, CommandType commandType, params IDataParameter[] dbParameters)
-        {
-            InitFactory();
+     
 
-
-            using (DbCommand)
-            {
-                
-           
-                #region 释放资源的命令在调用方法中执行
-                DbCommand = DbProviderFactory.CreateCommand();
-                if (DbCommand != null)
-                {
-                    DbCommand.Connection = DbConnection;
-                    DbCommand.CommandText = sqlStr;
-                    DbCommand.CommandType = commandType;
-                    DbCommand.CommandTimeout = 30;
-                    if (dbParameters.Length > 0)
-                    {
-                        foreach (var item in dbParameters)
-                        {
-                            DbCommand.Parameters.Add(item);
-                        }
-                    }
-                }
-                if (DbConnection.State == ConnectionState.Open) return;
-                try
-                {
-                    DbConnection.Open();
-                }
-                catch (DbException dbException)
-                {
-                    throw dbException;
-                }
-
-                #endregion
-
-            }
-
-        }
-
-        #region 执行SQL语句
-        /// <summary>
-        /// 执行单条的sql 语句,事务必须用这个
-        /// </summary>
-        /// <param name="sqlStr"></param>
-        /// <param name="dbParameters"></param>
-        /// <returns></returns>
-        public static int ExecSql(string sqlStr, params IDataParameter[] dbParameters)
-        {
-            if (DbTransaction != null)
-            {
-                int execSqlRes = -1;
-                SetDbCommandOpen(sqlStr, CommandType.Text, dbParameters);
-                try
-                {
-                    execSqlRes = DbCommand.ExecuteNonQuery();
-
-
-                }
-                catch (DbException dbException)
-                {
-                    throw dbException;
-                }
-                return execSqlRes;
-
-            }
-            else
-            {
-                using (DbConnection)
-                {
-                    int execSqlRes = -1;
-                    SetDbCommandOpen(sqlStr, CommandType.Text, dbParameters);
-                    try
-                    {
-                        execSqlRes = DbCommand.ExecuteNonQuery();
-
-
-                    }
-                    catch (DbException dbException)
-                    {
-                        throw dbException;
-                    }
-                    return execSqlRes;
-                }
-            }
-
-        }
-        #endregion
+     
         #endregion
         /// <summary>
         /// 获取单个实体
