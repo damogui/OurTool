@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonTools.cs" />
+    <Compile Include="Http\HttpHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PushCommon.cs" />
   </ItemGroup>

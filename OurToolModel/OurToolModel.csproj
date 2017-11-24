@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Card\CardUser.cs" />
     <Compile Include="Card\CardUserRecode.cs" />
+    <Compile Include="Credit\ComName.cs" />
+    <Compile Include="Credit\Credit.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="News\HotNews.cs" />
     <Compile Include="News\NewsShow.cs" />
