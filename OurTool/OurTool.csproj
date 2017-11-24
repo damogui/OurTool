@@ -1235,6 +1235,10 @@
       <Project>{a2c10460-a30e-4fc1-ae93-b4070881a822}</Project>
       <Name>OurToolBll</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OurToolCommon\OurToolCommon.csproj">
+      <Project>{6e3c297e-a297-47c2-b27a-4f8e7b8cb72a}</Project>
+      <Name>OurToolCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OurToolModel\OurToolModel.csproj">
       <Project>{d46bcc77-0cf2-47d9-a860-9b7f43e17fee}</Project>
       <Name>OurToolModel</Name>
