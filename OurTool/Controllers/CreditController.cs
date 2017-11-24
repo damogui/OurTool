@@ -28,24 +28,47 @@ namespace OurTool.Controllers
 
             var str = data;//Console.ReadLine();
 
-            //            Console.WriteLine(DeUnicode("\u817e\u8baf\u79d1\u6280\uff08\u6df1\u5733\uff09\u6709\u9650\u516c\u53f8"));
-            string jsonUrl = string.Format("https://www.tianyancha.com/search/suggest.json?key={0}", str);
+            JsonResult jsonResult = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            //string jsonUrl = string.Format("http://www.tianyancha.com/search/suggest.json?key={0}", str);
 
 
             string jsonUrl2 = string.Format("http://www.qichacha.com/tax_view?keyno={0}&ajaxflag=1", GetKeNo(str));
 
-            string json = HttpHelper.RequestJSONFromUrl(jsonUrl);
-            NamaePara<List<ComName>> para = JsonConvert.DeserializeObject<NamaePara<List<ComName>>>(json);
+            try
+            {
+               // string json = HttpHelper.RequestJSONFromUrl(jsonUrl);
+                //NamaePara<List<ComName>> para = JsonConvert.DeserializeObject<NamaePara<List<ComName>>>(json);
+            }
+            catch (Exception ex)
+            {
+                jsonResult.Data = "1"+ex.Message;
+
+                return jsonResult;
+
+                throw ex;
+            }
+
+            BasePara<Credit> para2=new BasePara<Credit>();
+
+            try
+            {
+                string json2 = HttpHelper.RequestJSONFromUrl(jsonUrl2);
+                para2 = JsonConvert.DeserializeObject<BasePara<Credit>>(json2);
+
+            }
+            catch (Exception ex)
+            {
+
+                jsonResult.Data = "2" + ex.Message;
+
+                return jsonResult;
+            }
 
 
 
-
-
-            string json2 = HttpHelper.RequestJSONFromUrl(jsonUrl2);
-            BasePara<Credit> para2 = JsonConvert.DeserializeObject<BasePara<Credit>>(json2);
-            //            Console.WriteLine(string.Format("输入的公司名字为：{0}", para2.Data.Name));
-            //            Console.WriteLine(string.Format("税票码为：{0}", para2.Data.CreditCode));
-            JsonResult jsonResult = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+         
+         
+          
             jsonResult.Data = para2;
 
             return jsonResult;
@@ -58,7 +81,7 @@ namespace OurTool.Controllers
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        public static string GetKeNo(string key)
+        public  string GetKeNo(string key)
         {
             string jsonUrl3 = string.Format("http://www.qichacha.com/search?key={0}", key);
             string json3 = HttpHelper.RequestJSONFromUrl(jsonUrl3);
