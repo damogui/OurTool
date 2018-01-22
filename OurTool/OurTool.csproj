@@ -201,6 +201,7 @@
     <Compile Include="Areas\Our\OurAreaRegistration.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CardController.cs" />
+    <Compile Include="Controllers\CompyController.cs" />
     <Compile Include="Controllers\CreditController.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1219,6 +1220,7 @@
     <Folder Include="Static\our666\orbit\" />
     <Folder Include="Static\our666\style\images\ylqx\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Compy\" />
     <Folder Include="Views\Credit\" />
     <Folder Include="Views\Data\" />
   </ItemGroup>
