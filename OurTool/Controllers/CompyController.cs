@@ -95,11 +95,7 @@ namespace OurTool.Controllers
             string phone = "";//名称
             string proxyer = "";//董事长
             string regtime = "";//注册时间
-           
-
-            corpName = HttpContext.Request.QueryString["corpname"].ToString();
-             address = HttpContext.Request.QueryString["address"].ToString();
-            corpName = HttpContext.Request.QueryString["corpname"].ToString();
+            address = HttpContext.Request.QueryString["address"].ToString();
             creditcode = HttpContext.Request.QueryString["creditcode"].ToString();
             taxNumber = HttpContext.Request.QueryString["taxNumber"].ToString();
             phone = HttpContext.Request.QueryString["phone"].ToString();
